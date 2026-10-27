@@ -4,9 +4,9 @@
     "servers": {
       "dc-gem": {
         "type": "local",
-        "command": [".venv-rocm/bin/python", "dc_gem_mcp_server.py"],
+        "command": ["/home/an-l-z/.venvs/rocm/bin/python", "/home/an-l-z/dc-gem/dc_gem_mcp_server.py"],
         "environment": {
-          "PYTHONPATH": "."
+          "PYTHONPATH": "/home/an-l-z/dc-gem"
         }
       }
     }

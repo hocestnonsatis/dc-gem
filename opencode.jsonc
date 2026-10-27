@@ -1,0 +1,14 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "dc-gem": {
+        "type": "local",
+        "command": [".venv-rocm/bin/python", "dc_gem_mcp_server.py"],
+        "environment": {
+          "PYTHONPATH": "."
+        }
+      }
+    }
+  }
+}

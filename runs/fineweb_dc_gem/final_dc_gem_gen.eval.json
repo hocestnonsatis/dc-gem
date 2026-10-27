@@ -1,0 +1,158 @@
+{
+  "steps": 800,
+  "wall_s": 125.72727052198024,
+  "hist": [
+    {
+      "step": 1,
+      "loss": 10.243148803710938,
+      "ce": 0.6697041988372803,
+      "ret": 1.1171875,
+      "ans": 6.87500524520874,
+      "p_free": 0.15,
+      "ans_exact": false,
+      "alpha": 1.5051881074905396
+    },
+    {
+      "step": 80,
+      "loss": 1.7206025123596191,
+      "ce": 0.08536823838949203,
+      "ret": 2.4375,
+      "ans": 0.00029957355582155287,
+      "p_free": 0.20932415519399247,
+      "ans_exact": true,
+      "alpha": 1.600000023841858
+    },
+    {
+      "step": 160,
+      "loss": 4.682212829589844,
+      "ce": 0.0760795921087265,
+      "ret": 1.15625,
+      "ans": 2.3554770946502686,
+      "p_free": 0.2693992490613266,
+      "ans_exact": false,
+      "alpha": 1.600000023841858
+    },
+    {
+      "step": 240,
+      "loss": 1.504520297050476,
+      "ce": 0.03952313959598541,
+      "ret": 1.984375,
+      "ans": 0.0001744659966789186,
+      "p_free": 0.3294743429286608,
+      "ans_exact": true,
+      "alpha": 1.600000023841858
+    },
+    {
+      "step": 320,
+      "loss": 1.5108431577682495,
+      "ce": 0.016120340675115585,
+      "ret": 2.265625,
+      "ans": 6.365457375068218e-05,
+      "p_free": 0.38954943679599496,
+      "ans_exact": true,
+      "alpha": 1.600000023841858
+    },
+    {
+      "step": 400,
+      "loss": 1.1310614347457886,
+      "ce": 0.03393769636750221,
+      "ret": 1.1015625,
+      "ans": 2.9066679417155683e-05,
+      "p_free": 0.4496245306633291,
+      "ans_exact": true,
+      "alpha": 1.600000023841858
+    },
+    {
+      "step": 480,
+      "loss": 6.394205093383789,
+      "ce": 0.0656517967581749,
+      "ret": 1.9140625,
+      "ans": 3.1520581245422363,
+      "p_free": 0.5096996245306633,
+      "ans_exact": false,
+      "alpha": 1.600000023841858
+    },
+    {
+      "step": 560,
+      "loss": 2.3562827110290527,
+      "ce": 0.003962003625929356,
+      "ret": 4.96875,
+      "ans": 0.0005041815456934273,
+      "p_free": 0.5697747183979975,
+      "ans_exact": true,
+      "alpha": 1.600000023841858
+    },
+    {
+      "step": 640,
+      "loss": 1.227442741394043,
+      "ce": 0.0010275839595124125,
+      "ret": 1.109375,
+      "ans": 0.026283305138349533,
+      "p_free": 0.6298498122653317,
+      "ans_exact": true,
+      "alpha": 1.600000023841858
+    },
+    {
+      "step": 720,
+      "loss": 1.6573548316955566,
+      "ce": 0.031042372807860374,
+      "ret": 2.703125,
+      "ans": 4.618216189555824e-05,
+      "p_free": 0.6899249061326658,
+      "ans_exact": true,
+      "alpha": 1.600000023841858
+    },
+    {
+      "step": 800,
+      "loss": 1.3344262838363647,
+      "ce": 0.01925688609480858,
+      "ret": 1.4140625,
+      "ans": 1.6410993339377455e-05,
+      "p_free": 0.75,
+      "ans_exact": true,
+      "alpha": 1.600000023841858
+    }
+  ],
+  "eval": {
+    "val_ppl_off": {
+      "nll": 5.580069446563721,
+      "ppl": 265.0900147376006
+    },
+    "val_ppl_on": {
+      "nll": 5.6461153348286945,
+      "ppl": 283.189230960944
+    },
+    "oow": {
+      "n_facts": 25,
+      "distractor_tokens": 200,
+      "exact_match_mem_on": 0.92,
+      "exact_match_mem_off": 0.0,
+      "target_ppl_mem_on": 2.0410640309108183,
+      "target_ppl_mem_off": 688.824213021007
+    },
+    "generate_exact": {
+      "n_facts": 25,
+      "distractor_tokens": 200,
+      "min_read_sim": 0.35,
+      "exact_match_mem_on": 0.92,
+      "exact_match_mem_off": 0.0,
+      "contains_code_mem_on": 0.92,
+      "contains_code_mem_off": 0.0
+    },
+    "generations": {
+      "prompt": "The secret password of castle Zorg is",
+      "answer_token_ids": [
+        220,
+        23,
+        46469
+      ],
+      "mem_off": "The secret password of castle Zorg is a of the 10th century.",
+      "mem_on": "The secret password of castle Zorg is 8 vents is a 3-",
+      "mem_off_cont": " a of the 10th century.",
+      "mem_on_cont": " 8 vents is a 3-",
+      "contains_8492_on": false,
+      "contains_8492_off": false,
+      "exact_ans_prefix_on": false
+    }
+  }
+}

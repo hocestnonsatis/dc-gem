@@ -1,0 +1,20 @@
+[data] SWE-bench/SWE-bench split=train
+[data] load failed (Unknown split "train". Should be one of ['test', 'dev'].); trying princeton-nlp/SWE-bench
+[data] samples=200
+[model] Qwen/Qwen2.5-Coder-3B-Instruct → cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]Loading weights: 100%|██████████| 434/434 [00:00<00:00, 24776.48it/s]
+trainable params: 14,966,784 || all params: 3,100,905,472 || trainable%: 0.4827
+[data] usable=113 (short-patch filtered)
+  epoch=0 step=8 loss=0.7223
+  epoch=0 step=16 loss=0.6928
+  epoch=0 step=24 loss=0.6458
+  epoch=0 step=32 loss=0.6193
+  epoch=0 step=40 loss=0.6185
+  epoch=0 step=48 loss=0.5982
+  epoch=0 step=56 loss=0.6661
+  epoch=0 step=64 loss=0.6718
+  epoch=0 step=72 loss=0.5854
+[save] runs/swe_dc_gem/lora/adapter
+[save] runs/swe_dc_gem/lora/sft_report.json
+mean_loss=0.6298 wall=40.5s

@@ -1,0 +1,59 @@
+{
+  "phase": 15.1,
+  "min_symbol_sim": 0.58,
+  "max_retrieved_symbols": 2,
+  "rows": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memOFF",
+      "apply%": 16.67,
+      "symRec%": 33.33,
+      "resolved_count": 0,
+      "resolved_ids": []
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON",
+      "apply%": 16.67,
+      "symRec%": 16.67,
+      "resolved_count": 0,
+      "resolved_ids": []
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON_LoRA",
+      "apply%": 8.33,
+      "symRec%": 41.67,
+      "resolved_count": 0,
+      "resolved_ids": []
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memOFF",
+      "apply%": 41.67,
+      "symRec%": 50.0,
+      "resolved_count": 0,
+      "resolved_ids": []
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memON",
+      "apply%": 41.67,
+      "symRec%": 50.0,
+      "resolved_count": 0,
+      "resolved_ids": []
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memON_LoRA",
+      "apply%": 50.0,
+      "symRec%": 41.67,
+      "resolved_count": 0,
+      "resolved_ids": []
+    }
+  ],
+  "notes": [
+    "Selective GEM symbol gate: min_symbol_sim + max_retrieved_symbols=2 + OOW dedupe",
+    "memory.reset() between tasks"
+  ]
+}

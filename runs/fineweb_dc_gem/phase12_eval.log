@@ -1,0 +1,58 @@
+[eval] loading runs/fineweb_dc_gem/final_dc_gem_gen.pt on cuda
+[eval] val PPL memOFF / memON …
+[eval] OOW exact-match …
+[eval] generate exact-match (Phase-12) …
+[eval] generate samples …
+{
+  "ckpt": "runs/fineweb_dc_gem/final_dc_gem_gen.pt",
+  "val_ppl_mem_off": {
+    "nll": 5.683717981974284,
+    "ppl": 294.0406379111794
+  },
+  "val_ppl_mem_on": {
+    "nll": 5.629111591974894,
+    "ppl": 278.4146619085432
+  },
+  "oow": {
+    "n_facts": 25,
+    "distractor_tokens": 200,
+    "exact_match_mem_on": 0.92,
+    "exact_match_mem_off": 0.0,
+    "target_ppl_mem_on": 2.0422853137157753,
+    "target_ppl_mem_off": 688.8242852815466
+  },
+  "generate_exact": {
+    "n_facts": 25,
+    "distractor_tokens": 200,
+    "min_read_sim": 0.35,
+    "exact_match_mem_on": 0.92,
+    "exact_match_mem_off": 0.0,
+    "contains_code_mem_on": 0.92,
+    "contains_code_mem_off": 0.0
+  },
+  "generations": {
+    "prompt": "The secret password of castle Zorg07 is",
+    "answer_token_ids": [
+      220,
+      23,
+      46469
+    ],
+    "mem_off": "The secret password of castle Zorg07 is in the 2012 issue of the ",
+    "mem_on": "The secret password of castle Zorg07 is 8 english.\nThe 3",
+    "mem_off_cont": " in the 2012 issue of the ",
+    "mem_on_cont": " 8 english.\nThe 3",
+    "contains_8492_on": false,
+    "contains_8492_off": false,
+    "exact_ans_prefix_on": false
+  },
+  "punct_token_ids": [
+    0,
+    11,
+    13,
+    26,
+    30,
+    198,
+    52000
+  ]
+}
+[eval] wrote runs/fineweb_dc_gem/eval_report_gen.json

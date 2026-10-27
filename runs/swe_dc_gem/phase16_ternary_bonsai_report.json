@@ -1,0 +1,114 @@
+{
+  "phase": 16,
+  "min_symbol_sim": 0.15,
+  "max_retrieved_symbols": 2,
+  "hybrid_score": "0.5*cos + 0.5*lex",
+  "coverage_aware_gating": true,
+  "gguf_model": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+  "gguf_file": "Ternary-Bonsai-2-9B-Q2_0.gguf",
+  "runtime": "PrismML llama-server (ROCm) + hash_embed",
+  "rows": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memOFF",
+      "apply%": 16.67,
+      "symRec%": 33.33,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_3_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON",
+      "apply%": 16.67,
+      "symRec%": 16.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_3_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON_LoRA",
+      "apply%": 8.33,
+      "symRec%": 41.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_3_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memOFF",
+      "apply%": 83.33,
+      "symRec%": 41.67,
+      "gem_hit_rate%": 0.0,
+      "resolved_count": 1,
+      "resolved_ids": [
+        "django__django-15814"
+      ],
+      "source": "phase15_3_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memON",
+      "apply%": 66.67,
+      "symRec%": 41.67,
+      "gem_hit_rate%": 66.67,
+      "resolved_count": 2,
+      "resolved_ids": [
+        "django__django-14534",
+        "django__django-15814"
+      ],
+      "source": "phase15_3_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memON_LoRA",
+      "apply%": 83.33,
+      "symRec%": 58.33,
+      "gem_hit_rate%": 75.0,
+      "resolved_count": 2,
+      "resolved_ids": [
+        "django__django-14534",
+        "django__django-15814"
+      ],
+      "source": "phase15_3_comparison_report.json"
+    },
+    {
+      "model": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+      "variant": "memOFF",
+      "apply%": 41.67,
+      "symRec%": 33.33,
+      "gem_hit_rate%": 0.0,
+      "resolved_count": 2,
+      "resolved_ids": [
+        "django__django-15814",
+        "django__django-16255"
+      ],
+      "source": "phase16"
+    },
+    {
+      "model": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+      "variant": "memON",
+      "apply%": 33.33,
+      "symRec%": 50.0,
+      "gem_hit_rate%": 75.0,
+      "resolved_count": 3,
+      "resolved_ids": [
+        "django__django-14534",
+        "django__django-15814",
+        "django__django-16255"
+      ],
+      "source": "phase16"
+    }
+  ],
+  "notes": [
+    "Phase-16: Ternary-Bonsai-2-9B-gguf (1.58-bit) + DC-GEM",
+    "memON uses coverage-aware GEM; memOFF narrow window",
+    "Ternary memOFF resolved 2/12: ['django__django-15814', 'django__django-16255']",
+    "Ternary memON resolved 3/12: ['django__django-14534', 'django__django-15814', 'django__django-16255']",
+    "Compare Qwen3-0.6B / Qwen2.5-Coder-3B / Ternary-9B"
+  ]
+}

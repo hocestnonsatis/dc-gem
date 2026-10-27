@@ -1,0 +1,22 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:18<03:25, 18.72s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:18<03:25, 18.72s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:18<01:33,  9.39s/it]2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:37<01:52, 12.47s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:37<01:52, 12.47s/it]3 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:15,  9.39s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:15,  9.39s/it]4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:56<01:18, 11.21s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:56<01:18, 11.21s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:56<00:56,  9.35s/it]6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:15<00:53, 10.76s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:15<00:53, 10.76s/it]7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:16<00:38,  9.54s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:16<00:38,  9.54s/it]8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:32<00:30, 10.32s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:32<00:30, 10.33s/it]9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:33<00:18,  9.38s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:33<00:18,  9.38s/it]Error in evaluation for sympy__sympy-24102: >>>>> Patch Apply Failed:
+patching file sympy/parsing/mathematica.py
+patch: **** malformed patch at line 9: @@ -12,10 +14,12 @@
+
+
+Check (logs/run_evaluation/p161b_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/sympy__sympy-24102/run_instance.log) for more information.
+10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:49<00:09,  9.96s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:49<00:09,  9.96s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:50<00:00,  9.18s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:50<00:00,  9.18s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:50<00:00,  9.18s/it]
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 11
+Instances incomplete: 0
+Instances resolved: 5
+Instances unresolved: 6
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 2
+Instances with empty patches: 0
+Instances with errors: 1
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase16/dc-gem-ternary_bonsai_2_9b_gguf-memON.p161b_ternary_bonsai_2_9b_gguf_memON.json

@@ -1,0 +1,155 @@
+{
+  "ckpt": "runs/fineweb_dc_gem/final_dc_gem_gen.pt",
+  "n_facts": 50,
+  "fact_seed": 13,
+  "plant": {
+    "n_facts": 50,
+    "n_docs": 50,
+    "writes": 362,
+    "n_valid": 411
+  },
+  "val_ppl_pre": 270.97327939180525,
+  "val_ppl_post": 350.75302391924635,
+  "val_ppl_ratio": 1.2944192309533447,
+  "pre_sleep_mem_on_exact": 0.92,
+  "pre_sleep_mem_on_target_ppl": 16.889378939075137,
+  "pre_sleep_mem_off_exact": 0.0,
+  "post_sleep_mem_off_exact": 0.36,
+  "post_sleep_mem_off_target_ppl": 6.076995842791953,
+  "sleep_steps": 590,
+  "sleep_kl": 0.0,
+  "sleep_ce": 0.914242684841156,
+  "sleep_anchor": 588.7581787109375,
+  "sleep_val_kl": 0.04690197855234146,
+  "sleep_n_replay": 50,
+  "sleep_api_kl": 2.1163218021392822,
+  "sleep_hist": [
+    {
+      "chunk": 1,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 3.085878610610962,
+      "anchor": 99.508544921875,
+      "val_kl": 0.05537628382444382,
+      "n_replay": 50
+    },
+    {
+      "chunk": 2,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 2.824857473373413,
+      "anchor": 136.729736328125,
+      "val_kl": 0.04404584690928459,
+      "n_replay": 50
+    },
+    {
+      "chunk": 3,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 2.8177244663238525,
+      "anchor": 153.16246032714844,
+      "val_kl": 0.038820452988147736,
+      "n_replay": 50
+    },
+    {
+      "chunk": 4,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 2.5325772762298584,
+      "anchor": 180.2182159423828,
+      "val_kl": 0.041294947266578674,
+      "n_replay": 50
+    },
+    {
+      "chunk": 5,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 2.3252668380737305,
+      "anchor": 238.8456573486328,
+      "val_kl": 0.03375615179538727,
+      "n_replay": 50
+    },
+    {
+      "chunk": 6,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 1.971152901649475,
+      "anchor": 311.98236083984375,
+      "val_kl": 0.05762869492173195,
+      "n_replay": 50
+    },
+    {
+      "chunk": 7,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 1.7408760786056519,
+      "anchor": 389.036376953125,
+      "val_kl": 0.060015685856342316,
+      "n_replay": 50
+    },
+    {
+      "chunk": 8,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 1.5127817392349243,
+      "anchor": 447.01708984375,
+      "val_kl": 0.04964204877614975,
+      "n_replay": 50
+    },
+    {
+      "chunk": 9,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 1.336319923400879,
+      "anchor": 522.545166015625,
+      "val_kl": 0.053833380341529846,
+      "n_replay": 50
+    },
+    {
+      "chunk": 10,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 1.1641055345535278,
+      "anchor": 561.3419799804688,
+      "val_kl": 0.0710361897945404,
+      "n_replay": 50
+    },
+    {
+      "chunk": 11,
+      "mode": "per_fact",
+      "steps": 50,
+      "kl": 0.0,
+      "ce": 0.914242684841156,
+      "anchor": 588.7581787109375,
+      "val_kl": 0.04690197855234146,
+      "n_replay": 50
+    },
+    {
+      "chunk": "api_polish",
+      "mode": "sleep_kl_consolidate",
+      "steps": 40,
+      "kl": 2.1163218021392822,
+      "ce": 1.4816402196884155,
+      "anchor": 572.9677124023438,
+      "n_replay": 13
+    }
+  ],
+  "lora_balance_factor": 1.0,
+  "lora_balance_ok": false,
+  "merged_layers": 4,
+  "retention_ok": false,
+  "exact_ok": false,
+  "targets_met": false,
+  "wall_s": 94.47236180800246,
+  "out_ckpt": "runs/fineweb_dc_gem/final_dc_gem_sleep_grid5.pt"
+}

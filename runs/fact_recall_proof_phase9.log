@@ -1,0 +1,69 @@
+[hw] cuda AMD Radeon RX 9070 XT
+[load] runs/rocm_baseline_20m/last.pt  missing=5 unexpected=0 use_lora=True
+[A] baseline memOFF exact=0.000 ppl=16687562752.00
+[stage-B] trainable_tensors=13 steps=1500 λ_ret=0.5 train_top_m=0 span=0 untie=True
+  step    1/1500 loss=38.993 ce=38.523 ret=4.699 ans=0.000 slots=110 writes=110 α=0.000
+  step  300/1500 loss=1.223 ce=0.635 ret=5.880 ans=0.000 slots=114 writes=114 α=0.499
+  step  600/1500 loss=3.234 ce=2.259 ret=9.747 ans=0.000 slots=210 writes=210 α=1.000
+  step  900/1500 loss=12.041 ce=4.825 ret=8.040 ans=6.412 slots=210 writes=210 α=1.000
+  step 1200/1500 loss=1.552 ce=0.692 ret=8.601 ans=0.000 slots=210 writes=210 α=1.000
+  step 1500/1500 loss=3.738 ce=2.865 ret=5.444 ans=0.328 slots=209 writes=209 α=1.000
+
+=== Fact-Recall Proof (Phase-8) ===
+Variant                                                             Exact     TgtPPL
+Baseline (memOFF)                                                   0.000 16687562752.00
+DC-GEM (memON, write_top_m=0 / unlimited)                           0.560      19.11
+DC-GEM (memON, guided force_write + top_m=32)                       0.660       5.48
+DC-GEM (memON, AUTONOMOUS no-mask, hybrid surprise + top_m=48 + span=2)    0.840       2.47
+Throughput (vectorized GEM, M=32): 6046 tok/s
+
+=== Bölüm 2: Sleep-to-LoRA + PPL Retention (Phase-9) ===
+[sleep] val_ppl_pre_sleep=22.725
+[sleep] planted facts → n_valid=6281
+[sleep] pre-sleep memOFF exact=0.000 ppl=22824120320.00
+[sleep-lora] step    1 | KL 23.9128 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 3.8777 | CE 2.6890 | anchor 746.6625 | valKL 1.7651
+[sleep-lora] step  160 | KL 3.4735 | CE 0.6590 | anchor 942.6989 | valKL 1.2727
+[sleep-lora] step  240 | KL 1.3563 | CE 0.6598 | anchor 1014.1430 | valKL 1.3235
+[sleep-lora] step  320 | KL 5.3169 | CE 1.8212 | anchor 991.7455 | valKL 0.8846
+[sleep-lora] step  400 | KL 5.3545 | CE 1.8169 | anchor 999.5019 | valKL 1.0468
+[sleep] done n_replay=50 steps=400 kl=5.3545 ce=1.8169
+[sleep] post-sleep memOFF exact=0.620 ppl=3.91
+[sleep] val_ppl_post_sleep=65.546 (limit=26.134)
+[sleep] retention/exact hedefi kaçtı — güçlendirilmiş çapa ile tekrar
+[sleep-lora] step    1 | KL 5.1866 | CE 1.7887 | anchor 1001.3192 | valKL -0.0000
+[sleep-lora] step   40 | KL 6.5082 | CE 1.4124 | anchor 574.9791 | valKL 0.3920
+[sleep-lora] step   80 | KL 2.3947 | CE 0.6752 | anchor 403.1083 | valKL 0.3373
+[sleep-lora] step  120 | KL 2.8528 | CE 1.0770 | anchor 338.7579 | valKL 0.3797
+[sleep-lora] step  160 | KL 2.4568 | CE 1.1914 | anchor 297.7474 | valKL 0.4077
+[sleep-lora] step  200 | KL 3.5164 | CE 0.9836 | anchor 272.8752 | valKL 0.3945
+[sleep] retry post exact=0.680 val_ppl=50.899
+[sleep] retention_ok=False exact_ok=True
+
+=== Bölüm 3: Continual Wave-1/2 Dual-Store (Phase-9) ===
+[continual] merge_and_reset (start) layers=24
+[continual] small GEM max_slots=256 (overflow vs ~25 fact yazımı)
+[continual] Wave-1 planted n_valid=256/256 occupancy=1.00
+[sleep-lora] step    1 | KL 0.9343 | CE 0.8211 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 0.5324 | CE 0.2972 | anchor 20.1921 | valKL 0.0286
+[sleep-lora] step  160 | KL 0.5499 | CE 0.3187 | anchor 20.5346 | valKL 0.0276
+[sleep-lora] step  240 | KL 0.5737 | CE 0.3200 | anchor 24.6764 | valKL 0.0198
+[sleep-lora] step  320 | KL 0.3818 | CE 0.2584 | anchor 15.6094 | valKL 0.0108
+[sleep-lora] step  400 | KL 0.3010 | CE 0.3529 | anchor 9.1855 | valKL 0.0053
+[continual] Wave-1 consolidated → merge layers=24, memory cleared
+[continual] Wave-1 core recall exact=0.560
+[continual] Wave-2 planted n_valid=256/256 occupancy=1.00
+[continual] Wave-1 (Core) exact=0.560
+[continual] Wave-2 (GEM)  exact=0.000
+[continual] Combined 50   exact=0.280
+[continual] val_ppl_final=51.402
+[continual] all50 memON   exact=0.000
+
+=== 31M Continual Learning & Consolidation Proof ===
+Metric                                        Value
+Wave-1 Core exact                             0.560
+Wave-2 GEM exact                              0.000
+Combined 50-Fact exact                        0.280
+val_ppl_final                                51.402
+max_slots / W1 occ / W2 occ              256/1.00/1.00
+[saved] runs/fact_recall_proof.json

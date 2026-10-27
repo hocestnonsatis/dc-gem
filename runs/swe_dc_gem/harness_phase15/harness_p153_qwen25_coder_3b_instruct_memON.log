@@ -1,0 +1,15 @@
+2 instances already run, skipping...
+No instances to run.
+Total instances: 2
+Instances submitted: 2
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 1
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 0
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 2
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen25_coder_3b_instruct-memON.p153_qwen25_coder_3b_instruct_memON.json

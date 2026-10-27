@@ -1,0 +1,18 @@
+[harness] /home/an-l-z/dc-gem/.venv-rocm/bin/python -m swebench.harness.run_evaluation --dataset_name SWE-bench/SWE-bench_Lite --predictions_path runs/swe_dc_gem/agent_sr/predictions_dryok.jsonl --max_workers 2 --timeout 1800 --run_id phase14_dryok --report_dir runs/swe_dc_gem/harness --instance_ids astropy__astropy-14365 django__django-14534
+[harness] returncode=0 log=runs/swe_dc_gem/harness/harness_phase14_dryok.log
+{
+  "run_id": "phase14_dryok",
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "predictions": "runs/swe_dc_gem/agent_sr/predictions_dryok.jsonl",
+  "n_instances": 2,
+  "instance_ids": [
+    "astropy__astropy-14365",
+    "django__django-14534"
+  ],
+  "returncode": 0,
+  "resolved_instances": 0,
+  "report_file": "runs/swe_dc_gem/harness/dc-gem-qwen25-coder-3b.phase14_dryok.json",
+  "log": "runs/swe_dc_gem/harness/harness_phase14_dryok.log",
+  "success_criterion_met": false
+}
+[save] runs/swe_dc_gem/harness/phase14_harness_summary_phase14_dryok.json

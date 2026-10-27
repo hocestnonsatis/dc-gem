@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-18",
+  "setup": {
+    "docker": "docker-ce active; user in docker group",
+    "swebench": "5.0.2",
+    "dataset": "SWE-bench/SWE-bench_Lite (prebuilt images)",
+    "note": "princeton-nlp/SWE-bench_Lite lacks image field — harness 5.x requires SWE-bench/SWE-bench_Lite"
+  },
+  "gold_sanity": {
+    "run_id": "dc_gem_gold_smoke",
+    "n": 1,
+    "instance": "astropy__astropy-12907",
+    "resolved": 1,
+    "report": "runs/swebench_smoke/gold.dc_gem_gold_smoke.json"
+  },
+  "dc_gem_51m": {
+    "run_id": "dc_gem_model_smoke",
+    "ckpt": "runs/fineweb_dc_gem/final_dc_gem_gen.pt",
+    "predictions": "runs/swebench_smoke/predictions.jsonl",
+    "n_evaluated": 5,
+    "resolved": 0,
+    "resolved_rate": 0.0,
+    "error_instances": 5,
+    "error_reason": "Patch Apply Failed — model output is not a valid unified diff",
+    "report": "runs/swebench_smoke/dc-gem-fineweb-51m.dc_gem_model_smoke.json"
+  },
+  "verdict": "Harness OK (gold 1/1). DC-GEM 51M resolve rate 0/5 (0%). Expected for current scale."
+}

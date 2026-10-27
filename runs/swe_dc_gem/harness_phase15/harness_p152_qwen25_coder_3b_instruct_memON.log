@@ -1,0 +1,41 @@
+1 instances already run, skipping...
+Running 11 instances...
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:18<03:07, 18.75s/it]1 ran successfully, 0 failed:   9%|▉         | 1/11 [00:18<03:07, 18.75s/it]1 ran successfully, 0 failed:  18%|█▊        | 2/11 [00:19<01:27,  9.76s/it]2 ran successfully, 0 failed:  18%|█▊        | 2/11 [00:19<01:27,  9.76s/it]Error in evaluation for django__django-15814: >>>>> Patch Apply Failed:
+patching file django/db/models/query.py
+Hunk #1 FAILED at 2243.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/query.py.rej
+patching file django/core/management/__init__.py
+Hunk #1 FAILED at 2243.
+1 out of 1 hunk FAILED -- saving rejects to file django/core/management/__init__.py.rej
+
+Check (logs/run_evaluation/p152_qwen25_coder_3b_instruct_memON/dc-gem-qwen25_coder_3b_instruct-memON/django__django-15814/run_instance.log) for more information.
+2 ran successfully, 0 failed:  27%|██▋       | 3/11 [00:34<01:32, 11.60s/it]3 ran successfully, 0 failed:  27%|██▋       | 3/11 [00:34<01:32, 11.60s/it]Error in evaluation for django__django-16595: >>>>> Patch Apply Failed:
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/django/db/migrations/optimize.py b/django/db/migrations/optimize.py
+|index 9a5b1c2..b7d8f9e 100644
+|--- a/django/db/migrations/optimize.py
+|+++ b/django/db/migrations/optimize.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 15: @@ -110,6 +114,10 @@ class Optimizer:
+
+
+Check (logs/run_evaluation/p152_qwen25_coder_3b_instruct_memON/dc-gem-qwen25_coder_3b_instruct-memON/django__django-16595/run_instance.log) for more information.
+3 ran successfully, 0 failed:  36%|███▋      | 4/11 [00:38<01:07,  9.68s/it]4 ran successfully, 0 failed:  36%|███▋      | 4/11 [00:38<01:07,  9.68s/it]4 ran successfully, 0 failed:  45%|████▌     | 5/11 [00:50<01:01, 10.17s/it]5 ran successfully, 0 failed:  45%|████▌     | 5/11 [00:50<01:01, 10.17s/it]5 ran successfully, 0 failed:  55%|█████▍    | 6/11 [00:56<00:47,  9.41s/it]6 ran successfully, 0 failed:  55%|█████▍    | 6/11 [00:56<00:47,  9.41s/it]6 ran successfully, 0 failed:  64%|██████▎   | 7/11 [01:10<00:40, 10.01s/it]7 ran successfully, 0 failed:  64%|██████▎   | 7/11 [01:10<00:40, 10.01s/it]7 ran successfully, 0 failed:  73%|███████▎  | 8/11 [01:14<00:27,  9.26s/it]8 ran successfully, 0 failed:  73%|███████▎  | 8/11 [01:14<00:27,  9.26s/it]8 ran successfully, 0 failed:  82%|████████▏ | 9/11 [01:26<00:19,  9.64s/it]9 ran successfully, 0 failed:  82%|████████▏ | 9/11 [01:26<00:19,  9.64s/it]9 ran successfully, 0 failed:  91%|█████████ | 10/11 [01:33<00:09,  9.35s/it]10 ran successfully, 0 failed:  91%|█████████ | 10/11 [01:33<00:09,  9.35s/it]10 ran successfully, 0 failed: 100%|██████████| 11/11 [01:44<00:00,  9.47s/it]11 ran successfully, 0 failed: 100%|██████████| 11/11 [01:44<00:00,  9.47s/it]11 ran successfully, 0 failed: 100%|██████████| 11/11 [01:44<00:00,  9.47s/it]
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 10
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 9
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 1
+Instances with empty patches: 0
+Instances with errors: 2
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen25_coder_3b_instruct-memON.p152_qwen25_coder_3b_instruct_memON.json

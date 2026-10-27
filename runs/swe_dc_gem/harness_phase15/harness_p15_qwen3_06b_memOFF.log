@@ -1,0 +1,89 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:19<03:34, 19.49s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:19<03:34, 19.49s/it]1 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:38,  9.84s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:38,  9.84s/it]2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:47<02:21, 15.68s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:47<02:21, 15.68s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:47<01:34, 11.76s/it]4 ran successfully, 0 failed:  42%|████▏     | 5/12 [01:07<01:34, 13.49s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [01:07<01:34, 13.49s/it]5 ran successfully, 0 failed:  50%|█████     | 6/12 [01:14<01:14, 12.42s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [01:14<01:14, 12.42s/it]6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:30<01:04, 12.89s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:30<01:04, 12.89s/it]7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:37<00:48, 12.21s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:37<00:48, 12.21s/it]8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [02:07<00:42, 14.11s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [02:07<00:42, 14.11s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [02:07<00:25, 12.71s/it]10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [02:25<00:13, 13.27s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [02:25<00:13, 13.27s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [02:26<00:00, 12.23s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [02:26<00:00, 12.23s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [02:26<00:00, 12.23s/it]
+Error in evaluation for django__django-13447: >>>>> Patch Apply Failed:
+patching file django/contrib/admin/sites.py
+patch: **** malformed patch at line 8: @@ -124,6 +124,6 @@
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/django__django-13447/run_instance.log) for more information.
+Error in evaluation for django__django-14999: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/django__django-14999/run_instance.log) for more information.
+Error in evaluation for django__django-15814: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 11:     ]
+
+patching file django/core/management/__init__.py
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/django__django-15814/run_instance.log) for more information.
+Error in evaluation for django__django-16255: >>>>> Patch Apply Failed:
+patching file django/contrib/sitemaps/__init__.py
+patch: **** malformed patch at line 11: +    if callable(self.lastmod):
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/django__django-16255/run_instance.log) for more information.
+Error in evaluation for django__django-16595: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 10:          ),
+
+patching file django/contrib/auth/migrations/0008_alter_user_username_max_length.py
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/django__django-16595/run_instance.log) for more information.
+Error in evaluation for pytest-dev__pytest-11143: >>>>> Patch Apply Failed:
+patching file testing/test_assertrewrite.py
+patch: **** malformed patch at line 21: -     ns: Dict[str, object] = {}
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/pytest-dev__pytest-11143/run_instance.log) for more information.
+Error in evaluation for pytest-dev__pytest-7490: >>>>> Patch Apply Failed:
+patching file testing/test_skipping.py
+patch: **** malformed patch at line 6: -        item = testdir.getitem("def test_func(): pass")
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/pytest-dev__pytest-7490/run_instance.log) for more information.
+Error in evaluation for scikit-learn__scikit-learn-25747: >>>>> Patch Apply Failed:
+patching file sklearn/utils/tests/test_set_output.py
+Hunk #1 FAILED at 25.
+1 out of 1 hunk FAILED -- saving rejects to file sklearn/utils/tests/test_set_output.py.rej
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/scikit-learn__scikit-learn-25747/run_instance.log) for more information.
+Error in evaluation for sympy__sympy-22714: >>>>> Patch Apply Failed:
+patching file sympy/core/sympify.py
+patch: **** malformed patch at line 12: 
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/sympy__sympy-22714/run_instance.log) for more information.
+Error in evaluation for sympy__sympy-24102: >>>>> Patch Apply Failed:
+(Patch is indented 4 spaces.)
+can't find file to patch at input line 10
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/sympy/parsing/mathematica.py | SYMBOL: mathematica b/sympy/parsing/mathematica.py
+|diff --git a/sympy/parsing/mathematica.py | SYMBOL: parse_mathematica b/sympy/parsing/mathematica.py
+|diff --git a/sympy/parsing/mathematica.py | SYMBOL: _parse_Function b/sympy/parsing/mathematica.py
+|diff --git a/sympy/parsing/mathematica.py | SYMBOL: _deco b/sympy/parsing/mathematica.py
+|
+|diff --git a/sympy/parsing/mathematica.py | SYMBOL: mathematica
+|    index 000000..000000
+|    --- 000000
+|    +++ 000000
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 11: diff --git a/sympy/parsing/mathematica.py | SYMBOL: parse_mathematica b/sympy/parsing/mathematica.py
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memOFF/dc-gem-qwen3_06b-memOFF/sympy__sympy-24102/run_instance.log) for more information.
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 2
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 0
+Instances with empty patches: 0
+Instances with errors: 10
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen3_06b-memOFF.p15_qwen3_06b_memOFF.json

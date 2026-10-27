@@ -1,0 +1,27 @@
+[load] runs/fineweb_dc_gem/final_dc_gem_gen.pt → cuda
+[bench] prefill …
+[bench] decode …
+[bench] quality …
+
+========== FineWeb Inference Benchmark ==========
+ckpt          runs/fineweb_dc_gem/final_dc_gem_gen.pt
+device        cuda  bf16=True
+params        51.5M  weights=196.6 MiB
+config        d=384 L=6 V=52032 T=256 mem=2048
+--- Memory footprint ---
+VRAM peak     2334 MiB  (alloc 277 / reserved 2644 / total 16304)
+RSS max       1872 MiB
+GEM host      6.0 MiB  (keys/values on CPU)
+--- Speed ---
+prefill_memOFF         585,731 tok/s
+prefill_memON_ro       588,117 tok/s
+prefill_memON_filled   592,679 tok/s
+decode_memOFF          640 tok/s
+decode_memON           67 tok/s
+--- Quality ---
+val PPL OFF/ON   303.8 / 273.1
+OOW Exact ON/OFF 0.920 / 0.000
+Gen Exact ON/OFF 0.920 / 0.000
+sample memON     ' 8655.\nThe following is'
+====================================================
+[save] runs/fineweb_dc_gem/inference_bench_gen.json

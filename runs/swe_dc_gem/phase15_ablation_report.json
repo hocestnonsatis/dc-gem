@@ -1,0 +1,515 @@
+{
+  "phase": 15,
+  "model_name": "Qwen/Qwen3-0.6B",
+  "active_context_tokens": 2048,
+  "subset": [
+    "django__django-14534",
+    "django__django-13447",
+    "django__django-14999",
+    "django__django-15814",
+    "django__django-16255",
+    "django__django-16595",
+    "sympy__sympy-20590",
+    "sympy__sympy-22714",
+    "sympy__sympy-24102",
+    "pytest-dev__pytest-11143",
+    "pytest-dev__pytest-7490",
+    "scikit-learn__scikit-learn-25747"
+  ],
+  "variants": {
+    "memON": {
+      "n": 12,
+      "patch_applied_rate": 0.16666666666666666,
+      "target_symbol_recall": 0.16666666666666666,
+      "looks_like_diff_rate": 1.0,
+      "wall_s": 155.64624435000587,
+      "predictions_path": "runs/swe_dc_gem/predictions_qwen3_06b_memON.jsonl",
+      "model_name_or_path": "dc-gem-qwen3_06b-memON",
+      "instances": [
+        {
+          "instance_id": "django__django-14534",
+          "variant": "memON",
+          "pred_chars": 1433,
+          "looks_like_diff": true,
+          "patch_applied": true,
+          "target_symbol_recall": false,
+          "n_chunks": 373,
+          "n_retrieved": 4,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "django__django-13447",
+          "variant": "memON",
+          "pred_chars": 1004,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 290,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "django__django-14999",
+          "variant": "memON",
+          "pred_chars": 1694,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 422,
+          "n_retrieved": 5,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "django__django-15814",
+          "variant": "memON",
+          "pred_chars": 1169,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 392,
+          "n_retrieved": 7,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "django__django-16255",
+          "variant": "memON",
+          "pred_chars": 2343,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "n_chunks": 80,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "django__django-16595",
+          "variant": "memON",
+          "pred_chars": 2125,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "n_chunks": 6,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "sympy__sympy-20590",
+          "variant": "memON",
+          "pred_chars": 823,
+          "looks_like_diff": true,
+          "patch_applied": true,
+          "target_symbol_recall": false,
+          "n_chunks": 664,
+          "n_retrieved": 11,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "sympy__sympy-22714",
+          "variant": "memON",
+          "pred_chars": 755,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 239,
+          "n_retrieved": 7,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "sympy__sympy-24102",
+          "variant": "memON",
+          "pred_chars": 964,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 321,
+          "n_retrieved": 5,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "pytest-dev__pytest-11143",
+          "variant": "memON",
+          "pred_chars": 879,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 386,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "pytest-dev__pytest-7490",
+          "variant": "memON",
+          "pred_chars": 2920,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 351,
+          "n_retrieved": 5,
+          "disable_memory": false,
+          "use_lora": false
+        },
+        {
+          "instance_id": "scikit-learn__scikit-learn-25747",
+          "variant": "memON",
+          "pred_chars": 561,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 407,
+          "n_retrieved": 12,
+          "disable_memory": false,
+          "use_lora": false
+        }
+      ],
+      "harness": {
+        "ran": true,
+        "returncode": 0,
+        "resolved_instances": 0,
+        "report_file": "runs/swe_dc_gem/harness_phase15/dc-gem-qwen3_06b-memON.p15_qwen3_06b_memON.json",
+        "log": "runs/swe_dc_gem/harness_phase15/harness_p15_qwen3_06b_memON.log"
+      },
+      "resolved_count": 0,
+      "harness_report": "runs/swe_dc_gem/harness_phase15/dc-gem-qwen3_06b-memON.p15_qwen3_06b_memON.json",
+      "completed_instances": 2,
+      "error_instances": 10
+    },
+    "memON_LoRA": {
+      "n": 12,
+      "patch_applied_rate": 0.08333333333333333,
+      "target_symbol_recall": 0.4166666666666667,
+      "looks_like_diff_rate": 1.0,
+      "wall_s": 680.4309026580013,
+      "predictions_path": "runs/swe_dc_gem/predictions_qwen3_06b_memON_LoRA.jsonl",
+      "model_name_or_path": "dc-gem-qwen3_06b-memON_LoRA",
+      "instances": [
+        {
+          "instance_id": "django__django-14534",
+          "variant": "memON_LoRA",
+          "pred_chars": 1117,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "n_chunks": 373,
+          "n_retrieved": 4,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "django__django-13447",
+          "variant": "memON_LoRA",
+          "pred_chars": 3404,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 290,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "django__django-14999",
+          "variant": "memON_LoRA",
+          "pred_chars": 2249,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 422,
+          "n_retrieved": 5,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "django__django-15814",
+          "variant": "memON_LoRA",
+          "pred_chars": 2941,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 414,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "django__django-16255",
+          "variant": "memON_LoRA",
+          "pred_chars": 3325,
+          "looks_like_diff": true,
+          "patch_applied": true,
+          "target_symbol_recall": true,
+          "n_chunks": 80,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "django__django-16595",
+          "variant": "memON_LoRA",
+          "pred_chars": 2974,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "n_chunks": 6,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "sympy__sympy-20590",
+          "variant": "memON_LoRA",
+          "pred_chars": 3197,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 832,
+          "n_retrieved": 11,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "sympy__sympy-22714",
+          "variant": "memON_LoRA",
+          "pred_chars": 3079,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 197,
+          "n_retrieved": 8,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "sympy__sympy-24102",
+          "variant": "memON_LoRA",
+          "pred_chars": 3028,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 321,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "pytest-dev__pytest-11143",
+          "variant": "memON_LoRA",
+          "pred_chars": 3323,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "n_chunks": 386,
+          "n_retrieved": 6,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "pytest-dev__pytest-7490",
+          "variant": "memON_LoRA",
+          "pred_chars": 3222,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "n_chunks": 351,
+          "n_retrieved": 5,
+          "disable_memory": false,
+          "use_lora": true
+        },
+        {
+          "instance_id": "scikit-learn__scikit-learn-25747",
+          "variant": "memON_LoRA",
+          "pred_chars": 2691,
+          "looks_like_diff": true,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "n_chunks": 402,
+          "n_retrieved": 11,
+          "disable_memory": false,
+          "use_lora": true
+        }
+      ],
+      "harness": {
+        "ran": true,
+        "returncode": 0,
+        "resolved_instances": 0,
+        "report_file": "runs/swe_dc_gem/harness_phase15/dc-gem-qwen3_06b-memON_LoRA.p15_qwen3_06b_memON_LoRA.json",
+        "log": "runs/swe_dc_gem/harness_phase15/harness_p15_qwen3_06b_memON_LoRA.log"
+      },
+      "resolved_count": 0,
+      "harness_report": "runs/swe_dc_gem/harness_phase15/dc-gem-qwen3_06b-memON_LoRA.p15_qwen3_06b_memON_LoRA.json",
+      "completed_instances": 4,
+      "error_instances": 8
+    },
+    "memOFF": {
+      "n": 12,
+      "patch_applied_rate": 0.16666666666666666,
+      "target_symbol_recall": 0.3333333333333333,
+      "looks_like_diff_rate": 1.0,
+      "predictions_path": "runs/swe_dc_gem/predictions_qwen3_06b_memOFF.jsonl",
+      "model_name_or_path": "dc-gem-qwen3_06b-memOFF",
+      "instances": [
+        {
+          "instance_id": "django__django-14534",
+          "variant": "memOFF",
+          "pred_chars": 1951,
+          "patch_applied": true,
+          "target_symbol_recall": false,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "django__django-13447",
+          "variant": "memOFF",
+          "pred_chars": 489,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "django__django-14999",
+          "variant": "memOFF",
+          "pred_chars": 831,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "django__django-15814",
+          "variant": "memOFF",
+          "pred_chars": 1380,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "django__django-16255",
+          "variant": "memOFF",
+          "pred_chars": 2195,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "django__django-16595",
+          "variant": "memOFF",
+          "pred_chars": 3464,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "sympy__sympy-20590",
+          "variant": "memOFF",
+          "pred_chars": 823,
+          "patch_applied": true,
+          "target_symbol_recall": false,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "sympy__sympy-22714",
+          "variant": "memOFF",
+          "pred_chars": 981,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "sympy__sympy-24102",
+          "variant": "memOFF",
+          "pred_chars": 955,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "pytest-dev__pytest-11143",
+          "variant": "memOFF",
+          "pred_chars": 2074,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "pytest-dev__pytest-7490",
+          "variant": "memOFF",
+          "pred_chars": 2074,
+          "patch_applied": false,
+          "target_symbol_recall": true,
+          "looks_like_diff": true
+        },
+        {
+          "instance_id": "scikit-learn__scikit-learn-25747",
+          "variant": "memOFF",
+          "pred_chars": 379,
+          "patch_applied": false,
+          "target_symbol_recall": false,
+          "looks_like_diff": true
+        }
+      ],
+      "resolved_count": 0,
+      "harness": {
+        "run_id": "p15_qwen3_06b_memOFF",
+        "dataset": "SWE-bench/SWE-bench_Lite",
+        "predictions": "runs/swe_dc_gem/predictions_qwen3_06b_memOFF.jsonl",
+        "n_instances": 12,
+        "instance_ids": [
+          "django__django-14534",
+          "django__django-13447",
+          "django__django-14999",
+          "django__django-15814",
+          "django__django-16255",
+          "django__django-16595",
+          "sympy__sympy-20590",
+          "sympy__sympy-22714",
+          "sympy__sympy-24102",
+          "pytest-dev__pytest-11143",
+          "pytest-dev__pytest-7490",
+          "scikit-learn__scikit-learn-25747"
+        ],
+        "returncode": 0,
+        "resolved_instances": 0,
+        "report_file": "runs/swe_dc_gem/harness_phase15/dc-gem-qwen3_06b-memOFF.p15_qwen3_06b_memOFF.json",
+        "log": "runs/swe_dc_gem/harness_phase15/harness_p15_qwen3_06b_memOFF.log",
+        "success_criterion_met": false
+      }
+    }
+  },
+  "table": {
+    "memOFF": {
+      "patch_applied_rate_pct": 16.67,
+      "target_symbol_recall_pct": 33.33,
+      "resolved_count": 0,
+      "resolved_rate": "0/12",
+      "n": 12
+    },
+    "memON": {
+      "patch_applied_rate_pct": 16.67,
+      "target_symbol_recall_pct": 16.67,
+      "resolved_count": 0,
+      "resolved_rate": "0/12",
+      "n": 12
+    },
+    "memON_LoRA": {
+      "patch_applied_rate_pct": 8.33,
+      "target_symbol_recall_pct": 41.67,
+      "resolved_count": 0,
+      "resolved_rate": "0/12",
+      "n": 12
+    }
+  },
+  "notes": [
+    "d_model=1024 dynamic from HF config; enable_thinking=False",
+    "AST symbol chunks + fuzzy SEARCH/REPLACE",
+    "memory.reset() between tasks",
+    "Official harness: many error_instances due to empty/non-apply patches under 0.6B",
+    "Phase-14 3B still holds django-14534 resolve reference"
+  ]
+}

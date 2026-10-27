@@ -1,0 +1,39 @@
+{
+  "phase": 14,
+  "title": "DC-GEM hybrid SWE-bench resolve",
+  "date": "2026-10-18",
+  "success_criterion": "official harness resolved >= 1 SWE-bench Lite instance",
+  "success_criterion_met": true,
+  "resolved_instances": 1,
+  "resolved_ids": ["django__django-14534"],
+  "harness": {
+    "dataset": "SWE-bench/SWE-bench_Lite",
+    "run_id": "phase14_resolve1",
+    "report": "runs/swe_dc_gem/harness/dc-gem-qwen25-coder-3b.phase14_resolve1.json",
+    "summary": "runs/swe_dc_gem/harness/phase14_harness_summary_phase14_resolve1.json",
+    "predictions": "runs/swe_dc_gem/agent_django_fix2/predictions.jsonl"
+  },
+  "architecture": {
+    "core": "Qwen/Qwen2.5-Coder-3B-Instruct (HF bf16)",
+    "memory": "GEM episodic (encode → mean-pool → Wk/Wq)",
+    "agent": "retrieve (rg+keywords+FAIL_TO_PASS) → ingest → SEARCH/REPLACE→difflib → dry-run → predictions.jsonl",
+    "sft": "LoRA r=8 on princeton-nlp/SWE-bench train (short patches, no Lite test leak)",
+    "files": {
+      "hf_core": "dc_gem/hf_core.py",
+      "swe_bundle": "dc_gem/swe_bundle.py",
+      "agent": "examples/swe_agent_dc_gem.py",
+      "sft": "examples/finetune_swe_lora.py",
+      "harness_runner": "examples/run_swe_harness_phase14.py"
+    }
+  },
+  "sft": {
+    "adapter": "runs/swe_dc_gem/lora/adapter",
+    "report": "runs/swe_dc_gem/lora/sft_report.json",
+    "note": "resolve run used base Instruct (no LoRA); LoRA available via --lora-adapter"
+  },
+  "notes": [
+    "51M FineWeb core cannot produce apply-able SWE patches; hybrid HF+GEM required",
+    "django__django-14534: title-symbol targeting + .get() safe-dict variant selected gold-equivalent patch",
+    "Next: expand Lite subset (e.g. 50) for resolve-rate report; optional LoRA longer SFT"
+  ]
+}

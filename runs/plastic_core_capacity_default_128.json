@@ -1,0 +1,64 @@
+{
+  "dataset": "data/tinystories/tinystories_train.npy",
+  "seed": 11,
+  "train_tokens": 2048,
+  "segment_tokens": 256,
+  "compact_vocab": 256,
+  "train_oov": 182,
+  "A_oov": 70,
+  "B_oov": 73,
+  "C_oov": 67,
+  "width": 48,
+  "memory_capacity": 128,
+  "memory_match_threshold": 0.999,
+  "occupied_slots_after_exposure": 128,
+  "fresh_slot_allocations": 375,
+  "slot_replacements": 247,
+  "epochs": 2,
+  "mean_final_train_loss": 3.8539229705929756,
+  "before_memory": {
+    "A": {
+      "nll": 3.3402807414531708,
+      "perplexity": 28.227050096207183,
+      "top1": 0.26953125
+    },
+    "B": {
+      "nll": 3.3875854909420013,
+      "perplexity": 29.594409964427516,
+      "top1": 0.26171875
+    },
+    "C": {
+      "nll": 3.182776600122452,
+      "perplexity": 24.113614551095328,
+      "top1": 0.26171875
+    }
+  },
+  "A_after_A_exposure": {
+    "nll": 2.129685327410698,
+    "perplexity": 8.412219300083414,
+    "top1": 0.546875
+  },
+  "B_before_its_exposure": {
+    "nll": 3.565796345472336,
+    "perplexity": 35.367607026509965,
+    "top1": 0.296875
+  },
+  "B_after_A_and_B_exposure": {
+    "nll": 2.229275867342949,
+    "perplexity": 9.293134180437367,
+    "top1": 0.53515625
+  },
+  "A_after_B_exposure": {
+    "nll": 3.3995546400547028,
+    "perplexity": 29.950758208619842,
+    "top1": 0.27734375
+  },
+  "C_after_A_and_B_exposure": {
+    "nll": 3.248607963323593,
+    "perplexity": 25.754463794364018,
+    "top1": 0.3046875
+  },
+  "writes_A": 186,
+  "writes_B": 193,
+  "scope": "continual replay/retention probe, compact vocabulary; not language-quality benchmark"
+}

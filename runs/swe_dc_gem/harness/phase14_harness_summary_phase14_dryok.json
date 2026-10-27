@@ -1,0 +1,15 @@
+{
+  "run_id": "phase14_dryok",
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "predictions": "runs/swe_dc_gem/agent_sr/predictions_dryok.jsonl",
+  "n_instances": 2,
+  "instance_ids": [
+    "astropy__astropy-14365",
+    "django__django-14534"
+  ],
+  "returncode": 0,
+  "resolved_instances": 0,
+  "report_file": "runs/swe_dc_gem/harness/dc-gem-qwen25-coder-3b.phase14_dryok.json",
+  "log": "runs/swe_dc_gem/harness/harness_phase14_dryok.log",
+  "success_criterion_met": false
+}

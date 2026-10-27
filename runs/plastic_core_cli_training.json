@@ -1,0 +1,48 @@
+{
+  "dataset": "data/tinystories/tinystories_train.npy",
+  "tokenizer": "GPT-2 BPE, remapped to most frequent train-slice tokens",
+  "train_tokens": 2048,
+  "validation_tokens": 257,
+  "compact_vocab": 256,
+  "train_oov_mapped_to_unk": 182,
+  "validation_oov_mapped_to_unk": 70,
+  "width": 48,
+  "epochs": 2,
+  "seq_len": 32,
+  "mean_final_train_loss": 3.8539229705929756,
+  "validation_before_memory": {
+    "nll": 3.3402807414531708,
+    "perplexity": 28.227050096207183,
+    "top1": 0.26953125,
+    "memory_similarity_mean": -1.0,
+    "memory_similarity_p90": -1.0,
+    "memory_similarity_max": -1.0
+  },
+  "validation_replay_with_memory": {
+    "nll": 0.8369327560067177,
+    "perplexity": 2.3092729991271654,
+    "top1": 0.88671875,
+    "memory_similarity_mean": 0.9812859360827133,
+    "memory_similarity_p90": 1.0,
+    "memory_similarity_max": 1.0
+  },
+  "validation_replay_without_memory_after_exposure": {
+    "nll": 3.3402807414531708,
+    "perplexity": 28.227050096207183,
+    "top1": 0.26953125,
+    "memory_similarity_mean": -1.0,
+    "memory_similarity_p90": -1.0,
+    "memory_similarity_max": -1.0
+  },
+  "checkpoint_replay_with_memory": {
+    "nll": 0.8369327560067177,
+    "perplexity": 2.3092729991271654,
+    "top1": 0.88671875,
+    "memory_similarity_mean": 0.9812859360827133,
+    "memory_similarity_p90": 1.0,
+    "memory_similarity_max": 1.0
+  },
+  "memory_writes": 231,
+  "checkpoint": "runs/plastic_core_cli_input.pt",
+  "scope": "small CPU language-model pilot; compact vocabulary, not full GPT-2 language quality"
+}

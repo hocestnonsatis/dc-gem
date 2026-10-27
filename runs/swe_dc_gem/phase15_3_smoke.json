@@ -1,0 +1,83 @@
+{
+  "phase": 15.3,
+  "min_symbol_sim": 0.15,
+  "max_retrieved_symbols": 2,
+  "hybrid_score": "0.5*cos + 0.5*lex",
+  "coverage_aware_gating": true,
+  "rows": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memOFF",
+      "apply%": 16.67,
+      "symRec%": 33.33,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_2_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON",
+      "apply%": 16.67,
+      "symRec%": 16.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_2_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON_LoRA",
+      "apply%": 8.33,
+      "symRec%": 41.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_2_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memOFF",
+      "apply%": 100.0,
+      "symRec%": 50.0,
+      "gem_hit_rate%": 0.0,
+      "resolved_count": 1,
+      "resolved_ids": [
+        "django__django-15814"
+      ],
+      "source": "phase15_3"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memON",
+      "apply%": 100.0,
+      "symRec%": 50.0,
+      "gem_hit_rate%": 50.0,
+      "resolved_count": 2,
+      "resolved_ids": [
+        "django__django-14534",
+        "django__django-15814"
+      ],
+      "source": "phase15_3"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memON_LoRA",
+      "apply%": 100.0,
+      "symRec%": 50.0,
+      "gem_hit_rate%": 50.0,
+      "resolved_count": 2,
+      "resolved_ids": [
+        "django__django-14534",
+        "django__django-15814"
+      ],
+      "source": "phase15_3"
+    }
+  ],
+  "notes": [
+    "Coverage-aware OOW gate: skip GEM when target already in-window",
+    "memON prioritizes title symbols into active window",
+    "Target: memON resolves both django-14534 and django-15814",
+    "memory.reset() between tasks"
+  ]
+}

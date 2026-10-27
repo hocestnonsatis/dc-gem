@@ -1,0 +1,58 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]Error in evaluation for django__django-14534: >>>>> Patch Apply Failed:
+patching file django/forms/boundfield.py
+patch: **** malformed patch at line 11: @@ -10,10 +10,10 @@
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memOFF/dc-gem-ternary_bonsai_2_9b_gguf-memOFF/django__django-14534/run_instance.log) for more information.
+  8%|▊         | 1/12 [00:16<02:58, 16.24s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:16<02:58, 16.24s/it]1 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:18<01:34,  9.49s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:18<01:34,  9.49s/it]2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:35<01:46, 11.89s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:35<01:46, 11.89s/it]3 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:15,  9.43s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:15,  9.43s/it]Error in evaluation for django__django-16595: >>>>> Patch Apply Failed:
+patching file django/db/migrations/optimizer.py
+patch: **** malformed patch at line 9: @@ -10,10 +12,14 @@
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memOFF/dc-gem-ternary_bonsai_2_9b_gguf-memOFF/django__django-16595/run_instance.log) for more information.
+4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:54<01:15, 10.80s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:54<01:15, 10.80s/it]5 ran successfully, 0 failed:  50%|█████     | 6/12 [00:54<00:54,  9.04s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:54<00:54,  9.04s/it]Error in evaluation for pytest-dev__pytest-11143: >>>>> Patch Apply Failed:
+patching file testing/test_assertrewrite.py
+patch: **** malformed patch at line 11: @@ -10,10 +10,10 @@
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memOFF/dc-gem-ternary_bonsai_2_9b_gguf-memOFF/pytest-dev__pytest-11143/run_instance.log) for more information.
+6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:09<00:49,  9.93s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:09<00:49,  9.93s/it]Error in evaluation for scikit-learn__scikit-learn-25747: >>>>> Patch Apply Failed:
+patching file sklearn/utils/_set_output.py
+patch: **** malformed patch at line 12: @@ -130,7 +133,10 @@ def _wrap_in_pandas_container(
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memOFF/dc-gem-ternary_bonsai_2_9b_gguf-memOFF/scikit-learn__scikit-learn-25747/run_instance.log) for more information.
+7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:13<00:36,  9.16s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:13<00:36,  9.16s/it]Error in evaluation for sympy__sympy-20590: >>>>> Patch Apply Failed:
+patching file sympy/core/function.py
+patch: **** malformed patch at line 14: @@ -12,10 +12,10 @@
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memOFF/dc-gem-ternary_bonsai_2_9b_gguf-memOFF/sympy__sympy-20590/run_instance.log) for more information.
+8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:25<00:28,  9.45s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:25<00:28,  9.45s/it]Error in evaluation for sympy__sympy-22714: >>>>> Patch Apply Failed:
+patching file sympy/core/sympify.py
+patch: **** malformed patch at line 10: @@ -476,7 +479,10 @@ class SympifyError.__str__:
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memOFF/dc-gem-ternary_bonsai_2_9b_gguf-memOFF/sympy__sympy-22714/run_instance.log) for more information.
+9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:29<00:17,  8.90s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:29<00:17,  8.90s/it]Error in evaluation for sympy__sympy-24102: >>>>> Patch Apply Failed:
+patching file sympy/parsing/mathematica.py
+patch: **** malformed patch at line 12:          number_of_arguments = max(numbers)
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memOFF/dc-gem-ternary_bonsai_2_9b_gguf-memOFF/sympy__sympy-24102/run_instance.log) for more information.
+10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:40<00:09,  9.17s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:40<00:09,  9.17s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:44<00:00,  8.73s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:44<00:00,  8.73s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:44<00:00,  8.73s/it]
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 5
+Instances incomplete: 0
+Instances resolved: 2
+Instances unresolved: 3
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 1
+Instances with empty patches: 0
+Instances with errors: 7
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase16/dc-gem-ternary_bonsai_2_9b_gguf-memOFF.p16_ternary_bonsai_2_9b_gguf_memOFF.json

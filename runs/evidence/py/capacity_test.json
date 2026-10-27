@@ -1,0 +1,35 @@
+{
+  "seed": 0,
+  "results": {
+    "5": {
+      "steps": 200,
+      "epochs": 40,
+      "regex": 0.0,
+      "firstline": 0.0
+    },
+    "10": {
+      "steps": 300,
+      "epochs": 30,
+      "regex": 0.0,
+      "firstline": 0.0
+    },
+    "20": {
+      "steps": 600,
+      "epochs": 30,
+      "regex": 0.0,
+      "firstline": 0.0
+    },
+    "40": {
+      "steps": 1200,
+      "epochs": 30,
+      "regex": 0.0,
+      "firstline": 0.0
+    },
+    "80": {
+      "steps": 2400,
+      "epochs": 30,
+      "regex": 0.0,
+      "firstline": 0.0
+    }
+  }
+}

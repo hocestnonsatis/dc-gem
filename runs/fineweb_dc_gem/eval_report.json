@@ -1,0 +1,37 @@
+{
+  "ckpt": "runs/fineweb_dc_gem/final_dc_gem.pt",
+  "val_ppl_mem_off": {
+    "nll": 5.62094509601593,
+    "ppl": 276.15024844363256
+  },
+  "val_ppl_mem_on": {
+    "nll": 5.646373581886292,
+    "ppl": 283.2623731905591
+  },
+  "oow": {
+    "n_facts": 25,
+    "distractor_tokens": 200,
+    "exact_match_mem_on": 0.0,
+    "exact_match_mem_off": 0.0,
+    "target_ppl_mem_on": 548.8917973149586,
+    "target_ppl_mem_off": 688.8242852815466
+  },
+  "generations": {
+    "prompt": "The secret password of castle Zorg is",
+    "mem_off": "The secret password of castle Zorg is a of the 10th century.\nThe 10th century of the 20th century, the 20",
+    "mem_on": "The secret password of castle Zorg is a of the 10th century.\nThe 10th century of the 20th century, the 20",
+    "mem_off_cont": " a of the 10th century.\nThe 10th century of the 20th century, the 20",
+    "mem_on_cont": " a of the 10th century.\nThe 10th century of the 20th century, the 20",
+    "contains_8492_on": false,
+    "contains_8492_off": false
+  },
+  "punct_token_ids": [
+    0,
+    11,
+    13,
+    26,
+    30,
+    198,
+    52000
+  ]
+}

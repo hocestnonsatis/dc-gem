@@ -1,0 +1,22 @@
+Running 2 instances...
+  0%|          | 0/2 [00:00<?, ?it/s]Error in evaluation for django__django-15814: >>>>> Patch Apply Failed:
+patching file django/core/management/__init__.py
+patch: **** malformed patch at line 12: @@ -10,6 +11,7 @@ from django.utils.module_loading import import_module
+
+
+Check (logs/run_evaluation/p153c_qwen25_coder_3b_instruct_memOFF/dc-gem-qwen25_coder_3b_instruct-memOFF/django__django-15814/run_instance.log) for more information.
+ 50%|█████     | 1/2 [00:16<00:16, 16.28s/it]1 ran successfully, 0 failed:  50%|█████     | 1/2 [00:16<00:16, 16.28s/it]1 ran successfully, 0 failed: 100%|██████████| 2/2 [00:19<00:00,  9.87s/it]2 ran successfully, 0 failed: 100%|██████████| 2/2 [00:19<00:00,  9.87s/it]2 ran successfully, 0 failed: 100%|██████████| 2/2 [00:19<00:00,  9.87s/it]
+All instances run.
+Total instances: 2
+Instances submitted: 2
+Instances completed: 1
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 1
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 0
+Instances with empty patches: 0
+Instances with errors: 1
+Unstopped containers: 0
+Unremoved images: 2
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen25_coder_3b_instruct-memOFF.p153c_qwen25_coder_3b_instruct_memOFF.json

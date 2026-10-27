@@ -1,0 +1,22 @@
+{
+  "dataset": "data/tinystories/tinystories_train.npy",
+  "tokenizer": "GPT-2 BPE ids from local TinyStories training stream",
+  "tokens": 256,
+  "width": 128,
+  "surprise_threshold": 0.0,
+  "memory_logit_scale": 4.0,
+  "start": 0,
+  "seed": 7,
+  "baseline": {
+    "nll": 10.950057983398438,
+    "perplexity": 56957.34765625,
+    "top1": 0.0
+  },
+  "after_one_exposure": {
+    "nll": 9.314899444580078,
+    "perplexity": 11102.2099609375,
+    "top1": 0.23828125
+  },
+  "writes": 256,
+  "scope": "untrained-core exact-stream replay probe; not language quality"
+}

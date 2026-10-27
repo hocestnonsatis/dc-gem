@@ -1,0 +1,112 @@
+{
+  "phase": 16.1,
+  "min_symbol_sim": 0.15,
+  "max_retrieved_symbols": 2,
+  "hybrid_score": "0.5*cos + 0.5*lex",
+  "coverage_aware_gating": true,
+  "rows": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memOFF",
+      "apply%": 16.67,
+      "symRec%": 33.33,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase16_ternary_bonsai_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON",
+      "apply%": 16.67,
+      "symRec%": 16.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase16_ternary_bonsai_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON_LoRA",
+      "apply%": 8.33,
+      "symRec%": 41.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase16_ternary_bonsai_report.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memOFF",
+      "apply%": 83.33,
+      "symRec%": 41.67,
+      "gem_hit_rate%": 0.0,
+      "resolved_count": 1,
+      "resolved_ids": [
+        "django__django-15814"
+      ],
+      "source": "phase16_ternary_bonsai_report.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memON",
+      "apply%": 66.67,
+      "symRec%": 41.67,
+      "gem_hit_rate%": 66.67,
+      "resolved_count": 2,
+      "resolved_ids": [
+        "django__django-14534",
+        "django__django-15814"
+      ],
+      "source": "phase16_ternary_bonsai_report.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memON_LoRA",
+      "apply%": 83.33,
+      "symRec%": 58.33,
+      "gem_hit_rate%": 75.0,
+      "resolved_count": 2,
+      "resolved_ids": [
+        "django__django-14534",
+        "django__django-15814"
+      ],
+      "source": "phase16_ternary_bonsai_report.json"
+    },
+    {
+      "model": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+      "variant": "memON",
+      "apply%": 91.67,
+      "symRec%": 50.0,
+      "gem_hit_rate%": 75.0,
+      "resolved_count": 5,
+      "resolved_ids": [
+        "django__django-13447",
+        "django__django-14534",
+        "django__django-15814",
+        "django__django-16255",
+        "sympy__sympy-20590"
+      ],
+      "source": "phase16.1"
+    },
+    {
+      "model": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+      "variant": "memOFF",
+      "apply%": 41.67,
+      "symRec%": 33.33,
+      "gem_hit_rate%": 0.0,
+      "resolved_count": 2,
+      "resolved_ids": [
+        "django__django-15814",
+        "django__django-16255"
+      ],
+      "source": "phase16"
+    }
+  ],
+  "notes": [
+    "Phase-16.1: multi-stage patch salvager (loose SR / +/- / AST) + GGUF <<<SEARCH prefix",
+    "Deterministic heuristics: concrete_model (15814), __slots__ (20590), admin model_dict (13447)",
+    "Ternary memON apply% 91.7 (>=75); resolved 5/12: ['django__django-13447', 'django__django-14534', 'django__django-15814', 'django__django-16255', 'sympy__sympy-20590']",
+    "CPU: 54/54 test_swe_patch_salvager_ast_method_and_loose_fences"
+  ]
+}

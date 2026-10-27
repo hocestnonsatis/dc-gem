@@ -1,0 +1,16 @@
+Running 2 instances...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:19<00:19, 19.30s/it]1 ran successfully, 0 failed:  50%|█████     | 1/2 [00:19<00:19, 19.30s/it]1 ran successfully, 0 failed: 100%|██████████| 2/2 [00:19<00:00,  9.92s/it]2 ran successfully, 0 failed: 100%|██████████| 2/2 [00:19<00:00,  9.92s/it]2 ran successfully, 0 failed: 100%|██████████| 2/2 [00:19<00:00,  9.92s/it]
+All instances run.
+Total instances: 2
+Instances submitted: 2
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 1
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 0
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 2
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen25_coder_3b_instruct-memOFF.p153d_qwen25_coder_3b_instruct_memOFF.json

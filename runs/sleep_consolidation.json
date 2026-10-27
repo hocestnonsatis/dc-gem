@@ -1,0 +1,11 @@
+{
+  "n_facts": 20,
+  "steps": 500,
+  "rank": 16,
+  "pre_sleep_memoff_exact": 0.0,
+  "post_sleep_memoff_exact": 1.0,
+  "improvement": 1.0,
+  "pre_retention_ppl": 1.9529855251312256,
+  "post_retention_ppl": 1.8828754425048828,
+  "ppl_ratio": 0.9641010741123481
+}

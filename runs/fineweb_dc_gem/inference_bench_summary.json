@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-18",
+  "hardware": {
+    "device": "cuda/ROCm",
+    "vram_total_mb": 16304,
+    "notes": "RX-class ~16GB; GEM host-memory (CPU) path"
+  },
+  "model": {
+    "n_params_m": 51.5,
+    "weights_mb": 196.6,
+    "d": 384,
+    "n_layers": 6,
+    "vocab_size": 52032,
+    "max_seq_len": 256,
+    "memory_size": 2048,
+    "gem_host_mb": 6.0
+  },
+  "inference_requirements": {
+    "weights_vram_mb": 197,
+    "idle_after_load_vram_mb": 197,
+    "peak_vram_eval_mb": 2334,
+    "peak_vram_decode_only_mb": 298,
+    "rss_process_mb": 1870,
+    "gem_host_ram_mb": 6,
+    "recommended_min_vram_mb": 512,
+    "recommended_comfortable_vram_mb": 3072,
+    "recommended_ram_mb": 3072,
+    "notes": "Core+head GPU bf16; GEM keys/values CPU. Peak ~2.3GiB eval (B=8 PPL). Decode B=1 ~300MiB VRAM."
+  },
+  "speed": {
+    "prefill_B8_T256_bf16_tok_s": {
+      "gen_memOFF": 585731,
+      "gen_memON": 592679,
+      "sleep_memOFF": 405998,
+      "sleep_memON": 371775
+    },
+    "decode_B1_tok_s": {
+      "gen_memOFF": 640,
+      "gen_memON": 67,
+      "sleep_memOFF": 645,
+      "sleep_memON": 78,
+      "gen_memOFF_64tok_run": 398,
+      "gen_memON_64tok_run": 83
+    },
+    "decode_ms_per_token_approx": {
+      "memOFF": 1.6,
+      "memON": 12.0
+    },
+    "bottleneck": "memON decode ~8–10× slower: her adımda CPU GEM query + host↔device transfer"
+  },
+  "quality": {
+    "final_dc_gem_gen.pt": {
+      "val_ppl_off": 303.8,
+      "val_ppl_on": 273.1,
+      "oow_exact_on": 0.92,
+      "oow_exact_off": 0.0,
+      "generate_exact_on": 0.92,
+      "generate_exact_off": 0.0,
+      "sleep_facts_memOFF_exact": 0.0
+    },
+    "final_dc_gem_sleep.pt": {
+      "val_ppl_off": 327.1,
+      "val_ppl_on": 310.4,
+      "oow_exact_on": 0.92,
+      "oow_exact_off": 0.0,
+      "generate_exact_on": 0.92,
+      "generate_exact_off": 0.0,
+      "sleep_facts_memOFF_exact": 0.60,
+      "note": "50 fact çekirdeğe konsolide; GEM kapalıyken Exact 0.60"
+    }
+  },
+  "artifacts": {
+    "gen_bench": "runs/fineweb_dc_gem/inference_bench_gen.json",
+    "sleep_bench": "runs/fineweb_dc_gem/inference_bench_sleep.json",
+    "script": "examples/bench_fineweb_inference.py"
+  }
+}

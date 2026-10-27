@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "vocab_size": 52032,
+    "actual_vocab_size": 52022,
+    "eos_token_id": 52002,
+    "train_tokens": 95000000,
+    "val_tokens": 5000000,
+    "source_repo": "anisoleai/fineweb-tokenized",
+    "source_parquet": "data/fineweb/data_1/shard-00000.parquet",
+    "max_tokens_arg": 100000000,
+    "dtype": "uint16"
+  },
+  "args": {
+    "data_dir": "data/fineweb",
+    "out_dir": "runs/fineweb_dc_gem",
+    "d_model": 384,
+    "n_layers": 6,
+    "n_heads": 6,
+    "seq_len": 256,
+    "batch": 16,
+    "max_slots": 2048,
+    "phase1_tokens": 0,
+    "phase2_tokens": 3000000,
+    "eval_interval": 250,
+    "eval_batches": 20,
+    "log_interval": 50,
+    "sleep_interval": 500,
+    "sleep_steps": 40,
+    "seed": 0,
+    "skip_phase1": true,
+    "phase1_ckpt": "runs/fineweb_dc_gem/phase1_core.pt"
+  },
+  "n_params": 51548162,
+  "device": "cuda",
+  "phase1": {
+    "skipped": true
+  },
+  "phase2": {
+    "steps": [
+      {
+        "step": 250,
+        "tokens": 1024000,
+        "mem_on": {
+          "nll": 5.70311279296875,
+          "ppl": 299.7991627497849
+        },
+        "mem_off": {
+          "nll": 5.620309376716614,
+          "ppl": 275.9747501909096
+        },
+        "tps": 13359.047455410257
+      },
+      {
+        "step": 500,
+        "tokens": 2048000,
+        "mem_on": {
+          "nll": 5.690920376777649,
+          "ppl": 296.166079620802
+        },
+        "mem_off": {
+          "nll": 5.674201655387878,
+          "ppl": 291.25572326667805
+        },
+        "tps": 12910.909310398367
+      },
+      {
+        "step": 732,
+        "tokens": 2998272,
+        "mem_on": {
+          "nll": 5.601589179039001,
+          "ppl": 270.8565050649855
+        },
+        "mem_off": {
+          "nll": 5.652976322174072,
+          "ppl": 285.1388692648181
+        },
+        "tps": 14940.146366963716
+      }
+    ],
+    "sleeps": [
+      {
+        "step": 500,
+        "n_replay": 2048,
+        "merged": 4,
+        "kl": 0.0006001773290336132,
+        "final_loss": 5.522692680358887
+      }
+    ],
+    "tokens_seen": 2998272,
+    "wall_s": 264.0913644260145
+  },
+  "phase1_summary": {
+    "tokens": 24997888,
+    "steps": 6103,
+    "val_ppl_start_approx": 783.42,
+    "val_ppl_end": 282.6,
+    "n_params": 51548162,
+    "note": "memOFF warmup; tok/s in early logs unsynced (async). Phase2 ~12-15k tok/s synced."
+  },
+  "phase2_summary": {
+    "tokens": 2998272,
+    "steps": 732,
+    "final_mem_on_ppl": 270.86,
+    "final_mem_off_ppl": 285.14,
+    "tok_per_s_approx": 12000
+  }
+}

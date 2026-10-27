@@ -1,0 +1,1135 @@
+{
+  "gen_model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "embed_model": "BAAI/bge-small-en-v1.5",
+  "n_facts": 20,
+  "retrieval_accuracy": {
+    "dense": 0.95,
+    "hybrid": 1.0
+  },
+  "variants": {
+    "direct": {
+      "memON_exact_match": 1.0,
+      "memOFF_exact_match": 0.0,
+      "gap": 1.0,
+      "memON_details": [
+        {
+          "id": 0,
+          "name": "Z00",
+          "code": "1000",
+          "query": "The secret password of castle Z00 is",
+          "generated": "1000\nExplanation: The question asks for",
+          "extracted": "1000",
+          "correct": true
+        },
+        {
+          "id": 1,
+          "name": "Z01",
+          "code": "1037",
+          "query": "The secret password of castle Z01 is",
+          "generated": "1037\nThis answer is correct because the",
+          "extracted": "1037",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "name": "Z02",
+          "code": "1074",
+          "query": "The secret password of castle Z02 is",
+          "generated": "1074\nThis answer is correct because the",
+          "extracted": "1074",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "name": "Z03",
+          "code": "1111",
+          "query": "The secret password of castle Z03 is",
+          "generated": "1111\nThis answer is correct because the",
+          "extracted": "1111",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "name": "Z04",
+          "code": "1148",
+          "query": "The secret password of castle Z04 is",
+          "generated": "1148\nThis answer is correct because the",
+          "extracted": "1148",
+          "correct": true
+        },
+        {
+          "id": 5,
+          "name": "Z05",
+          "code": "1185",
+          "query": "The secret password of castle Z05 is",
+          "generated": "1185\nThis answer is correct because the",
+          "extracted": "1185",
+          "correct": true
+        },
+        {
+          "id": 6,
+          "name": "Z06",
+          "code": "1222",
+          "query": "The secret password of castle Z06 is",
+          "generated": "1222\nThis answer is correct because the",
+          "extracted": "1222",
+          "correct": true
+        },
+        {
+          "id": 7,
+          "name": "Z07",
+          "code": "1259",
+          "query": "The secret password of castle Z07 is",
+          "generated": "1259\nExplanation: The question asks for",
+          "extracted": "1259",
+          "correct": true
+        },
+        {
+          "id": 8,
+          "name": "Z08",
+          "code": "1296",
+          "query": "The secret password of castle Z08 is",
+          "generated": "1296\nExplanation: The secret password of",
+          "extracted": "1296",
+          "correct": true
+        },
+        {
+          "id": 9,
+          "name": "Z09",
+          "code": "1333",
+          "query": "The secret password of castle Z09 is",
+          "generated": "1333\nExplanation: The question asks for",
+          "extracted": "1333",
+          "correct": true
+        },
+        {
+          "id": 10,
+          "name": "Z10",
+          "code": "1370",
+          "query": "The secret password of castle Z10 is",
+          "generated": "1370\nThis answer is correct because the",
+          "extracted": "1370",
+          "correct": true
+        },
+        {
+          "id": 11,
+          "name": "Z11",
+          "code": "1407",
+          "query": "The secret password of castle Z11 is",
+          "generated": "1407\nThis answer is correct because the",
+          "extracted": "1407",
+          "correct": true
+        },
+        {
+          "id": 12,
+          "name": "Z12",
+          "code": "1444",
+          "query": "The secret password of castle Z12 is",
+          "generated": "1444\nThis answer is correct because the",
+          "extracted": "1444",
+          "correct": true
+        },
+        {
+          "id": 13,
+          "name": "Z13",
+          "code": "1481",
+          "query": "The secret password of castle Z13 is",
+          "generated": "1481\nThis answer is correct because the",
+          "extracted": "1481",
+          "correct": true
+        },
+        {
+          "id": 14,
+          "name": "Z14",
+          "code": "1518",
+          "query": "The secret password of castle Z14 is",
+          "generated": "1518\nThis answer is correct because the",
+          "extracted": "1518",
+          "correct": true
+        },
+        {
+          "id": 15,
+          "name": "Z15",
+          "code": "1555",
+          "query": "The secret password of castle Z15 is",
+          "generated": "1555\nExplanation: The question asks for",
+          "extracted": "1555",
+          "correct": true
+        },
+        {
+          "id": 16,
+          "name": "Z16",
+          "code": "1592",
+          "query": "The secret password of castle Z16 is",
+          "generated": "1592\nThis answer is correct because the",
+          "extracted": "1592",
+          "correct": true
+        },
+        {
+          "id": 17,
+          "name": "Z17",
+          "code": "1629",
+          "query": "The secret password of castle Z17 is",
+          "generated": "1629\nThis answer is correct because the",
+          "extracted": "1629",
+          "correct": true
+        },
+        {
+          "id": 18,
+          "name": "Z18",
+          "code": "1666",
+          "query": "The secret password of castle Z18 is",
+          "generated": "1666\nThis answer is correct because the",
+          "extracted": "1666",
+          "correct": true
+        },
+        {
+          "id": 19,
+          "name": "Z19",
+          "code": "1703",
+          "query": "The secret password of castle Z19 is",
+          "generated": "1703\nThis answer is correct because the",
+          "extracted": "1703",
+          "correct": true
+        }
+      ],
+      "memOFF_details": [
+        {
+          "id": 0,
+          "name": "Z00",
+          "code": "1000",
+          "query": "The secret password of castle Z00 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 1,
+          "name": "Z01",
+          "code": "1037",
+          "query": "The secret password of castle Z01 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 2,
+          "name": "Z02",
+          "code": "1074",
+          "query": "The secret password of castle Z02 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 3,
+          "name": "Z03",
+          "code": "1111",
+          "query": "The secret password of castle Z03 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 4,
+          "name": "Z04",
+          "code": "1148",
+          "query": "The secret password of castle Z04 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 5,
+          "name": "Z05",
+          "code": "1185",
+          "query": "The secret password of castle Z05 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 6,
+          "name": "Z06",
+          "code": "1222",
+          "query": "The secret password of castle Z06 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 7,
+          "name": "Z07",
+          "code": "1259",
+          "query": "The secret password of castle Z07 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 8,
+          "name": "Z08",
+          "code": "1296",
+          "query": "The secret password of castle Z08 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 9,
+          "name": "Z09",
+          "code": "1333",
+          "query": "The secret password of castle Z09 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 10,
+          "name": "Z10",
+          "code": "1370",
+          "query": "The secret password of castle Z10 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 11,
+          "name": "Z11",
+          "code": "1407",
+          "query": "The secret password of castle Z11 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 12,
+          "name": "Z12",
+          "code": "1444",
+          "query": "The secret password of castle Z12 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 13,
+          "name": "Z13",
+          "code": "1481",
+          "query": "The secret password of castle Z13 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 14,
+          "name": "Z14",
+          "code": "1518",
+          "query": "The secret password of castle Z14 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 15,
+          "name": "Z15",
+          "code": "1555",
+          "query": "The secret password of castle Z15 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 16,
+          "name": "Z16",
+          "code": "1592",
+          "query": "The secret password of castle Z16 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 17,
+          "name": "Z17",
+          "code": "1629",
+          "query": "The secret password of castle Z17 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 18,
+          "name": "Z18",
+          "code": "1666",
+          "query": "The secret password of castle Z18 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 19,
+          "name": "Z19",
+          "code": "1703",
+          "query": "The secret password of castle Z19 is",
+          "generated": "1234567890",
+          "extracted": null,
+          "correct": false
+        }
+      ]
+    },
+    "paraphrase": {
+      "memON_exact_match": 1.0,
+      "memOFF_exact_match": 0.0,
+      "gap": 1.0,
+      "memON_details": [
+        {
+          "id": 0,
+          "name": "Z00",
+          "code": "1000",
+          "query": "What is the password for castle Z00?",
+          "generated": "1000\nExplanation: The question asks for",
+          "extracted": "1000",
+          "correct": true
+        },
+        {
+          "id": 1,
+          "name": "Z01",
+          "code": "1037",
+          "query": "What is the password for castle Z01?",
+          "generated": "1037\nThis answer is correct because it",
+          "extracted": "1037",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "name": "Z02",
+          "code": "1074",
+          "query": "What is the password for castle Z02?",
+          "generated": "1074\nThis answer is correct because it",
+          "extracted": "1074",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "name": "Z03",
+          "code": "1111",
+          "query": "What is the password for castle Z03?",
+          "generated": "1111\nExplanation: The question asks for",
+          "extracted": "1111",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "name": "Z04",
+          "code": "1148",
+          "query": "What is the password for castle Z04?",
+          "generated": "1148\nThis answer is correct because it",
+          "extracted": "1148",
+          "correct": true
+        },
+        {
+          "id": 5,
+          "name": "Z05",
+          "code": "1185",
+          "query": "What is the password for castle Z05?",
+          "generated": "1185\nThis answer is correct because it",
+          "extracted": "1185",
+          "correct": true
+        },
+        {
+          "id": 6,
+          "name": "Z06",
+          "code": "1222",
+          "query": "What is the password for castle Z06?",
+          "generated": "1222\nThis answer is correct because it",
+          "extracted": "1222",
+          "correct": true
+        },
+        {
+          "id": 7,
+          "name": "Z07",
+          "code": "1259",
+          "query": "What is the password for castle Z07?",
+          "generated": "1259\nThis answer is correct because it",
+          "extracted": "1259",
+          "correct": true
+        },
+        {
+          "id": 8,
+          "name": "Z08",
+          "code": "1296",
+          "query": "What is the password for castle Z08?",
+          "generated": "1296\nThis answer is correct because it",
+          "extracted": "1296",
+          "correct": true
+        },
+        {
+          "id": 9,
+          "name": "Z09",
+          "code": "1333",
+          "query": "What is the password for castle Z09?",
+          "generated": "1333\nExplanation: The question asks for",
+          "extracted": "1333",
+          "correct": true
+        },
+        {
+          "id": 10,
+          "name": "Z10",
+          "code": "1370",
+          "query": "What is the password for castle Z10?",
+          "generated": "1370\nThis answer is correct because it",
+          "extracted": "1370",
+          "correct": true
+        },
+        {
+          "id": 11,
+          "name": "Z11",
+          "code": "1407",
+          "query": "What is the password for castle Z11?",
+          "generated": "1407\nThis answer is correct because it",
+          "extracted": "1407",
+          "correct": true
+        },
+        {
+          "id": 12,
+          "name": "Z12",
+          "code": "1444",
+          "query": "What is the password for castle Z12?",
+          "generated": "1444\nThis answer is correct because it",
+          "extracted": "1444",
+          "correct": true
+        },
+        {
+          "id": 13,
+          "name": "Z13",
+          "code": "1481",
+          "query": "What is the password for castle Z13?",
+          "generated": "1481\nThis answer is correct because it",
+          "extracted": "1481",
+          "correct": true
+        },
+        {
+          "id": 14,
+          "name": "Z14",
+          "code": "1518",
+          "query": "What is the password for castle Z14?",
+          "generated": "1518\nThis answer is correct because it",
+          "extracted": "1518",
+          "correct": true
+        },
+        {
+          "id": 15,
+          "name": "Z15",
+          "code": "1555",
+          "query": "What is the password for castle Z15?",
+          "generated": "1555\nThis answer is correct because it",
+          "extracted": "1555",
+          "correct": true
+        },
+        {
+          "id": 16,
+          "name": "Z16",
+          "code": "1592",
+          "query": "What is the password for castle Z16?",
+          "generated": "1592\nThis answer is correct because it",
+          "extracted": "1592",
+          "correct": true
+        },
+        {
+          "id": 17,
+          "name": "Z17",
+          "code": "1629",
+          "query": "What is the password for castle Z17?",
+          "generated": "1629\nThis answer is correct because it",
+          "extracted": "1629",
+          "correct": true
+        },
+        {
+          "id": 18,
+          "name": "Z18",
+          "code": "1666",
+          "query": "What is the password for castle Z18?",
+          "generated": "1666\nThis answer is correct because it",
+          "extracted": "1666",
+          "correct": true
+        },
+        {
+          "id": 19,
+          "name": "Z19",
+          "code": "1703",
+          "query": "What is the password for castle Z19?",
+          "generated": "1703\nThis answer is correct because it",
+          "extracted": "1703",
+          "correct": true
+        }
+      ],
+      "memOFF_details": [
+        {
+          "id": 0,
+          "name": "Z00",
+          "code": "1000",
+          "query": "What is the password for castle Z00?",
+          "generated": "The password for castle Z00 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 1,
+          "name": "Z01",
+          "code": "1037",
+          "query": "What is the password for castle Z01?",
+          "generated": "The password for castle Z01 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 2,
+          "name": "Z02",
+          "code": "1074",
+          "query": "What is the password for castle Z02?",
+          "generated": "The password for castle Z02 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 3,
+          "name": "Z03",
+          "code": "1111",
+          "query": "What is the password for castle Z03?",
+          "generated": "The password for castle Z03 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 4,
+          "name": "Z04",
+          "code": "1148",
+          "query": "What is the password for castle Z04?",
+          "generated": "The password for castle Z04 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 5,
+          "name": "Z05",
+          "code": "1185",
+          "query": "What is the password for castle Z05?",
+          "generated": "The password for castle Z05 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 6,
+          "name": "Z06",
+          "code": "1222",
+          "query": "What is the password for castle Z06?",
+          "generated": "The password for castle Z06 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 7,
+          "name": "Z07",
+          "code": "1259",
+          "query": "What is the password for castle Z07?",
+          "generated": "The password for castle Z07 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 8,
+          "name": "Z08",
+          "code": "1296",
+          "query": "What is the password for castle Z08?",
+          "generated": "The password for castle Z08 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 9,
+          "name": "Z09",
+          "code": "1333",
+          "query": "What is the password for castle Z09?",
+          "generated": "The password for castle Z09 is \"castleZ0",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 10,
+          "name": "Z10",
+          "code": "1370",
+          "query": "What is the password for castle Z10?",
+          "generated": "The password for castle Z10 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 11,
+          "name": "Z11",
+          "code": "1407",
+          "query": "What is the password for castle Z11?",
+          "generated": "The password for castle Z11 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 12,
+          "name": "Z12",
+          "code": "1444",
+          "query": "What is the password for castle Z12?",
+          "generated": "The password for castle Z12 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 13,
+          "name": "Z13",
+          "code": "1481",
+          "query": "What is the password for castle Z13?",
+          "generated": "The password for castle Z13 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 14,
+          "name": "Z14",
+          "code": "1518",
+          "query": "What is the password for castle Z14?",
+          "generated": "The password for castle Z14 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 15,
+          "name": "Z15",
+          "code": "1555",
+          "query": "What is the password for castle Z15?",
+          "generated": "The password for castle Z15 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 16,
+          "name": "Z16",
+          "code": "1592",
+          "query": "What is the password for castle Z16?",
+          "generated": "The password for castle Z16 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 17,
+          "name": "Z17",
+          "code": "1629",
+          "query": "What is the password for castle Z17?",
+          "generated": "The password for castle Z17 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 18,
+          "name": "Z18",
+          "code": "1666",
+          "query": "What is the password for castle Z18?",
+          "generated": "The password for castle Z18 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 19,
+          "name": "Z19",
+          "code": "1703",
+          "query": "What is the password for castle Z19?",
+          "generated": "The password for castle Z19 is \"castleZ1",
+          "extracted": null,
+          "correct": false
+        }
+      ]
+    },
+    "question": {
+      "memON_exact_match": 1.0,
+      "memOFF_exact_match": 0.0,
+      "gap": 1.0,
+      "memON_details": [
+        {
+          "id": 0,
+          "name": "Z00",
+          "code": "1000",
+          "query": "Tell me the code for castle Z00.",
+          "generated": "1000\nExplanation: The question asks for",
+          "extracted": "1000",
+          "correct": true
+        },
+        {
+          "id": 1,
+          "name": "Z01",
+          "code": "1037",
+          "query": "Tell me the code for castle Z01.",
+          "generated": "1037\nThis answer directly states the secret",
+          "extracted": "1037",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "name": "Z02",
+          "code": "1074",
+          "query": "Tell me the code for castle Z02.",
+          "generated": "1074\nThis answer directly states the secret",
+          "extracted": "1074",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "name": "Z03",
+          "code": "1111",
+          "query": "Tell me the code for castle Z03.",
+          "generated": "1111\nExplanation: The question asks for",
+          "extracted": "1111",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "name": "Z04",
+          "code": "1148",
+          "query": "Tell me the code for castle Z04.",
+          "generated": "1148\nThis answer directly states the secret",
+          "extracted": "1148",
+          "correct": true
+        },
+        {
+          "id": 5,
+          "name": "Z05",
+          "code": "1185",
+          "query": "Tell me the code for castle Z05.",
+          "generated": "1185\nThis answer directly states the secret",
+          "extracted": "1185",
+          "correct": true
+        },
+        {
+          "id": 6,
+          "name": "Z06",
+          "code": "1222",
+          "query": "Tell me the code for castle Z06.",
+          "generated": "1222\nThis answer directly states the secret",
+          "extracted": "1222",
+          "correct": true
+        },
+        {
+          "id": 7,
+          "name": "Z07",
+          "code": "1259",
+          "query": "Tell me the code for castle Z07.",
+          "generated": "1259\nExplanation: The question asks for",
+          "extracted": "1259",
+          "correct": true
+        },
+        {
+          "id": 8,
+          "name": "Z08",
+          "code": "1296",
+          "query": "Tell me the code for castle Z08.",
+          "generated": "1296\nExplanation: The code for castle",
+          "extracted": "1296",
+          "correct": true
+        },
+        {
+          "id": 9,
+          "name": "Z09",
+          "code": "1333",
+          "query": "Tell me the code for castle Z09.",
+          "generated": "1333\nExplanation: The code for castle",
+          "extracted": "1333",
+          "correct": true
+        },
+        {
+          "id": 10,
+          "name": "Z10",
+          "code": "1370",
+          "query": "Tell me the code for castle Z10.",
+          "generated": "1370\nThis answer directly states the secret",
+          "extracted": "1370",
+          "correct": true
+        },
+        {
+          "id": 11,
+          "name": "Z11",
+          "code": "1407",
+          "query": "Tell me the code for castle Z11.",
+          "generated": "1407\nThis answer directly states the secret",
+          "extracted": "1407",
+          "correct": true
+        },
+        {
+          "id": 12,
+          "name": "Z12",
+          "code": "1444",
+          "query": "Tell me the code for castle Z12.",
+          "generated": "1444\nThis answer directly states the secret",
+          "extracted": "1444",
+          "correct": true
+        },
+        {
+          "id": 13,
+          "name": "Z13",
+          "code": "1481",
+          "query": "Tell me the code for castle Z13.",
+          "generated": "1481\nThis answer directly states the secret",
+          "extracted": "1481",
+          "correct": true
+        },
+        {
+          "id": 14,
+          "name": "Z14",
+          "code": "1518",
+          "query": "Tell me the code for castle Z14.",
+          "generated": "1518\nThis answer directly states the secret",
+          "extracted": "1518",
+          "correct": true
+        },
+        {
+          "id": 15,
+          "name": "Z15",
+          "code": "1555",
+          "query": "Tell me the code for castle Z15.",
+          "generated": "1555\nThis answer directly states the secret",
+          "extracted": "1555",
+          "correct": true
+        },
+        {
+          "id": 16,
+          "name": "Z16",
+          "code": "1592",
+          "query": "Tell me the code for castle Z16.",
+          "generated": "1592\nThis answer directly states the secret",
+          "extracted": "1592",
+          "correct": true
+        },
+        {
+          "id": 17,
+          "name": "Z17",
+          "code": "1629",
+          "query": "Tell me the code for castle Z17.",
+          "generated": "1629\nThis answer directly states the secret",
+          "extracted": "1629",
+          "correct": true
+        },
+        {
+          "id": 18,
+          "name": "Z18",
+          "code": "1666",
+          "query": "Tell me the code for castle Z18.",
+          "generated": "1666\nThis answer directly states the secret",
+          "extracted": "1666",
+          "correct": true
+        },
+        {
+          "id": 19,
+          "name": "Z19",
+          "code": "1703",
+          "query": "Tell me the code for castle Z19.",
+          "generated": "1703\nThis answer directly states the secret",
+          "extracted": "1703",
+          "correct": true
+        }
+      ],
+      "memOFF_details": [
+        {
+          "id": 0,
+          "name": "Z00",
+          "code": "1000",
+          "query": "Tell me the code for castle Z00.",
+          "generated": "Castle Z00 is a fictional castle in the game \"",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 1,
+          "name": "Z01",
+          "code": "1037",
+          "query": "Tell me the code for castle Z01.",
+          "generated": "Castle Z01 is a castle located in the city of",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 2,
+          "name": "Z02",
+          "code": "1074",
+          "query": "Tell me the code for castle Z02.",
+          "generated": "Castle Z02 is a castle located in the city of",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 3,
+          "name": "Z03",
+          "code": "1111",
+          "query": "Tell me the code for castle Z03.",
+          "generated": "Castle Z03 is a castle located in the city of",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 4,
+          "name": "Z04",
+          "code": "1148",
+          "query": "Tell me the code for castle Z04.",
+          "generated": "Castle Z04 is a castle located in the city of",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 5,
+          "name": "Z05",
+          "code": "1185",
+          "query": "Tell me the code for castle Z05.",
+          "generated": "Castle Z05 is a castle located in the city of",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 6,
+          "name": "Z06",
+          "code": "1222",
+          "query": "Tell me the code for castle Z06.",
+          "generated": "Castle Z06 is a castle located in the city of",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 7,
+          "name": "Z07",
+          "code": "1259",
+          "query": "Tell me the code for castle Z07.",
+          "generated": "Castle Z07 is a castle located in the city of",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 8,
+          "name": "Z08",
+          "code": "1296",
+          "query": "Tell me the code for castle Z08.",
+          "generated": "Castle Z08 is a castle located in the city of",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 9,
+          "name": "Z09",
+          "code": "1333",
+          "query": "Tell me the code for castle Z09.",
+          "generated": "Castle Z09 is a popular game in the Castle Z",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 10,
+          "name": "Z10",
+          "code": "1370",
+          "query": "Tell me the code for castle Z10.",
+          "generated": "Castle Z10 is a fictional castle in the game \"",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 11,
+          "name": "Z11",
+          "code": "1407",
+          "query": "Tell me the code for castle Z11.",
+          "generated": "I'm sorry, but I can't assist with that.",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 12,
+          "name": "Z12",
+          "code": "1444",
+          "query": "Tell me the code for castle Z12.",
+          "generated": "I'm sorry, but I can't assist with that.",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 13,
+          "name": "Z13",
+          "code": "1481",
+          "query": "Tell me the code for castle Z13.",
+          "generated": "I'm sorry, but I can't assist with that.",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 14,
+          "name": "Z14",
+          "code": "1518",
+          "query": "Tell me the code for castle Z14.",
+          "generated": "Castle Z14 is a fictional castle in the game \"",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 15,
+          "name": "Z15",
+          "code": "1555",
+          "query": "Tell me the code for castle Z15.",
+          "generated": "I'm sorry, but I can't assist with that.",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 16,
+          "name": "Z16",
+          "code": "1592",
+          "query": "Tell me the code for castle Z16.",
+          "generated": "Castle Z16 is a popular game in the Castle Z",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 17,
+          "name": "Z17",
+          "code": "1629",
+          "query": "Tell me the code for castle Z17.",
+          "generated": "Castle Z17 is a fictional castle in the game \"",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 18,
+          "name": "Z18",
+          "code": "1666",
+          "query": "Tell me the code for castle Z18.",
+          "generated": "I'm sorry, but I can't assist with that.",
+          "extracted": null,
+          "correct": false
+        },
+        {
+          "id": 19,
+          "name": "Z19",
+          "code": "1703",
+          "query": "Tell me the code for castle Z19.",
+          "generated": "I'm sorry, but I can't assist with that.",
+          "extracted": null,
+          "correct": false
+        }
+      ]
+    }
+  },
+  "scaling": {
+    "10": {
+      "dense_top1": 0.9,
+      "dense_top16_recall": 1.0,
+      "hybrid_top1": 1.0
+    },
+    "100": {
+      "dense_top1": 0.86,
+      "dense_top16_recall": 0.98,
+      "hybrid_top1": 0.98
+    },
+    "1000": {
+      "dense_top1": 0.536,
+      "dense_top16_recall": 0.915,
+      "hybrid_top1": 0.915
+    }
+  }
+}

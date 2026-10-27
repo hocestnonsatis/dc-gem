@@ -1,0 +1,65 @@
+[load] runs/fineweb_dc_gem/final_dc_gem_fact.pt → cuda
+[fact] steps=800 trainable=13 distractor=180 lm_every=8 α0=1.500 free_run=0.15→0.75 min_read_sim=0.35
+/home/an-l-z/dc-gem/examples/finetune_fineweb_facts.py:231: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/rockrel/rockrel/external-builds/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  f"α={float(model.copy_logit_alpha):.3f}  "
+  fact     1/800  loss=10.243  ce=0.670 ret=1.117  ans=6.875  p_free=0.15 exact=0  α=1.505  slots=34
+  fact    80/800  loss=1.721  ce=0.085 ret=2.438  ans=0.000  p_free=0.21 exact=1  α=1.600  slots=12
+  fact   160/800  loss=4.682  ce=0.076 ret=1.156  ans=2.355  p_free=0.27 exact=0  α=1.600  slots=34
+  fact   240/800  loss=1.505  ce=0.040 ret=1.984  ans=0.000  p_free=0.33 exact=1  α=1.600  slots=33
+  fact   320/800  loss=1.511  ce=0.016 ret=2.266  ans=0.000  p_free=0.39 exact=1  α=1.600  slots=33
+  fact   400/800  loss=1.131  ce=0.034 ret=1.102  ans=0.000  p_free=0.45 exact=1  α=1.600  slots=10
+  fact   480/800  loss=6.394  ce=0.066 ret=1.914  ans=3.152  p_free=0.51 exact=0  α=1.600  slots=12
+  fact   560/800  loss=2.356  ce=0.004 ret=4.969  ans=0.001  p_free=0.57 exact=1  α=1.600  slots=33
+  fact   640/800  loss=1.227  ce=0.001 ret=1.109  ans=0.026  p_free=0.63 exact=1  α=1.600  slots=34
+  fact   720/800  loss=1.657  ce=0.031 ret=2.703  ans=0.000  p_free=0.69 exact=1  α=1.600  slots=12
+  fact   800/800  loss=1.334  ce=0.019 ret=1.414  ans=0.000  p_free=0.75 exact=1  α=1.600  slots=12
+[save] runs/fineweb_dc_gem/final_dc_gem_gen.pt
+{
+  "val_ppl_off": {
+    "nll": 5.580069446563721,
+    "ppl": 265.0900147376006
+  },
+  "val_ppl_on": {
+    "nll": 5.6461153348286945,
+    "ppl": 283.189230960944
+  },
+  "oow": {
+    "n_facts": 25,
+    "distractor_tokens": 200,
+    "exact_match_mem_on": 0.92,
+    "exact_match_mem_off": 0.0,
+    "target_ppl_mem_on": 2.0410640309108183,
+    "target_ppl_mem_off": 688.824213021007
+  },
+  "generate_exact": {
+    "n_facts": 25,
+    "distractor_tokens": 200,
+    "min_read_sim": 0.35,
+    "exact_match_mem_on": 0.92,
+    "exact_match_mem_off": 0.0,
+    "contains_code_mem_on": 0.92,
+    "contains_code_mem_off": 0.0
+  },
+  "generations": {
+    "prompt": "The secret password of castle Zorg is",
+    "answer_token_ids": [
+      220,
+      23,
+      46469
+    ],
+    "mem_off": "The secret password of castle Zorg is a of the 10th century.",
+    "mem_on": "The secret password of castle Zorg is 8 vents is a 3-",
+    "mem_off_cont": " a of the 10th century.",
+    "mem_on_cont": " 8 vents is a 3-",
+    "contains_8492_on": false,
+    "contains_8492_off": false,
+    "exact_ans_prefix_on": false
+  }
+}
+[eval] runs/fineweb_dc_gem/final_dc_gem_gen.eval.json
+
+=== OOW Exact ON=0.920  OFF=0.000  PPL_ON=2.0  PPL_OFF=688.8 ===
+=== Generate Exact ON=0.920  OFF=0.000  contain ON=0.920 ===
+generate contains 8492? ON=False OFF=False
+  memON cont: ' 8 vents is a 3-'

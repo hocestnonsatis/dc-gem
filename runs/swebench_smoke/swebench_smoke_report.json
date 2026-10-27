@@ -1,0 +1,135 @@
+{
+  "ckpt": "runs/fineweb_dc_gem/final_dc_gem_gen.pt",
+  "dataset": "princeton-nlp/SWE-bench_Lite",
+  "split": "test",
+  "n": 10,
+  "model_name_or_path": "dc-gem-fineweb-51m",
+  "context_limit": 256,
+  "max_new": 96,
+  "wall_s": 3.452589952008566,
+  "metrics": {
+    "resolved_rate": null,
+    "looks_like_diff_rate": 0.5,
+    "empty_patch_rate": 0.0,
+    "mean_char_f1_vs_gold": 0.005827190751713935,
+    "note": "51.5M / T=256 ile SWE-bench resolve beklenmez (~0%). Bu duman testi: \u00fcretilebilirlik + format sinyali. Resmi resolve i\u00e7in Docker harness gerekir."
+  },
+  "instances": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "repo": "astropy/astropy",
+      "prompt_tokens": 154,
+      "pred_chars": 96,
+      "gold_chars": 470,
+      "looks_like_diff": true,
+      "empty": false,
+      "char_f1_vs_gold": 0.0,
+      "pred_head": "- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1.1.1.\\n- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1"
+    },
+    {
+      "instance_id": "astropy__astropy-14182",
+      "repo": "astropy/astropy",
+      "prompt_tokens": 154,
+      "pred_chars": 103,
+      "gold_chars": 2186,
+      "looks_like_diff": false,
+      "empty": false,
+      "char_f1_vs_gold": 0.0019193857965451055,
+      "pred_head": "B.D. (1.g., 1.1.1)\\nB. (2.g., 1.1.1.1)\\n(b.g., 1.1.1)\\n(b.g., 1.1.1)\\n(b.g., 1.1.1.1)\\n(b.g. 1.1.1)\\n(b. 1.1."
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "repo": "astropy/astropy",
+      "prompt_tokens": 154,
+      "pred_chars": 110,
+      "gold_chars": 955,
+      "looks_like_diff": true,
+      "empty": false,
+      "char_f1_vs_gold": 0.0,
+      "pred_head": "- A 1.1.\\n- A 2.1.\\n- A 1.2.\\n- A 1.1.\\n- A 1.1.\\n- A 1.1.\\n- A 1.2.\\n- A 1. A 2.\\n- A 1. A 1.\\n- A 1. A 2.\\n- A 1. A 1."
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "repo": "astropy/astropy",
+      "prompt_tokens": 154,
+      "pred_chars": 322,
+      "gold_chars": 869,
+      "looks_like_diff": false,
+      "empty": false,
+      "char_f1_vs_gold": 0.04444444444444444,
+      "pred_head": "I'm not sure that the other thing is that I'm not going to be\\nthe same thing. I'm not sure that I'm not sure I'm not sure I'm not sure I'm not sure I'm not going to be able to get "
+    },
+    {
+      "instance_id": "astropy__astropy-6938",
+      "repo": "astropy/astropy",
+      "prompt_tokens": 154,
+      "pred_chars": 329,
+      "gold_chars": 493,
+      "looks_like_diff": false,
+      "empty": false,
+      "char_f1_vs_gold": 0.00980392156862745,
+      "pred_head": "I have a lot of the same thing I have been doing. I have a lot of\\nthe same thing I have been doing. I have to do this\\nto be a lot of the same thing.\\nI have been able to do this.\\nI "
+    },
+    {
+      "instance_id": "astropy__astropy-7746",
+      "repo": "astropy/astropy",
+      "prompt_tokens": 154,
+      "pred_chars": 95,
+      "gold_chars": 861,
+      "looks_like_diff": true,
+      "empty": false,
+      "char_f1_vs_gold": 0.0,
+      "pred_head": "- 1.1.1.1.\\n- 1.1.1.1\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1."
+    },
+    {
+      "instance_id": "django__django-10914",
+      "repo": "django/django",
+      "prompt_tokens": 154,
+      "pred_chars": 97,
+      "gold_chars": 582,
+      "looks_like_diff": false,
+      "empty": false,
+      "char_f1_vs_gold": 0.0,
+      "pred_head": "- A 1.1.1.2.2.1.2.2.1.2.1.1.2.2.1.1.2.1.2.2.1.2.2.2.1.2.2.1.2.2.2.2.2.2.2.1.2.2.1.2.2.2.2.1.2.1.2"
+    },
+    {
+      "instance_id": "django__django-10924",
+      "repo": "django/django",
+      "prompt_tokens": 154,
+      "pred_chars": 96,
+      "gold_chars": 530,
+      "looks_like_diff": true,
+      "empty": false,
+      "char_f1_vs_gold": 0.0,
+      "pred_head": "- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.1.\\n- 1.1.1.\\n- 1.1.1.\\n-"
+    },
+    {
+      "instance_id": "django__django-11001",
+      "repo": "django/django",
+      "prompt_tokens": 154,
+      "pred_chars": 98,
+      "gold_chars": 615,
+      "looks_like_diff": false,
+      "empty": false,
+      "char_f1_vs_gold": 0.0,
+      "pred_head": "A: A: A 1-1-1-1-2-1-1-1-1-1-1-1-1-1-1-1-1-1-2-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-"
+    },
+    {
+      "instance_id": "django__django-11019",
+      "repo": "django/django",
+      "prompt_tokens": 154,
+      "pred_chars": 95,
+      "gold_chars": 4929,
+      "looks_like_diff": true,
+      "empty": false,
+      "char_f1_vs_gold": 0.0021041557075223566,
+      "pred_head": "- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1.1.\\n- 1.\\n- 1.1.\\n- 1.\\n- 1.1.\\n- 1. 1.\\n- 1.\\n- 1.\\n- 1. 1.\\n- 1.\\n- 1. 1.\\n- 1."
+    }
+  ],
+  "harness": {
+    "ran": false,
+    "resolved": null,
+    "note": "docker daemon yok / atland\u0131"
+  },
+  "predictions_path": "runs/swebench_smoke/predictions.jsonl"
+}

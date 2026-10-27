@@ -1,0 +1,283 @@
+{
+  "backend": "scripted-bench",
+  "budget": 3072,
+  "gem_slots": 256,
+  "max_tokens": 1024,
+  "temperature": 0.2,
+  "passed": 7,
+  "failed": 0,
+  "total": 7,
+  "elapsed_ms": 28,
+  "scenarios": [
+    {
+      "id": "write_short",
+      "title": "Create a short markdown file via write tool",
+      "ok": true,
+      "elapsed_ms": 0,
+      "core_tokens_last": 808,
+      "budget": 3072,
+      "gem_slots": 13,
+      "tool_summaries": [
+        "wrote hello.md (17 bytes, total=17)"
+      ],
+      "checks": [
+        {
+          "ok": true,
+          "detail": "FileExists(hello.md) → true"
+        },
+        {
+          "ok": true,
+          "detail": "FileContains(hello.md ∋ \"Hello\") → true (len=17)"
+        },
+        {
+          "ok": true,
+          "detail": "ToolSummaryContains(\"wrote\") → true (wrote hello.md (17 bytes, total=17))"
+        },
+        {
+          "ok": true,
+          "detail": "MinToolEvents(≥1) → 1"
+        },
+        {
+          "ok": true,
+          "detail": "CoreUnderBudget(808 ≤ 3072+200) → true"
+        }
+      ],
+      "replies": [
+        "OK done."
+      ],
+      "error": null,
+      "gem_hit": false,
+      "steps": 2,
+      "repaired": false
+    },
+    {
+      "id": "expand_long",
+      "title": "Long doc: agent freely expands essay.md (no harness push)",
+      "ok": true,
+      "elapsed_ms": 0,
+      "core_tokens_last": 683,
+      "budget": 3072,
+      "gem_slots": 18,
+      "tool_summaries": [
+        "wrote essay.md (31 bytes, total=31)",
+        "appended essay.md (+992 bytes, total=1025)",
+        "appended essay.md (+992 bytes, total=2018)",
+        "appended essay.md (+992 bytes, total=3011)"
+      ],
+      "checks": [
+        {
+          "ok": true,
+          "detail": "FileExists(essay.md) → true"
+        },
+        {
+          "ok": true,
+          "detail": "FileMinBytes(essay.md ≥ 2500) → 3011"
+        },
+        {
+          "ok": true,
+          "detail": "ToolSummaryContains(\"append\") → true (wrote essay.md (31 bytes, total=31) | appended essay.md (+992 bytes, total=1025) | appended essay.md (+992 bytes, total=2018) | appended essay.md (+992 bytes, total=3011))"
+        },
+        {
+          "ok": true,
+          "detail": "CoreUnderBudget(683 ≤ 3072+200) → true"
+        }
+      ],
+      "replies": [
+        "OK done.",
+        "OK done."
+      ],
+      "error": null,
+      "gem_hit": false,
+      "steps": 6,
+      "repaired": false
+    },
+    {
+      "id": "expand_typo",
+      "title": "Agent interprets 'much londer' as expand (free; may fail live)",
+      "ok": true,
+      "elapsed_ms": 0,
+      "core_tokens_last": 753,
+      "budget": 3072,
+      "gem_slots": 18,
+      "tool_summaries": [
+        "wrote hello2.md (17 bytes, total=17)",
+        "appended hello2.md (+993 bytes, total=1012)",
+        "appended hello2.md (+993 bytes, total=2006)",
+        "appended hello2.md (+993 bytes, total=3000)"
+      ],
+      "checks": [
+        {
+          "ok": true,
+          "detail": "FileExists(hello2.md) → true"
+        },
+        {
+          "ok": true,
+          "detail": "FileMinBytes(hello2.md ≥ 2500) → 3000"
+        },
+        {
+          "ok": true,
+          "detail": "CoreUnderBudget(753 ≤ 3072+200) → true"
+        }
+      ],
+      "replies": [
+        "OK done.",
+        "OK done."
+      ],
+      "error": null,
+      "gem_hit": false,
+      "steps": 6,
+      "repaired": false
+    },
+    {
+      "id": "str_replace",
+      "title": "Surgical edit via str_replace",
+      "ok": true,
+      "elapsed_ms": 0,
+      "core_tokens_last": 805,
+      "budget": 3072,
+      "gem_slots": 13,
+      "tool_summaries": [
+        "edited note.txt"
+      ],
+      "checks": [
+        {
+          "ok": true,
+          "detail": "FileContains(note.txt ∋ \"BETA\") → true (len=15)"
+        },
+        {
+          "ok": true,
+          "detail": "FileContains(note.txt ∋ \"keep\") → true (len=15)"
+        },
+        {
+          "ok": true,
+          "detail": "ToolSummaryContains(\"edited\") → true (edited note.txt)"
+        },
+        {
+          "ok": true,
+          "detail": "CoreUnderBudget(805 ≤ 3072+200) → true"
+        }
+      ],
+      "replies": [
+        "OK done."
+      ],
+      "error": null,
+      "gem_hit": false,
+      "steps": 2,
+      "repaired": false
+    },
+    {
+      "id": "read_list",
+      "title": "List then read an existing file",
+      "ok": true,
+      "elapsed_ms": 0,
+      "core_tokens_last": 716,
+      "budget": 3072,
+      "gem_slots": 14,
+      "tool_summaries": [
+        "list .",
+        "read README.md"
+      ],
+      "checks": [
+        {
+          "ok": true,
+          "detail": "MinToolEvents(≥1) → 2"
+        },
+        {
+          "ok": true,
+          "detail": "CoreUnderBudget(716 ≤ 3072+200) → true"
+        }
+      ],
+      "replies": [
+        "OK done."
+      ],
+      "error": null,
+      "gem_hit": false,
+      "steps": 2,
+      "repaired": false
+    },
+    {
+      "id": "multi_step_bugfix",
+      "title": "OOW constants + read + str_replace + verify",
+      "ok": true,
+      "elapsed_ms": 0,
+      "core_tokens_last": 1020,
+      "budget": 3072,
+      "gem_slots": 21,
+      "tool_summaries": [
+        "read client.py (+3 OOW symbol injected)",
+        "edited client.py"
+      ],
+      "checks": [
+        {
+          "ok": true,
+          "detail": "ToolSummaryContains(\"read\") → true (read client.py (+3 OOW symbol injected) | edited client.py)"
+        },
+        {
+          "ok": true,
+          "detail": "ToolSummaryContains(\"edited\") → true (read client.py (+3 OOW symbol injected) | edited client.py)"
+        },
+        {
+          "ok": true,
+          "detail": "GemHit → true (tools=read client.py (+3 OOW symbol injected) | edited client.py)"
+        },
+        {
+          "ok": true,
+          "detail": "Verify(ClientTimeoutFix) has_default=true buggy=false syntax=true"
+        },
+        {
+          "ok": true,
+          "detail": "CoreUnderBudget(1020 ≤ 3072+400) → true"
+        }
+      ],
+      "replies": [
+        "OK done."
+      ],
+      "error": null,
+      "gem_hit": true,
+      "steps": 3,
+      "repaired": false
+    },
+    {
+      "id": "rust_oow_bugfix",
+      "title": "Rust OOW const + read + str_replace + verify",
+      "ok": true,
+      "elapsed_ms": 25,
+      "core_tokens_last": 1063,
+      "budget": 3072,
+      "gem_slots": 22,
+      "tool_summaries": [
+        "read worker.rs (+3 OOW symbol injected)",
+        "edited worker.rs"
+      ],
+      "checks": [
+        {
+          "ok": true,
+          "detail": "ToolSummaryContains(\"read\") → true (read worker.rs (+3 OOW symbol injected) | edited worker.rs)"
+        },
+        {
+          "ok": true,
+          "detail": "ToolSummaryContains(\"edited\") → true (read worker.rs (+3 OOW symbol injected) | edited worker.rs)"
+        },
+        {
+          "ok": true,
+          "detail": "GemHit → true (tools=read worker.rs (+3 OOW symbol injected) | edited worker.rs)"
+        },
+        {
+          "ok": true,
+          "detail": "Verify(RustRetryFix) sig=true buggy=false fixed=true parse_ok=true rustc=ok"
+        },
+        {
+          "ok": true,
+          "detail": "CoreUnderBudget(1063 ≤ 3072+400) → true"
+        }
+      ],
+      "replies": [
+        "OK done."
+      ],
+      "error": null,
+      "gem_hit": true,
+      "steps": 3,
+      "repaired": false
+    }
+  ]
+}

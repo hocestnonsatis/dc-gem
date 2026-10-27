@@ -1,0 +1,28 @@
+[hw] device=cuda name=AMD Radeon RX 9070 XT
+[data] cache: data/tinystories/tinystories_train.npy (44,978,706 tokens)
+[data] train=43,978,706  val=1,000,000
+[train] budget=20,000,000  steps=4882  tok/step=4096
+[model] params=30.92M  memory_slots=16384  train_memory=False
+[step     1/4882] loss=250.932 val_ppl on/off=485165195.41/485165195.41 fact on/off=0.00/0.00 slots=0  384 tok/s
+[step   250/4882] loss=9.350 val_ppl on/off=5249.55/4641.93 fact on/off=nan/nan slots=0  30900 tok/s
+[step   500/4882] loss=5.405 val_ppl on/off=314.39/356.04 fact on/off=nan/nan slots=0  36693 tok/s
+[step   750/4882] loss=5.105 val_ppl on/off=163.30/141.74 fact on/off=nan/nan slots=0  39139 tok/s
+[step  1000/4882] loss=4.675 val_ppl on/off=104.40/108.87 fact on/off=0.00/0.00 slots=0  37063 tok/s
+[step  1250/4882] loss=4.467 val_ppl on/off=88.06/79.14 fact on/off=nan/nan slots=0  38468 tok/s
+[step  1500/4882] loss=4.126 val_ppl on/off=70.16/70.19 fact on/off=nan/nan slots=0  39450 tok/s
+[step  1750/4882] loss=4.262 val_ppl on/off=54.36/64.24 fact on/off=nan/nan slots=0  40181 tok/s
+[step  2000/4882] loss=3.782 val_ppl on/off=53.14/52.95 fact on/off=0.00/0.00 slots=0  38873 tok/s
+[step  2250/4882] loss=3.769 val_ppl on/off=47.69/43.20 fact on/off=nan/nan slots=0  39496 tok/s
+[step  2500/4882] loss=3.784 val_ppl on/off=42.31/40.83 fact on/off=nan/nan slots=0  40002 tok/s
+[step  2750/4882] loss=4.192 val_ppl on/off=41.76/38.76 fact on/off=nan/nan slots=0  40426 tok/s
+[step  3000/4882] loss=3.490 val_ppl on/off=33.60/38.77 fact on/off=0.00/0.00 slots=0  39629 tok/s
+[step  3250/4882] loss=3.500 val_ppl on/off=31.83/31.37 fact on/off=nan/nan slots=0  40011 tok/s
+[step  3500/4882] loss=3.340 val_ppl on/off=32.91/33.05 fact on/off=nan/nan slots=0  40341 tok/s
+[step  3750/4882] loss=3.578 val_ppl on/off=28.81/31.75 fact on/off=nan/nan slots=0  40632 tok/s
+[step  4000/4882] loss=3.300 val_ppl on/off=30.07/29.84 fact on/off=0.00/0.00 slots=0  40019 tok/s
+[step  4250/4882] loss=3.196 val_ppl on/off=24.07/26.27 fact on/off=nan/nan slots=0  40294 tok/s
+[step  4500/4882] loss=3.401 val_ppl on/off=24.01/24.95 fact on/off=nan/nan slots=0  40538 tok/s
+[step  4750/4882] loss=3.047 val_ppl on/off=23.78/24.36 fact on/off=nan/nan slots=0  40758 tok/s
+[step  4882/4882] loss=3.053 val_ppl on/off=20.83/21.57 fact on/off=0.00/0.00 slots=0  40163 tok/s
+[done] runs/rocm_baseline_20m/last.pt  tokens=19,996,672  elapsed=498.0s
+[result] val_ppl memON=20.83 memOFF=21.57 | factON=0.00 factOFF=0.00

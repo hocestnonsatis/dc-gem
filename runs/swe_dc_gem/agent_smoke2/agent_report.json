@@ -1,0 +1,100 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "lora_adapter": null,
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "split": "test",
+  "n": 3,
+  "model_name_or_path": "dc-gem-qwen25-coder-3b",
+  "wall_s": 128.23423675101367,
+  "looks_like_diff_rate": 1.0,
+  "dry_run_ok_rate": 0.3333333333333333,
+  "instances": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "repo": "astropy/astropy",
+      "n_chunks": 6,
+      "pred_chars": 3847,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 3847,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file astropy/modeling/separable.py\nHunk #1 FAILED at 1.\n1 out of 1 hunk FAILED\n"
+          },
+          {
+            "n": 1,
+            "chars": 1525,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file astropy/modeling/separable.py\nHunk #1 FAILED at 1.\n1 out of 1 hunk FAILED\n"
+          },
+          {
+            "n": 2,
+            "chars": 3847,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file astropy/modeling/separable.py\nHunk #1 FAILED at 1.\n1 out of 1 hunk FAILED\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/astropy/modeling/separable.py b/astropy/modeling/separable.py\\n--- a/astropy/modeling/separable.py\\n+++ b/astropy/modeling/separable.py\\n@@ -1,6 +1,7 @@\\n from astropy.modeling.models import "
+    },
+    {
+      "instance_id": "astropy__astropy-14182",
+      "repo": "astropy/astropy",
+      "n_chunks": 6,
+      "pred_chars": 3338,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 0,
+            "like_diff": false
+          },
+          {
+            "n": 1,
+            "chars": 3338,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file astropy/io/ascii/core.py\npatch: **** malformed patch at line 13:  def _get_reader(Reader, fast_reader, **kwargs):\n\n"
+          },
+          {
+            "n": 2,
+            "chars": 3338,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file astropy/io/ascii/core.py\npatch: **** malformed patch at line 13:  def _get_reader(Reader, fast_reader, **kwargs):\n\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/astropy/io/ascii/core.py b/astropy/io/ascii/core.py\\nindex 5a3b4f1..c0a5b1c 100644\\n--- a/astropy/io/ascii/core.py\\n+++ b/astropy/io/ascii/core.py\\n@@ -1719,6 +1719,7 @@ def _get_writer(Write"
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "repo": "astropy/astropy",
+      "n_chunks": 6,
+      "pred_chars": 3447,
+      "looks_like_diff": true,
+      "dry_run_ok": true,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 3447,
+            "like_diff": true,
+            "dry_run": true,
+            "dry_msg": "checking file astropy/io/ascii/qdp.py\nHunk #1 succeeded at 20 with fuzz 2 (offset 19 lines).\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/astropy/io/ascii/qdp.py b/astropy/io/ascii/qdp.py\\n--- a/astropy/io/ascii/qdp.py\\n+++ b/astropy/io/ascii/qdp.py\\n@@ -1,3 +1,3 @@\\n-def _line_type(line, delimiter=None):\\n+def _line_type(line, "
+    }
+  ],
+  "predictions_path": "runs/swe_dc_gem/agent_smoke2/predictions.jsonl"
+}

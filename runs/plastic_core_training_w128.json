@@ -1,0 +1,30 @@
+{
+  "dataset": "data/tinystories/tinystories_train.npy",
+  "tokenizer": "GPT-2 BPE, remapped to most frequent train-slice tokens",
+  "train_tokens": 2048,
+  "validation_tokens": 257,
+  "compact_vocab": 256,
+  "train_oov_mapped_to_unk": 182,
+  "validation_oov_mapped_to_unk": 70,
+  "width": 128,
+  "epochs": 2,
+  "seq_len": 32,
+  "mean_final_train_loss": 3.025899926200509,
+  "validation_before_memory": {
+    "nll": 3.1203323304653168,
+    "perplexity": 22.653906975771644,
+    "top1": 0.296875
+  },
+  "validation_replay_with_memory": {
+    "nll": 5.026810675859451,
+    "perplexity": 152.44603672123787,
+    "top1": 0.42578125
+  },
+  "validation_replay_without_memory_after_exposure": {
+    "nll": 3.1203323304653168,
+    "perplexity": 22.653906975771644,
+    "top1": 0.296875
+  },
+  "memory_writes": 207,
+  "scope": "small CPU language-model pilot; compact vocabulary, not full GPT-2 language quality"
+}

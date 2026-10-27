@@ -1,0 +1,16 @@
+Running 2 instances...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:28<00:28, 28.67s/it]1 ran successfully, 0 failed:  50%|█████     | 1/2 [00:28<00:28, 28.67s/it]1 ran successfully, 0 failed: 100%|██████████| 2/2 [00:44<00:00, 22.16s/it]2 ran successfully, 0 failed: 100%|██████████| 2/2 [00:44<00:00, 22.16s/it]2 ran successfully, 0 failed: 100%|██████████| 2/2 [00:44<00:00, 22.16s/it]
+All instances run.
+Total instances: 2
+Instances submitted: 2
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 2
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 0
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 2
+Report written to runs/swe_dc_gem/harness/dc-gem-qwen25-coder-3b.phase14_dryok.json

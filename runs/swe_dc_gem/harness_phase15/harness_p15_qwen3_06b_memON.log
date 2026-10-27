@@ -1,0 +1,86 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:16<02:57, 16.11s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:16<02:57, 16.11s/it]1 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:38,  9.83s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:38,  9.83s/it]2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:32<01:36, 10.74s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:32<01:36, 10.74s/it]3 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:35<01:11,  8.98s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:35<01:11,  8.98s/it]4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:48<01:07,  9.70s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:48<01:07,  9.70s/it]5 ran successfully, 0 failed:  50%|█████     | 6/12 [00:51<00:51,  8.66s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:51<00:51,  8.66s/it]6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:03<00:45,  9.14s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:03<00:45,  9.14s/it]7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:07<00:33,  8.44s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:07<00:33,  8.44s/it]8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:19<00:26,  8.85s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:19<00:26,  8.85s/it]9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:25<00:17,  8.54s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:25<00:17,  8.54s/it]10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:35<00:08,  8.67s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:35<00:08,  8.67s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:41<00:00,  8.43s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:41<00:00,  8.43s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:41<00:00,  8.43s/it]
+Error in evaluation for django__django-13447: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 10:          Can be overridden by the user in subclasses. In such case it should
+
+patching file django/contrib/admin/sites.py
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/django__django-13447/run_instance.log) for more information.
+Error in evaluation for django__django-14999: >>>>> Patch Apply Failed:
+patching file django/db/backends/oracle/operations.py
+patch: **** malformed patch at line 11: -        'PositiveIntegerField': (0, 99999999999),
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/django__django-14999/run_instance.log) for more information.
+Error in evaluation for django__django-15814: >>>>> Patch Apply Failed:
+patching file django/core/management/__init__.py
+patch: **** malformed patch at line 10:         self.settings_exception = None
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/django__django-15814/run_instance.log) for more information.
+Error in evaluation for django__django-16255: >>>>> Patch Apply Failed:
+patching file django/contrib/sitemaps/__init__.py
+patch: **** malformed patch at line 10:                 return max([self.lastmod(item) for item in self.items()])
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/django__django-16255/run_instance.log) for more information.
+Error in evaluation for django__django-16595: >>>>> Patch Apply Failed:
+patching file django/contrib/auth/migrations/0008_alter_user_username_max_length.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file django/contrib/auth/migrations/0008_alter_user_username_max_length.py.rej
+patching file django/contrib/auth/migrations/0012_alter_user_first_name_max_length.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file django/contrib/auth/migrations/0012_alter_user_first_name_max_length.py.rej
+patching file django/contrib/auth/migrations/0009_alter_user_last_name_max_length.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file django/contrib/auth/migrations/0009_alter_user_last_name_max_length.py.rej
+patching file django/contrib/auth/migrations/0010_alter_group_name_max_length.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file django/contrib/auth/migrations/0010_alter_group_name_max_length.py.rej
+patching file django/contrib/auth/migrations/0004_alter_user_username_opts.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file django/contrib/auth/migrations/0004_alter_user_username_opts.py.rej
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/django__django-16595/run_instance.log) for more information.
+Error in evaluation for pytest-dev__pytest-11143: >>>>> Patch Apply Failed:
+patching file src/_pytest/python.py
+patch: **** malformed patch at line 10:          if module_name != "setup" and not module_name.startswith("__editable__"):
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/pytest-dev__pytest-11143/run_instance.log) for more information.
+Error in evaluation for pytest-dev__pytest-7490: >>>>> Patch Apply Failed:
+patching file testing/test_skipping.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file testing/test_skipping.py.rej
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/pytest-dev__pytest-7490/run_instance.log) for more information.
+Error in evaluation for scikit-learn__scikit-learn-25747: >>>>> Patch Apply Failed:
+patching file sklearn/utils/tests/test_set_output.py
+patch: **** malformed patch at line 8: @@
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/scikit-learn__scikit-learn-25747/run_instance.log) for more information.
+Error in evaluation for sympy__sympy-22714: >>>>> Patch Apply Failed:
+patching file sympy/core/sympify.py
+patch: **** malformed patch at line 7: @@ -472,15 +472,15 @@
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/sympy__sympy-22714/run_instance.log) for more information.
+Error in evaluation for sympy__sympy-24102: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON/dc-gem-qwen3_06b-memON/sympy__sympy-24102/run_instance.log) for more information.
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 2
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 0
+Instances with empty patches: 0
+Instances with errors: 10
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen3_06b-memON.p15_qwen3_06b_memON.json

@@ -1,0 +1,155 @@
+{
+  "seed": 0,
+  "n_train": 10,
+  "steps": 300,
+  "rank": 16,
+  "loss_first": 0.2531246542930603,
+  "loss_mid": 7.748593020551198e-07,
+  "loss_last": 3.774959225211205e-07,
+  "tf_pre": 0,
+  "tf_post": 0,
+  "pre_outputs": [
+    {
+      "id": 0,
+      "name": "Z000",
+      "expected": "60494",
+      "query": "What is the password for castle Z000?",
+      "raw": " 0000000"
+    },
+    {
+      "id": 1,
+      "name": "Z001",
+      "expected": "65125",
+      "query": "What is the password for castle Z001?",
+      "raw": " The password for castle Z001"
+    },
+    {
+      "id": 2,
+      "name": "Z002",
+      "expected": "15306",
+      "query": "What is the password for castle Z002?",
+      "raw": " The password for castle Z002"
+    },
+    {
+      "id": 3,
+      "name": "Z003",
+      "expected": "43936",
+      "query": "What is the password for castle Z003?",
+      "raw": " The password for castle Z003"
+    },
+    {
+      "id": 4,
+      "name": "Z004",
+      "expected": "77013",
+      "query": "What is the password for castle Z004?",
+      "raw": " 0000000"
+    },
+    {
+      "id": 5,
+      "name": "Z005",
+      "expected": "73691",
+      "query": "What is the password for castle Z005?",
+      "raw": " The password for castle Z005"
+    },
+    {
+      "id": 6,
+      "name": "Z006",
+      "expected": "63075",
+      "query": "What is the password for castle Z006?",
+      "raw": " The password for castle Z006"
+    },
+    {
+      "id": 7,
+      "name": "Z007",
+      "expected": "49755",
+      "query": "What is the password for castle Z007?",
+      "raw": " The password for castle Z007"
+    },
+    {
+      "id": 8,
+      "name": "Z008",
+      "expected": "72468",
+      "query": "What is the password for castle Z008?",
+      "raw": " The password for castle Z008"
+    },
+    {
+      "id": 9,
+      "name": "Z009",
+      "expected": "56930",
+      "query": "What is the password for castle Z009?",
+      "raw": " The password for castle Z009"
+    }
+  ],
+  "post_outputs": [
+    {
+      "id": 0,
+      "name": "Z000",
+      "expected": "60494",
+      "query": "What is the password for castle Z000?",
+      "raw": " 000\n\nAnswer: "
+    },
+    {
+      "id": 1,
+      "name": "Z001",
+      "expected": "65125",
+      "query": "What is the password for castle Z001?",
+      "raw": " 123456\n\n"
+    },
+    {
+      "id": 2,
+      "name": "Z002",
+      "expected": "15306",
+      "query": "What is the password for castle Z002?",
+      "raw": " 002\n\nQuestion: What"
+    },
+    {
+      "id": 3,
+      "name": "Z003",
+      "expected": "43936",
+      "query": "What is the password for castle Z003?",
+      "raw": " 003\n\nQuestion: What"
+    },
+    {
+      "id": 4,
+      "name": "Z004",
+      "expected": "77013",
+      "query": "What is the password for castle Z004?",
+      "raw": " 004\n\nQuestion: What"
+    },
+    {
+      "id": 5,
+      "name": "Z005",
+      "expected": "73691",
+      "query": "What is the password for castle Z005?",
+      "raw": " 005\n\nQuestion: What"
+    },
+    {
+      "id": 6,
+      "name": "Z006",
+      "expected": "63075",
+      "query": "What is the password for castle Z006?",
+      "raw": " 006\n\nQuestion: What"
+    },
+    {
+      "id": 7,
+      "name": "Z007",
+      "expected": "49755",
+      "query": "What is the password for castle Z007?",
+      "raw": " 007\n\nAnswer: "
+    },
+    {
+      "id": 8,
+      "name": "Z008",
+      "expected": "72468",
+      "query": "What is the password for castle Z008?",
+      "raw": " 008\n\nQuestion: What"
+    },
+    {
+      "id": 9,
+      "name": "Z009",
+      "expected": "56930",
+      "query": "What is the password for castle Z009?",
+      "raw": " 009\n\nQuestion: What"
+    }
+  ]
+}

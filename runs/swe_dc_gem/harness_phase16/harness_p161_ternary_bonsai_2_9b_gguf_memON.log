@@ -1,0 +1,28 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:18<03:26, 18.74s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:18<03:26, 18.74s/it]1 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:35,  9.55s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:35,  9.55s/it]2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:37<01:52, 12.51s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:37<01:52, 12.51s/it]3 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:15,  9.47s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:15,  9.47s/it]4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:56<01:18, 11.23s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:56<01:18, 11.23s/it]Error in evaluation for pytest-dev__pytest-11143: >>>>> Patch Apply Failed:
+patching file testing/test_assertrewrite.py
+patch: **** malformed patch at line 11: @@ -10,10 +10,10 @@
+
+
+Check (logs/run_evaluation/p161_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/pytest-dev__pytest-11143/run_instance.log) for more information.
+5 ran successfully, 0 failed:  50%|█████     | 6/12 [00:56<00:56,  9.47s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:56<00:56,  9.47s/it]6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:11<00:51, 10.23s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:11<00:51, 10.23s/it]7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:15<00:37,  9.47s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:15<00:37,  9.47s/it]8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:29<00:29,  9.94s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:29<00:29,  9.94s/it]9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:33<00:18,  9.30s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:33<00:18,  9.30s/it]Error in evaluation for sympy__sympy-24102: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 9: @@ -12,10 +14,17 @@
+
+patching file sympy/parsing/mathematica.py
+
+Check (logs/run_evaluation/p161_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/sympy__sympy-24102/run_instance.log) for more information.
+10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:46<00:09,  9.65s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:46<00:09,  9.65s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:48<00:00,  9.07s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:48<00:00,  9.07s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:48<00:00,  9.07s/it]
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 10
+Instances incomplete: 0
+Instances resolved: 3
+Instances unresolved: 7
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 1
+Instances with empty patches: 0
+Instances with errors: 2
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase16/dc-gem-ternary_bonsai_2_9b_gguf-memON.p161_ternary_bonsai_2_9b_gguf_memON.json

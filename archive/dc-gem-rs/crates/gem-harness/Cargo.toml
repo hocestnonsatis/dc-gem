@@ -1,0 +1,36 @@
+[package]
+name = "gem-harness"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "DC-GEM autonomous coding agent CLI and SWE-bench harness"
+default-run = "dc-gem"
+
+[[bin]]
+name = "dc-gem"
+path = "src/main.rs"
+
+[features]
+default = ["cpu"]
+cpu = ["gem-engine/cpu"]
+rocm = ["gem-engine/rocm"]
+cuda = ["gem-engine/cuda"]
+metal = ["gem-engine/metal"]
+vulkan = ["gem-engine/vulkan"]
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true }
+gem-ast = { workspace = true }
+gem-engine = { workspace = true }
+gem-memory = { workspace = true }
+regex = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+walkdir = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+
+[lints]
+workspace = true

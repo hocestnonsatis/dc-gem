@@ -1,0 +1,16 @@
+{
+  "n": 12,
+  "apply_pct": 91.66666666666667,
+  "sym_rec_pct": 91.66666666666667,
+  "gem_hit_pct": 0.0,
+  "n_apply": 11,
+  "n_sym_rec": 11,
+  "n_gem_hit": 0,
+  "heuristic_hits": [
+    "django__django-14534",
+    "django__django-13447",
+    "django__django-15814",
+    "django__django-16255",
+    "sympy__sympy-20590"
+  ]
+}

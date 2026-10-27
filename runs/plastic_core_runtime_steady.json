@@ -1,0 +1,102 @@
+{
+  "device": "cpu",
+  "torch_threads": 1,
+  "measurements": [
+    {
+      "width": 32,
+      "capacity": 1024,
+      "occupancy": 0.0,
+      "occupied_slots": 0,
+      "tokens": 512,
+      "seconds": 0.027532639011042193,
+      "ms_per_token": 0.05377468556844178,
+      "tokens_per_second": 18596.110594217218,
+      "parameters": 23809,
+      "memory_state_bytes": 271360
+    },
+    {
+      "width": 32,
+      "capacity": 1024,
+      "occupancy": 1.0,
+      "occupied_slots": 1024,
+      "tokens": 512,
+      "seconds": 0.043018486991059035,
+      "ms_per_token": 0.08402048240441218,
+      "tokens_per_second": 11901.859777318856,
+      "parameters": 23809,
+      "memory_state_bytes": 271360
+    },
+    {
+      "width": 32,
+      "capacity": 4096,
+      "occupancy": 0.0,
+      "occupied_slots": 0,
+      "tokens": 512,
+      "seconds": 0.027232006017584354,
+      "ms_per_token": 0.05318751175309444,
+      "tokens_per_second": 18801.40595112198,
+      "parameters": 23809,
+      "memory_state_bytes": 1085440
+    },
+    {
+      "width": 32,
+      "capacity": 4096,
+      "occupancy": 1.0,
+      "occupied_slots": 4096,
+      "tokens": 512,
+      "seconds": 0.07742940098978579,
+      "ms_per_token": 0.15122929880817537,
+      "tokens_per_second": 6612.475280127005,
+      "parameters": 23809,
+      "memory_state_bytes": 1085440
+    },
+    {
+      "width": 128,
+      "capacity": 1024,
+      "occupancy": 0.0,
+      "occupied_slots": 0,
+      "tokens": 512,
+      "seconds": 0.033563154021976516,
+      "ms_per_token": 0.06555303519917288,
+      "tokens_per_second": 15254.823776834326,
+      "parameters": 181249,
+      "memory_state_bytes": 1057792
+    },
+    {
+      "width": 128,
+      "capacity": 1024,
+      "occupancy": 1.0,
+      "occupied_slots": 1024,
+      "tokens": 512,
+      "seconds": 0.07110568200005218,
+      "ms_per_token": 0.13887828515635192,
+      "tokens_per_second": 7200.549739465606,
+      "parameters": 181249,
+      "memory_state_bytes": 1057792
+    },
+    {
+      "width": 128,
+      "capacity": 4096,
+      "occupancy": 0.0,
+      "occupied_slots": 0,
+      "tokens": 512,
+      "seconds": 0.03345036300015636,
+      "ms_per_token": 0.06533274023468039,
+      "tokens_per_second": 15306.261399842111,
+      "parameters": 181249,
+      "memory_state_bytes": 4231168
+    },
+    {
+      "width": 128,
+      "capacity": 4096,
+      "occupancy": 1.0,
+      "occupied_slots": 4096,
+      "tokens": 512,
+      "seconds": 0.3649256739881821,
+      "ms_per_token": 0.7127454570081682,
+      "tokens_per_second": 1403.0254281768644,
+      "parameters": 181249,
+      "memory_state_bytes": 4231168
+    }
+  ]
+}

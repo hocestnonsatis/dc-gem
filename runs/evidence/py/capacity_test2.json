@@ -1,0 +1,21 @@
+{
+  "seed": 0,
+  "method": "batch_all_examples_per_epoch",
+  "results": {
+    "5": {
+      "epochs": 30,
+      "exact": 0.0,
+      "prefix": 0.0
+    },
+    "10": {
+      "epochs": 30,
+      "exact": 0.0,
+      "prefix": 0.0
+    },
+    "20": {
+      "epochs": 30,
+      "exact": 0.0,
+      "prefix": 0.0
+    }
+  }
+}

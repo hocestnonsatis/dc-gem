@@ -1,0 +1,286 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "lora_adapter": "runs/swe_dc_gem/lora/adapter",
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "split": "test",
+  "n": 8,
+  "model_name_or_path": "dc-gem-qwen25-coder-3b-lora",
+  "wall_s": 600.1423734440177,
+  "looks_like_diff_rate": 1.0,
+  "dry_run_ok_rate": 0.0,
+  "instances": [
+    {
+      "instance_id": "django__django-14534",
+      "repo": "django/django",
+      "n_chunks": 8,
+      "pred_chars": 2651,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 2705,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/forms/boundfield.py\npatch: **** malformed patch at line 9: diff --git a/django/forms/widgets.py b/django/forms/widgets.py\n\n"
+          },
+          {
+            "n": 1,
+            "chars": 2442,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/forms/boundfield.py\npatch: **** malformed patch at line 9: diff --git a/django/forms/widgets.py b/django/forms/widgets.py\n\n"
+          },
+          {
+            "n": 2,
+            "chars": 2651,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/forms/boundfield.py\npatch: **** malformed patch at line 9: diff --git a/django/forms/widgets.py b/django/forms/widgets.py\n\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/django/forms/boundfield.py b/django/forms/boundfield.py\\n--- a/django/forms/boundfield.py\\n+++ b/django/forms/boundfield.py\\n@@ -1,3 +1,3 @@\\n-def f(x):\\n-    return x - 1\\n+def f(x):\\n+    retu"
+    },
+    {
+      "instance_id": "sympy__sympy-17139",
+      "repo": "sympy/sympy",
+      "n_chunks": 8,
+      "pred_chars": 1732,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 2410,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file sympy/core/expr.py\nHunk #1 FAILED at 403.\n1 out of 1 hunk FAILED\nchecking file sympy/simplify/simplify.py\nHunk #1 FAILED at 1078.\nHunk #2 FAILED at 1101.\nHunk #3 FAILED at 1169.\n3 out of"
+          },
+          {
+            "n": 1,
+            "chars": 1458,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file sympy/core/expr.py\nHunk #1 FAILED at 403.\n1 out of 1 hunk FAILED\nchecking file sympy/simplify/simplify.py\nHunk #1 FAILED at 1078.\nHunk #2 FAILED at 1101.\npatch: **** unexpected end of fi"
+          },
+          {
+            "n": 2,
+            "chars": 1732,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file sympy/core/expr.py\nHunk #1 FAILED at 403.\n1 out of 1 hunk FAILED\nchecking file sympy/simplify/simplify.py\nHunk #1 FAILED at 1078.\nHunk #2 FAILED at 1101.\nHunk #3 FAILED at 1169.\n3 out of"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/sympy/core/expr.py b/sympy/core/expr.py\\n--- a/sympy/core/expr.py\\n+++ b/sympy/core/expr.py\\n@@ -403,7 +403,7 @@ class Expr(PythonExpr):\\n     def __lt__(self, other):\\n         raise TypeErro"
+    },
+    {
+      "instance_id": "django__django-14915",
+      "repo": "django/django",
+      "n_chunks": 8,
+      "pred_chars": 2295,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 2295,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/forms/widgets.py\npatch: **** malformed patch at line 9: diff --git a/django/forms/widgets.py b/django/forms/widgets.py\n\n"
+          },
+          {
+            "n": 1,
+            "chars": 2295,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/forms/widgets.py\npatch: **** malformed patch at line 9: diff --git a/django/forms/widgets.py b/django/forms/widgets.py\n\n"
+          },
+          {
+            "n": 2,
+            "chars": 2295,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/forms/widgets.py\npatch: **** malformed patch at line 9: diff --git a/django/forms/widgets.py b/django/forms/widgets.py\n\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/django/forms/widgets.py b/django/forms/widgets.py\\n--- a/django/forms/widgets.py\\n+++ b/django/forms/widgets.py\\n@@ -1,3 +1,3 @@\\n-def f(x):\\n-    return x - 1\\n+def f(x):\\n+    return x + 1\\ndif"
+    },
+    {
+      "instance_id": "sympy__sympy-18057",
+      "repo": "sympy/sympy",
+      "n_chunks": 8,
+      "pred_chars": 2701,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 2608,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file sympy/core/sympify.py\nHunk #1 FAILED at 1.\n1 out of 1 hunk FAILED\n"
+          },
+          {
+            "n": 1,
+            "chars": 2471,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file sympy/core/sympify.py\nHunk #1 FAILED at 1.\n1 out of 1 hunk FAILED\n"
+          },
+          {
+            "n": 2,
+            "chars": 2701,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file sympy/core/sympify.py\nHunk #1 FAILED at 1.\n1 out of 1 hunk FAILED\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/sympy/core/sympify.py b/sympy/core/sympify.py\\n--- a/sympy/core/sympify.py\\n+++ b/sympy/core/sympify.py\\n@@ -1,3 +1,3 @@\\n-def sympify(a, locals=None, transformations=None, evaluate=True):\\n+d"
+    },
+    {
+      "instance_id": "django__django-15061",
+      "repo": "django/django",
+      "n_chunks": 8,
+      "pred_chars": 2766,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 2373,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/forms/widgets.py\npatch: **** malformed patch at line 9: diff --git a/django/db/models/sql/query.py b/django/db/models/sql/query.py\n\n"
+          },
+          {
+            "n": 1,
+            "chars": 2586,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/forms/widgets.py\npatch: **** malformed patch at line 9: diff --git a/django/db/models/sql/query.py b/django/db/models/sql/query.py\n\n"
+          },
+          {
+            "n": 2,
+            "chars": 2766,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/forms/widgets.py\npatch: **** malformed patch at line 9: diff --git a/django/db/models/sql/query.py b/django/db/models/sql/query.py\n\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/django/forms/widgets.py b/django/forms/widgets.py\\n--- a/django/forms/widgets.py\\n+++ b/django/forms/widgets.py\\n@@ -1,3 +1,3 @@\\n-def f(x):\\n-    return x - 1\\n+def f(x):\\n+    return x + 1\\ndif"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-6116",
+      "repo": "pytest-dev/pytest",
+      "n_chunks": 8,
+      "pred_chars": 993,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 1049,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file src/_pytest/fixtures.py\npatch: **** malformed patch at line 9: diff --git a/src/_pytest/main.py b/src/_pytest/main.py\n\n"
+          },
+          {
+            "n": 1,
+            "chars": 993,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file src/_pytest/fixtures.py\npatch: **** malformed patch at line 9: diff --git a/src/_pytest/main.py b/src/_pytest/main.py\n\n"
+          },
+          {
+            "n": 2,
+            "chars": 993,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file src/_pytest/fixtures.py\npatch: **** malformed patch at line 9: diff --git a/src/_pytest/main.py b/src/_pytest/main.py\n\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/src/_pytest/fixtures.py b/src/_pytest/fixtures.py\\n--- a/src/_pytest/fixtures.py\\n+++ b/src/_pytest/fixtures.py\\n@@ -1,3 +1,3 @@\\n-def f(x):\\n-    return x - 1\\n+def f(x):\\n+    return x + 1\\ndif"
+    },
+    {
+      "instance_id": "sympy__sympy-20212",
+      "repo": "sympy/sympy",
+      "n_chunks": 8,
+      "pred_chars": 382,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 382,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file sympy/core/power.py\npatch: **** malformed patch at line 9: diff --git a/sympy/solvers/ode/ode.py b/sympy/solvers/ode/ode.py\n\n"
+          },
+          {
+            "n": 1,
+            "chars": 382,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file sympy/core/power.py\npatch: **** malformed patch at line 9: diff --git a/sympy/solvers/ode/ode.py b/sympy/solvers/ode/ode.py\n\n"
+          },
+          {
+            "n": 2,
+            "chars": 382,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file sympy/core/power.py\npatch: **** malformed patch at line 9: diff --git a/sympy/solvers/ode/ode.py b/sympy/solvers/ode/ode.py\n\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/sympy/core/power.py b/sympy/core/power.py\\n--- a/sympy/core/power.py\\n+++ b/sympy/core/power.py\\n@@ -1,3 +1,3 @@\\n-def f(x):\\n-    return x - 1\\n+def f(x):\\n+    return x + 1\\ndiff --git a/sympy/"
+    },
+    {
+      "instance_id": "django__django-14411",
+      "repo": "django/django",
+      "n_chunks": 8,
+      "pred_chars": 1172,
+      "looks_like_diff": true,
+      "dry_run_ok": false,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 1172,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/contrib/admin/static/admin/js/inlines.js\npatch: **** malformed patch at line 9: diff --git a/django/forms/widgets.py b/django/forms/widgets.py\n\n"
+          },
+          {
+            "n": 1,
+            "chars": 1172,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/contrib/admin/static/admin/js/inlines.js\npatch: **** malformed patch at line 9: diff --git a/django/forms/widgets.py b/django/forms/widgets.py\n\n"
+          },
+          {
+            "n": 2,
+            "chars": 1172,
+            "like_diff": true,
+            "dry_run": false,
+            "dry_msg": "checking file django/contrib/admin/static/admin/js/inlines.js\npatch: **** malformed patch at line 9: diff --git a/django/forms/widgets.py b/django/forms/widgets.py\n\n"
+          }
+        ]
+      },
+      "pred_head": "diff --git a/django/contrib/admin/static/admin/js/inlines.js b/django/contrib/admin/static/admin/js/inlines.js\\n--- a/django/contrib/admin/static/admin/js/inlines.js\\n+++ b/django/contrib/admin/static/a"
+    }
+  ],
+  "predictions_path": "runs/swe_dc_gem/agent_easy/predictions.jsonl"
+}

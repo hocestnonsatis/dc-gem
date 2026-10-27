@@ -1,0 +1,13 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "train_dataset": "SWE-bench/SWE-bench",
+  "train_split": "train",
+  "n_samples": 113,
+  "epochs": 1,
+  "steps": 74,
+  "mean_loss": 0.6297779750987231,
+  "wall_s": 40.532853587996215,
+  "adapter_path": "runs/swe_dc_gem/lora/adapter",
+  "lora_r": 8,
+  "no_test_leak": true
+}

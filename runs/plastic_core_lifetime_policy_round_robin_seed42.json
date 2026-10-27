@@ -1,0 +1,148 @@
+{
+  "dataset": "data/tinystories/tinystories_train.npy",
+  "seed": 42,
+  "train_tokens": 2048,
+  "segments": 5,
+  "segment_tokens": 256,
+  "compact_vocab": 256,
+  "train_oov": 182,
+  "width": 48,
+  "memory_capacity": 512,
+  "memory_match_threshold": 0.999,
+  "memory_read_threshold": 0.999,
+  "memory_read_top_k": 1,
+  "memory_replacement_policy": "round_robin",
+  "epochs": 2,
+  "mean_final_train_loss": 3.8587821312248707,
+  "session_1_before_memory": {
+    "nll": 3.3965823352336884,
+    "perplexity": 29.861867596044185,
+    "top1": 0.24609375,
+    "memory_similarity_mean": -1.0,
+    "memory_similarity_p90": -1.0,
+    "memory_similarity_max": -1.0
+  },
+  "history": [
+    {
+      "session": 1,
+      "writes": 234,
+      "current_replay": {
+        "nll": 0.8473655134439468,
+        "perplexity": 2.3334911958056135,
+        "top1": 0.859375,
+        "memory_similarity_mean": 0.9825934530235827,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 0.8473655134439468,
+        "perplexity": 2.3334911958056135,
+        "top1": 0.859375,
+        "memory_similarity_mean": 0.9825934530235827,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "occupied_slots": 231,
+      "total_memory_hits": 708,
+      "fresh_allocations": 231,
+      "slot_replacements": 0
+    },
+    {
+      "session": 2,
+      "writes": 225,
+      "current_replay": {
+        "nll": 0.9811667054891586,
+        "perplexity": 2.6675666917891325,
+        "top1": 0.85546875,
+        "memory_similarity_mean": 0.9827344177756459,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 0.8632954135537148,
+        "perplexity": 2.370961131260027,
+        "top1": 0.85546875,
+        "memory_similarity_mean": 0.9869131478480995,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "occupied_slots": 450,
+      "total_memory_hits": 1405,
+      "fresh_allocations": 450,
+      "slot_replacements": 0
+    },
+    {
+      "session": 3,
+      "writes": 220,
+      "current_replay": {
+        "nll": 0.9733972996473312,
+        "perplexity": 2.6469215874985013,
+        "top1": 0.84765625,
+        "memory_similarity_mean": 0.9794938645791262,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 2.4423604384064674,
+        "perplexity": 11.500154135961468,
+        "top1": 0.48828125,
+        "memory_similarity_mean": 0.936199605697766,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "occupied_slots": 512,
+      "total_memory_hits": 1376,
+      "fresh_allocations": 650,
+      "slot_replacements": 138
+    },
+    {
+      "session": 4,
+      "writes": 215,
+      "current_replay": {
+        "nll": 1.0082584992051125,
+        "perplexity": 2.7408237097147055,
+        "top1": 0.84375,
+        "memory_similarity_mean": 0.9739801976829767,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 3.405227482318878,
+        "perplexity": 30.121146972979897,
+        "top1": 0.24609375,
+        "memory_similarity_mean": 0.9333861873019487,
+        "memory_similarity_p90": 0.9967882931232452,
+        "memory_similarity_max": 0.9998226165771484
+      },
+      "occupied_slots": 512,
+      "total_memory_hits": 1100,
+      "fresh_allocations": 850,
+      "slot_replacements": 338
+    },
+    {
+      "session": 5,
+      "writes": 227,
+      "current_replay": {
+        "nll": 1.0002313181757927,
+        "perplexity": 2.7189106891835486,
+        "top1": 0.8359375,
+        "memory_similarity_mean": 0.9824503570562229,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 3.4000419080257416,
+        "perplexity": 29.965355809986203,
+        "top1": 0.25,
+        "memory_similarity_mean": 0.9311762240249664,
+        "memory_similarity_p90": 0.9973751604557037,
+        "memory_similarity_max": 0.9998367428779602
+      },
+      "occupied_slots": 512,
+      "total_memory_hits": 1095,
+      "fresh_allocations": 1067,
+      "slot_replacements": 555
+    }
+  ],
+  "scope": "multi-session replay lifetime probe; compact vocabulary, not language-quality benchmark"
+}

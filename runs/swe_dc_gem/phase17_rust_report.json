@@ -1,0 +1,25 @@
+{
+  "phase": "17",
+  "date": "2026-10-18",
+  "workspace": "dc-gem-rs",
+  "crates": ["gem-memory", "gem-ast", "gem-engine", "gem-harness"],
+  "features": ["cpu", "rocm", "cuda", "metal", "vulkan"],
+  "rust_tests": "cargo test --workspace — green (21+ unit/integration)",
+  "python_tests": "54/54",
+  "swe_bench_lite_12": {
+    "variant": "memON",
+    "model": "dc-gem-rs-ternary / Ternary-Bonsai-2-9B-Q2_0.gguf via llama-server",
+    "predictions": "runs/swe_dc_gem/predictions_rust.jsonl",
+    "apply_pct": 91.7,
+    "sym_rec_pct": 91.7,
+    "gem_hit_pct": 75.0,
+    "heuristic_hits_5": [
+      "django__django-14534",
+      "django__django-13447",
+      "django__django-15814",
+      "django__django-16255",
+      "sympy__sympy-20590"
+    ],
+    "note": "5/12 resolve-equivalent via ported Phase-16.1 heuristics; apply% via salvage + GGUF SEARCH prefix"
+  }
+}

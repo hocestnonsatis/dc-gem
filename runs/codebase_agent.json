@@ -1,0 +1,47 @@
+{
+  "n_functions": 10,
+  "n_questions": 5,
+  "retrieval_hit_rate": 1.0,
+  "results": [
+    {
+      "question": "What does the factorial function do?",
+      "expected_fn": "factorial",
+      "retrieved": "Function factorial: Return n factorial (n!). Code: def factorial(n):\n    \"\"\"Return n factorial (n!).\"\"\"\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+      "retrieval_hit": true,
+      "memON_answer": "The factorial function calculates the product of all positive integers up to and including a given number n. It is often used in mathematics, computer science, and statistics for various applications such as permutations, combinations,",
+      "memOFF_answer": "The factorial function multiplies all positive integers up to a given number, including the number itself. For example, 5! (5 factorial) equals 5 \u00d7 4 \u00d7 3 \u00d7"
+    },
+    {
+      "question": "Which function checks if a number is prime?",
+      "expected_fn": "is_prime",
+      "retrieved": "Function is_prime: Return True if n is a prime number. Code: def is_prime(n):\n    \"\"\"Return True if n is a prime number.\"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n ",
+      "retrieval_hit": true,
+      "memON_answer": "The function `is_prime` checks if a number is prime. It returns `True` if the number is prime and `False` otherwise. The function uses trial division up to the square root of",
+      "memOFF_answer": "The function `is_prime` checks if a number is prime by testing divisibility from 2 up to the square root of the number. It returns `True` if the number is prime and `"
+    },
+    {
+      "question": "How do I reverse a string?",
+      "expected_fn": "reverse_string",
+      "retrieved": "Function reverse_string: Return the reversed version of string s. Code: def reverse_string(s):\n    \"\"\"Return the reversed version of string s.\"\"\"\n    return s[::-1]",
+      "retrieval_hit": true,
+      "memON_answer": "You can reverse a string by using slicing with a step of -1, like `s[::-1]`. This method creates a new string that is the reverse of the original string. For example,",
+      "memOFF_answer": "You can reverse a string by using slicing in Python. For example, `my_string[::-1]` will return the reversed version of `my_string`."
+    },
+    {
+      "question": "Which function computes Fibonacci numbers?",
+      "expected_fn": "fibonacci",
+      "retrieved": "Function fibonacci: Return the nth Fibonacci number. Code: def fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a",
+      "retrieval_hit": true,
+      "memON_answer": "The function `fibonacci` computes Fibonacci numbers. The function takes an integer `n` as input and returns the nth Fibonacci number. The Fibonacci sequence is a series of numbers where each number is the",
+      "memOFF_answer": "The function that computes Fibonacci numbers is called \"fibonacci\". It uses an iterative approach to calculate the sequence efficiently. The function takes an integer as input and returns the Fibonacci number at that position in the"
+    },
+    {
+      "question": "What function counts vowels in a string?",
+      "expected_fn": "count_vowels",
+      "retrieved": "Function count_vowels: Count the number of vowels in string s. Code: def count_vowels(s):\n    \"\"\"Count the number of vowels in string s.\"\"\"\n    return sum(1 for c in s.lower() if c in \"aeiou\")",
+      "retrieval_hit": true,
+      "memON_answer": "The function `count_vowels` counts the number of vowels in a string by iterating over each character, converting it to lowercase, and checking if it is a vowel. It then returns the total",
+      "memOFF_answer": "The function that counts vowels in a string is typically named `count_vowels`. This function iterates through each character in the string, checks if it is a vowel (a, e, i"
+    }
+  ]
+}

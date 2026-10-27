@@ -1,0 +1,46 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:19<03:31, 19.21s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:19<03:31, 19.21s/it]1 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:37,  9.76s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:37,  9.76s/it]2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:38<01:54, 12.74s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:38<01:54, 12.74s/it]3 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:38<01:17,  9.71s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:38<01:17,  9.71s/it]Error in evaluation for django__django-16595: >>>>> Patch Apply Failed:
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/django/db/migrations/optimize.py b/django/db/migrations/optimize.py
+|index 9a5b1c2..d4f5e6f 100644
+|--- a/django/db/migrations/optimize.py
+|+++ b/django/db/migrations/optimize.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 16:      def optimize(self, operations, model_name):
+
+
+Check (logs/run_evaluation/p153e_qwen25_coder_3b_instruct_memOFF/dc-gem-qwen25_coder_3b_instruct-memOFF/django__django-16595/run_instance.log) for more information.
+4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:55<01:17, 11.03s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:55<01:17, 11.03s/it]5 ran successfully, 0 failed:  50%|█████     | 6/12 [00:57<00:57,  9.52s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:57<00:57,  9.52s/it]6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:15<00:53, 10.72s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:15<00:53, 10.73s/it]Error in evaluation for scikit-learn__scikit-learn-25747: >>>>> Patch Apply Failed:
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/sklearn/utils/set_output.py b/sklearn/utils/set_output.py
+|index 1234567..89abcdef 100644
+|--- a/sklearn/utils/set_output.py
+|+++ b/sklearn/utils/set_output.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 39: ```
+
+
+Check (logs/run_evaluation/p153e_qwen25_coder_3b_instruct_memOFF/dc-gem-qwen25_coder_3b_instruct-memOFF/scikit-learn__scikit-learn-25747/run_instance.log) for more information.
+7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:16<00:38,  9.55s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:16<00:38,  9.55s/it]8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:30<00:30, 10.08s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:30<00:30, 10.08s/it]9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:33<00:18,  9.38s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:33<00:18,  9.38s/it]10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:50<00:10, 10.03s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:50<00:10, 10.03s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:51<00:00,  9.28s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:51<00:00,  9.28s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:51<00:00,  9.28s/it]
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 10
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 9
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 2
+Instances with empty patches: 0
+Instances with errors: 2
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen25_coder_3b_instruct-memOFF.p153e_qwen25_coder_3b_instruct_memOFF.json

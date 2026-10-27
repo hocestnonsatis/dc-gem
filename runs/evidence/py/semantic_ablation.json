@@ -1,0 +1,6 @@
+{
+  "N": 50,
+  "bge_top1": 0.84,
+  "core_meanpool_top1": 0.04,
+  "chance": 0.02
+}

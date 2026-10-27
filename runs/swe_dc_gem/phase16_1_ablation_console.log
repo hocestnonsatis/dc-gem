@@ -1,0 +1,86 @@
+[suite] n=12 model=prism-ml/Ternary-Bonsai-2-9B-gguf
+[load] prism-ml/Ternary-Bonsai-2-9B-gguf → cuda
+[dims] d_model=4096 vocab=151936 backend=llama-server(http://127.0.0.1:8765)+hash_embed
+
+[memON] 1/12 django__django-14534
+  ast_chunks=373 files=6
+  hybrid-GEM: 2 OOW [BoundWidget.id_for_label,ChoiceWidget.options] (coverage_aware=on)
+  chars=361 dry=True sym_hit=True gem_hit=True
+
+[memON] 2/12 django__django-13447
+  ast_chunks=290 files=6
+  hybrid-GEM: 2 OOW [AdminSite.register,BaseModelAdmin.has_module_permission] (coverage_aware=on)
+  chars=444 dry=True sym_hit=False gem_hit=True
+
+[memON] 3/12 django__django-14999
+  ast_chunks=391 files=6
+  hybrid-GEM: 2 OOW [ForeignObject.contribute_to_related_class,ManyToManyField._get_m2m_db_table] (coverage_aware=on)
+  chars=1376 dry=True sym_hit=False gem_hit=True
+
+[memON] 4/12 django__django-15814
+  ast_chunks=386 files=6
+  hybrid-GEM: 0 OOW → coverage-gate; narrow+2 in-window fix hints
+  chars=640 dry=True sym_hit=False gem_hit=False
+
+[memON] 5/12 django__django-16255
+  ast_chunks=80 files=6
+  hybrid-GEM: 2 OOW [GenericSitemap.lastmod,Sitemap.get_latest_lastmod] (coverage_aware=on)
+  chars=473 dry=True sym_hit=True gem_hit=True
+
+[memON] 6/12 django__django-16595
+  ast_chunks=6 files=6
+  hybrid-GEM: 0 OOW → coverage-gate; narrow+0 in-window fix hints
+  chars=1078 dry=True sym_hit=True gem_hit=False
+
+[memON] 7/12 sympy__sympy-20590
+  ast_chunks=664 files=6
+  hybrid-GEM: 2 OOW [_imp_namespace,Attribute] (coverage_aware=on)
+  chars=572 dry=True sym_hit=False gem_hit=True
+
+[memON] 8/12 sympy__sympy-22714
+  ast_chunks=197 files=6
+  hybrid-GEM: 2 OOW [eval_expr,sympify] (coverage_aware=on)
+  chars=458 dry=True sym_hit=True gem_hit=True
+
+[memON] 9/12 sympy__sympy-24102
+  ast_chunks=321 files=6
+  hybrid-GEM: 2 OOW [stringify_expr,MCodePrinter._print_ImmutableSparseNDimArray] (coverage_aware=on)
+<unknown>:617: SyntaxWarning: invalid escape sequence '\.'
+<unknown>:617: SyntaxWarning: invalid escape sequence '\.'
+<unknown>:617: SyntaxWarning: invalid escape sequence '\.'
+<unknown>:591: SyntaxWarning: invalid escape sequence '\.'
+  chars=745 dry=False sym_hit=False gem_hit=True
+
+[memON] 10/12 pytest-dev__pytest-11143
+  ast_chunks=386 files=6
+  hybrid-GEM: 0 OOW → coverage-gate; narrow+0 in-window fix hints
+  chars=1040 dry=True sym_hit=True gem_hit=False
+
+[memON] 11/12 pytest-dev__pytest-7490
+  ast_chunks=351 files=6
+  hybrid-GEM: 2 OOW [Testdir._getpytestargs,Testdir.spawn_pytest] (coverage_aware=on)
+  chars=548 dry=True sym_hit=True gem_hit=True
+
+[memON] 12/12 scikit-learn__scikit-learn-25747
+  ast_chunks=402 files=6
+  hybrid-GEM: 2 OOW [LocallyLinearEmbedding.fit_transform,LocallyLinearEmbedding.transform] (coverage_aware=on)
+  chars=2065 dry=True sym_hit=False gem_hit=True
+[harness] /home/an-l-z/dc-gem/.venv-rocm/bin/python -m swebench.harness.run_evaluation --dataset_name SWE-bench/SWE-bench_Lite --predictions_path runs/swe_dc_gem/predictions_ternary_bonsai_2_9b_gguf_memON.jsonl --max_workers 2 --timeout 1800 --run_id p161b_ternary_bonsai_2_9b_gguf_memON --report_dir runs/swe_dc_gem/harness_phase16 --instance_ids django__django-14534 django__django-13447 django__django-14999 django__django-15814 django__django-16255 django__django-16595 sympy__sympy-20590 sympy__sympy-22714 sympy__sympy-24102 pytest-dev__pytest-11143 pytest-dev__pytest-7490 scikit-learn__scikit-learn-25747
+
+=== Phase-16.1 Ablation ===
+model=prism-ml/Ternary-Bonsai-2-9B-gguf  min_symbol_sim=0.15  max_retrieved_symbols=2  gguf=True
+variant          apply%  symRec%  gemHit%     resolved
+memON             91.7%    50.0%    75.0%         5/12
+  resolved_ids: ['django__django-13447', 'django__django-14534', 'django__django-15814', 'django__django-16255', 'sympy__sympy-20590']
+[save] runs/swe_dc_gem/phase16_ablation_ternary_bonsai_2_9b_gguf.json
+[save] runs/swe_dc_gem/phase16_1_ternary_salvage_report.json
+
+=== Phase-16.1 Comparison (0.6B vs 3B vs Ternary-9B) ===
+model                                      variant       apply% symRec% gemHit% resolved  ids
+Qwen/Qwen3-0.6B                            memOFF          16.7    33.3     n/a        0  -
+Qwen/Qwen3-0.6B                            memON           16.7    16.7     n/a        0  -
+Qwen/Qwen3-0.6B                            memON_LoRA       8.3    41.7     n/a        0  -
+Qwen/Qwen2.5-Coder-3B-Instruct             memOFF          83.3    41.7     0.0        1  django__django-15814
+Qwen/Qwen2.5-Coder-3B-Instruct             memON           66.7    41.7    66.7        2  django__django-14534,django__django-15814
+Qwen/Qwen2.5-Coder-3B-Instruct             memON_LoRA      83.3    58.3    75.0        2  django__django-14534,django__django-15814
+prism-ml/Ternary-Bonsai-2-9B-gguf          memON           91.7    50.0    75.0        5  django__django-13447,django__django-14534,django__django-15814,django__django-16255,sympy__sympy-20590

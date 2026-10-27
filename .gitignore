@@ -1,0 +1,44 @@
+# Python
+.venv/
+.venv-rocm/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Rust
+dc-gem-rs/target/
+**/target/
+
+# Large / local artifacts
+models/
+bin/
+data/swe_repos/
+data/fineweb/
+data/tinystories/
+logs/
+runs/**/*.log
+*.log
+*.gguf
+*.pt
+*.bin
+*.arrow
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Agent scratch
+.dc_gem_*.diff
+**/.dc_gem_safeguard_apply.diff
+**/.dc_gem_patch_check.diff
+
+# Additional
+*.safetensors
+.env
+wandb/
+*.egg-info/

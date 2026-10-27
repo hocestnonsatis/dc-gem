@@ -1,0 +1,61 @@
+[hw] cuda AMD Radeon RX 9070 XT
+[load] runs/rocm_baseline_20m/last.pt  missing=5 unexpected=0 use_lora=True
+[A] baseline memOFF exact=0.000 ppl=16687531008.00
+[stage-B] trainable_tensors=13 steps=1200 λ_ret=0.5 train_top_m=0 span=0 untie=True
+  step    1/1200 loss=38.393 ce=37.923 ret=4.699 ans=0.000 slots=110 writes=110 α=0.000
+  step  240/1200 loss=13.129 ce=7.612 ret=4.398 ans=16.925 slots=114 writes=114 α=0.176
+  step  480/1200 loss=8.460 ce=7.474 ret=9.864 ans=0.000 slots=210 writes=210 α=1.000
+  step  720/1200 loss=4.061 ce=2.813 ret=7.984 ans=0.450 slots=210 writes=210 α=1.000
+  step  960/1200 loss=1.660 ce=0.399 ret=12.617 ans=0.000 slots=210 writes=210 α=1.000
+  step 1200/1200 loss=4.694 ce=4.037 ret=6.566 ans=0.000 slots=210 writes=210 α=1.000
+
+=== Bölüm 2: Sleep-to-LoRA + PPL Retention (Phase-9) ===
+[sleep] val_ppl_pre_sleep=22.725
+[sleep] planted facts → n_valid=6292
+[sleep] pre-sleep memOFF exact=0.000 ppl=22824165376.00
+[sleep-lora] step    1 | KL 23.9234 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 12.2656 | CE 1.5556 | anchor 744.2368 | valKL 2.2076
+[sleep-lora] step  160 | KL 0.0492 | CE 0.1924 | anchor 966.4075 | valKL 1.3578
+[sleep-lora] step  240 | KL 1.3334 | CE 3.7249 | anchor 986.0095 | valKL 1.1128
+[sleep-lora] step  320 | KL 5.0847 | CE 1.5493 | anchor 893.9821 | valKL 0.9463
+[sleep-lora] step  400 | KL 4.8506 | CE 0.5576 | anchor 910.3576 | valKL 0.8901
+[sleep] done n_replay=50 steps=400 kl=4.8506 ce=0.5576
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.620 val_ppl=51.325 ok=False
+[balance] factor=0.75 exact=0.500 val_ppl=35.776 ok=False
+[balance] factor=0.55 exact=0.000 val_ppl=30.040 ok=False
+[balance] factor=0.40 exact=0.000 val_ppl=27.027 ok=False
+[balance] factor=0.30 exact=0.000 val_ppl=25.313 ok=False
+[balance] factor=0.20 exact=0.000 val_ppl=23.915 ok=False
+[balance] factor=0.10 exact=0.000 val_ppl=22.987 ok=False
+[sleep] post-sleep memOFF exact=0.500 fact_ppl=5.17
+[sleep] val_ppl_post_sleep=35.776 (limit=26.134) factor=0.75
+[sleep] retention_ok=False exact_ok=True
+
+=== Bölüm 3: Continual Wave-1/2 Dual-Store (Phase-9) ===
+[continual] LoRA reset (no merge) layers=24
+[continual] small GEM max_slots=256 (overflow vs ~25 fact yazımı)
+[continual] Wave-1 planted n_valid=256/256 occupancy=1.00
+[sleep-lora] step    1 | KL 23.9234 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 0.8114 | CE 1.2348 | anchor 561.0338 | valKL 1.2887
+[sleep-lora] step  160 | KL 0.1673 | CE 0.5446 | anchor 424.3159 | valKL 0.4123
+[sleep-lora] step  240 | KL 1.8743 | CE 0.4787 | anchor 307.0393 | valKL 0.3275
+[sleep-lora] step  320 | KL 0.9531 | CE 0.8995 | anchor 327.1737 | valKL 0.3538
+[sleep-lora] step  400 | KL 0.3223 | CE 0.5638 | anchor 376.5391 | valKL 0.3845
+[continual] Wave-1 consolidated → merge layers=24, memory cleared
+[continual] Wave-1 core recall exact=0.920
+[continual] Wave-2 planted n_valid=256/256 occupancy=1.00
+[continual] Wave-1 (Core) exact=0.920
+[continual] Wave-2 (GEM)  exact=0.320
+[continual] Combined 50   exact=0.620
+[continual] val_ppl_final=28.051
+[continual] all50 memON   exact=0.500
+
+=== 31M Continual Learning & Consolidation Proof ===
+Metric                                        Value
+Wave-1 Core exact                             0.920
+Wave-2 GEM exact                              0.320
+Combined 50-Fact exact                        0.620
+val_ppl_final                                28.051
+max_slots / W1 occ / W2 occ              256/1.00/1.00
+[saved] runs/fact_recall_proof.json

@@ -1,0 +1,183 @@
+[facts] sample[0] code=8655 n_tok=3 ids=[220, 7371, 3299]
+[facts] sample[1] code=6732 n_tok=3 ids=[220, 5804, 3188]
+[facts] sample[2] code=5600 n_tok=3 ids=[220, 4370, 515]
+[load] runs/fineweb_dc_gem/final_dc_gem_gen.pt → cuda
+[pre] FineWeb val PPL (memOFF) …
+[pre] val_ppl_pre=282.78
+[plant] ingest 50 facts …
+[plant] n_valid=416 writes=367
+[pre] memON Exact (shared memory) …
+[pre] memON exact=0.060 target_ppl=13.88
+[pre] shared <0.90 — replant OOW yedek ölçüm …
+[pre] replant memON exact=0.920
+[pre] memOFF exact=0.000 (beklenen ~0)
+[sleep] per-fact KL steps=600 batch=8 λ_anchor=0.002 λ_val=0.2 lr=0.004
+  [sleep-fact] step    1/50 | KL 6.3585 | CE 5.4712 | anchor 1.2212 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 6.0414 | CE 3.7606 | anchor 5.9867 | valKL 0.0210
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 3.6951 | anchor 21.1929 | valKL 0.1189
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 3.6718 | anchor 36.5717 | valKL 0.1251
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 3.0273 | anchor 45.8806 | valKL 0.0915
+  [sleep-fact] step   25/50 | KL 5.8755 | CE 3.1857 | anchor 51.7218 | valKL 0.0657
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 3.4398 | anchor 53.5116 | valKL 0.0466
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 3.2643 | anchor 54.8468 | valKL 0.0388
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 3.1766 | anchor 55.5693 | valKL 0.0375
+  [sleep-fact] step   45/50 | KL 5.4180 | CE 2.6832 | anchor 57.1969 | valKL 0.0374
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 2.9869 | anchor 58.8501 | valKL 0.0337
+  [sleep] chunk 1/12 mid_memOFF_exact=0.000 ppl=24.7
+  [sleep-fact] step    1/50 | KL 5.0623 | CE 2.6770 | anchor 58.5731 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 6.5613 | CE 3.2853 | anchor 59.2318 | valKL 0.0596
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 3.3232 | anchor 54.5706 | valKL 0.0295
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 3.0298 | anchor 56.0214 | valKL 0.0321
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 2.5593 | anchor 59.1806 | valKL 0.0519
+  [sleep-fact] step   25/50 | KL 5.4144 | CE 2.8783 | anchor 59.5202 | valKL 0.0321
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 2.9748 | anchor 60.2021 | valKL 0.0481
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 3.1852 | anchor 61.7283 | valKL 0.0685
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 3.0128 | anchor 61.3014 | valKL 0.0483
+  [sleep-fact] step   45/50 | KL 5.3815 | CE 2.6277 | anchor 57.3524 | valKL 0.0535
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 2.8615 | anchor 56.1298 | valKL 0.0514
+  [sleep] chunk 2/12 mid_memOFF_exact=0.000 ppl=21.2
+  [sleep-fact] step    1/50 | KL 5.2547 | CE 2.6285 | anchor 56.1637 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 6.4064 | CE 3.0632 | anchor 63.7025 | valKL 0.0232
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 3.1811 | anchor 64.8149 | valKL 0.0444
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 2.8763 | anchor 64.9739 | valKL 0.0439
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 2.4704 | anchor 66.2090 | valKL 0.0182
+  [sleep-fact] step   25/50 | KL 5.3561 | CE 2.6766 | anchor 67.8862 | valKL 0.0177
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 2.8503 | anchor 72.5850 | valKL 0.0275
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 2.9414 | anchor 79.6534 | valKL 0.0300
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 2.7150 | anchor 84.4719 | valKL 0.0293
+  [sleep-fact] step   45/50 | KL 4.7140 | CE 2.3488 | anchor 87.5402 | valKL 0.0261
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 2.5394 | anchor 90.7237 | valKL 0.0306
+  [sleep] chunk 3/12 mid_memOFF_exact=0.000 ppl=18.9
+  [sleep-fact] step    1/50 | KL 4.6471 | CE 2.3481 | anchor 90.8140 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 6.0292 | CE 2.8788 | anchor 97.0902 | valKL 0.0232
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 2.9526 | anchor 94.4614 | valKL 0.0346
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 2.6955 | anchor 98.6244 | valKL 0.0294
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 2.3413 | anchor 100.5727 | valKL 0.0327
+  [sleep-fact] step   25/50 | KL 4.6117 | CE 2.6277 | anchor 104.0741 | valKL 0.0277
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 2.7169 | anchor 105.3517 | valKL 0.0237
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 2.7172 | anchor 108.5123 | valKL 0.0267
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 2.5579 | anchor 110.7851 | valKL 0.0277
+  [sleep-fact] step   45/50 | KL 4.0464 | CE 2.1024 | anchor 111.8636 | valKL 0.0217
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 2.3824 | anchor 117.4544 | valKL 0.0291
+  [sleep] chunk 4/12 mid_memOFF_exact=0.020 ppl=16.2
+  [sleep-fact] step    1/50 | KL 4.4678 | CE 2.1039 | anchor 118.2039 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 5.8389 | CE 3.0420 | anchor 121.0431 | valKL 0.0307
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 2.8386 | anchor 121.3544 | valKL 0.0282
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 2.6309 | anchor 129.8941 | valKL 0.0375
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 2.1019 | anchor 133.2318 | valKL 0.0401
+  [sleep-fact] step   25/50 | KL 4.9784 | CE 2.3042 | anchor 137.5874 | valKL 0.0331
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 2.5931 | anchor 141.0833 | valKL 0.0236
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 2.5162 | anchor 144.5694 | valKL 0.0253
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 2.2922 | anchor 147.0570 | valKL 0.0279
+  [sleep-fact] step   45/50 | KL 4.4174 | CE 1.9172 | anchor 149.1479 | valKL 0.0259
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 2.1643 | anchor 150.9969 | valKL 0.0285
+  [sleep] chunk 5/12 mid_memOFF_exact=0.000 ppl=14.6
+  [sleep-fact] step    1/50 | KL 4.2694 | CE 1.8634 | anchor 151.7861 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 5.4580 | CE 2.7756 | anchor 152.6417 | valKL 0.0110
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 2.6770 | anchor 156.2834 | valKL 0.0155
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 2.3039 | anchor 164.5401 | valKL 0.0246
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 1.8380 | anchor 164.6312 | valKL 0.0241
+  [sleep-fact] step   25/50 | KL 4.7288 | CE 2.2384 | anchor 169.0976 | valKL 0.0252
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 2.4642 | anchor 172.0907 | valKL 0.0251
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 2.3076 | anchor 176.7240 | valKL 0.0220
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 2.1603 | anchor 179.0586 | valKL 0.0198
+  [sleep-fact] step   45/50 | KL 4.1271 | CE 1.6069 | anchor 179.0794 | valKL 0.0181
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 1.9980 | anchor 184.0677 | valKL 0.0188
+  [sleep] chunk 6/12 mid_memOFF_exact=0.040 ppl=11.0
+  [sleep-fact] step    1/50 | KL 3.9164 | CE 1.4943 | anchor 184.2262 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 5.3336 | CE 2.4758 | anchor 192.6399 | valKL 0.0149
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 2.4456 | anchor 202.1935 | valKL 0.0189
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 2.5015 | anchor 212.1560 | valKL 0.0203
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 1.6596 | anchor 214.1650 | valKL 0.0193
+  [sleep-fact] step   25/50 | KL 4.7920 | CE 2.0825 | anchor 215.4532 | valKL 0.0179
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 2.1436 | anchor 217.4618 | valKL 0.0179
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 2.0609 | anchor 218.5258 | valKL 0.0187
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 2.1035 | anchor 221.8743 | valKL 0.0215
+  [sleep-fact] step   45/50 | KL 4.0190 | CE 1.3181 | anchor 221.9769 | valKL 0.0194
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 1.7011 | anchor 227.8324 | valKL 0.0202
+  [sleep] chunk 7/12 mid_memOFF_exact=0.020 ppl=8.8
+  [sleep-fact] step    1/50 | KL 3.7846 | CE 1.1621 | anchor 229.0861 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 5.3910 | CE 2.3331 | anchor 238.0382 | valKL 0.0241
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 2.2937 | anchor 242.7275 | valKL 0.0242
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 2.2646 | anchor 252.1329 | valKL 0.0221
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 1.2373 | anchor 258.1303 | valKL 0.0239
+  [sleep-fact] step   25/50 | KL 5.1068 | CE 1.7939 | anchor 262.3103 | valKL 0.0235
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 1.7852 | anchor 265.5387 | valKL 0.0209
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 1.7818 | anchor 271.1370 | valKL 0.0279
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 2.0206 | anchor 278.2835 | valKL 0.0270
+  [sleep-fact] step   45/50 | KL 3.9277 | CE 1.1581 | anchor 275.7932 | valKL 0.0279
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 1.5611 | anchor 276.9576 | valKL 0.0316
+  [sleep] chunk 8/12 mid_memOFF_exact=0.220 ppl=6.8
+  [sleep-fact] step    1/50 | KL 4.2296 | CE 0.9672 | anchor 276.4638 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 5.8081 | CE 1.9183 | anchor 282.7994 | valKL 0.0124
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 1.8671 | anchor 289.5494 | valKL 0.0195
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 1.9358 | anchor 291.9151 | valKL 0.0231
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 1.0120 | anchor 293.8854 | valKL 0.0213
+  [sleep-fact] step   25/50 | KL 4.3170 | CE 1.7583 | anchor 300.8650 | valKL 0.0238
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 1.7167 | anchor 301.3270 | valKL 0.0206
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 1.4050 | anchor 309.5789 | valKL 0.0215
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 1.6246 | anchor 306.9730 | valKL 0.0182
+  [sleep-fact] step   45/50 | KL 4.2208 | CE 0.7872 | anchor 304.6534 | valKL 0.0204
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 1.3265 | anchor 305.3393 | valKL 0.0218
+  [sleep] chunk 9/12 mid_memOFF_exact=0.300 ppl=5.3
+  [sleep-fact] step    1/50 | KL 3.3579 | CE 0.7249 | anchor 305.4702 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 5.0555 | CE 1.8125 | anchor 312.3451 | valKL 0.0144
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 1.5817 | anchor 319.8326 | valKL 0.0162
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 1.7036 | anchor 327.8347 | valKL 0.0177
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 0.7804 | anchor 328.6982 | valKL 0.0292
+  [sleep-fact] step   25/50 | KL 4.3801 | CE 1.4226 | anchor 326.8849 | valKL 0.0244
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 1.5076 | anchor 325.7679 | valKL 0.0207
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 1.1346 | anchor 326.6236 | valKL 0.0230
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 1.4305 | anchor 322.8381 | valKL 0.0222
+  [sleep-fact] step   45/50 | KL 4.3210 | CE 0.7102 | anchor 322.1792 | valKL 0.0220
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 1.1519 | anchor 322.8388 | valKL 0.0220
+  [sleep] chunk 10/12 mid_memOFF_exact=0.440 ppl=4.6
+  [sleep-fact] step    1/50 | KL 4.0296 | CE 0.6455 | anchor 323.0995 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 4.9701 | CE 1.6411 | anchor 336.2667 | valKL 0.0216
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 1.5475 | anchor 340.3169 | valKL 0.0303
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 1.5655 | anchor 349.3104 | valKL 0.0293
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 0.6800 | anchor 354.3580 | valKL 0.0321
+  [sleep-fact] step   25/50 | KL 4.2757 | CE 1.0923 | anchor 351.0763 | valKL 0.0320
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 1.3096 | anchor 349.8511 | valKL 0.0287
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 1.0332 | anchor 350.6815 | valKL 0.0263
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 1.2302 | anchor 351.5452 | valKL 0.0234
+  [sleep-fact] step   45/50 | KL 3.9783 | CE 0.6596 | anchor 348.9851 | valKL 0.0245
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 1.0205 | anchor 345.5438 | valKL 0.0253
+  [sleep] chunk 11/12 mid_memOFF_exact=0.500 ppl=4.4
+  [sleep-fact] step    1/50 | KL 3.7115 | CE 0.6025 | anchor 346.4758 | valKL -0.0000
+  [sleep-fact] step    5/50 | KL 5.1039 | CE 1.4213 | anchor 357.8780 | valKL 0.0143
+  [sleep-fact] step   10/50 | KL 0.0000 | CE 1.1310 | anchor 368.9146 | valKL 0.0148
+  [sleep-fact] step   15/50 | KL 0.0000 | CE 1.3025 | anchor 374.2431 | valKL 0.0140
+  [sleep-fact] step   20/50 | KL 0.0000 | CE 0.6973 | anchor 374.2853 | valKL 0.0147
+  [sleep-fact] step   25/50 | KL 4.0415 | CE 1.0073 | anchor 372.2454 | valKL 0.0144
+  [sleep-fact] step   30/50 | KL 0.0000 | CE 1.0864 | anchor 369.4691 | valKL 0.0117
+  [sleep-fact] step   35/50 | KL 0.0000 | CE 1.0125 | anchor 365.2675 | valKL 0.0124
+  [sleep-fact] step   40/50 | KL 0.0000 | CE 1.0651 | anchor 362.5136 | valKL 0.0133
+  [sleep-fact] step   45/50 | KL 3.9523 | CE 0.6033 | anchor 358.7611 | valKL 0.0145
+  [sleep-fact] step   50/50 | KL 0.0000 | CE 0.9016 | anchor 359.3106 | valKL 0.0128
+  [sleep] chunk 12/12 mid_memOFF_exact=0.600 ppl=4.0
+[sleep] early-stop: mid exact ≥ 0.55
+[sleep] sleep_kl_consolidate polish (tek-fact rotate) …
+[balance] LoRA scale vs Exact/PPL …
+  [balance] factor=1.00 exact=0.600 val_ppl=323.71 ok=True
+[merge] layers=4; memory reset
+[post] memOFF Exact …
+[post] memOFF exact=0.600 target_ppl=3.95
+[post] FineWeb val PPL (memOFF) …
+[post] val_ppl_post=326.53 ratio=1.155
+
+=== Phase-13 FineWeb Sleep-to-LoRA ===
+  val_ppl_pre          282.78
+  val_ppl_post         326.53
+  val_ppl_ratio        1.155 (limit ≤1.15)
+  pre_memON_exact      0.920
+  post_memOFF_exact    0.600
+  sleep_steps          675
+  lora_balance_factor  1.00
+  merged_layers        4
+  retention_ok         True
+  exact_ok             True
+  targets_met          True
+==========================================
+[save] report → runs/fineweb_dc_gem/fineweb_sleep_report.json
+[save] ckpt   → runs/fineweb_dc_gem/final_dc_gem_sleep.pt

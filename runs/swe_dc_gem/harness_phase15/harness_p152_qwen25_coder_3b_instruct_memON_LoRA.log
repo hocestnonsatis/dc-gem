@@ -1,0 +1,54 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:18<03:26, 18.78s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:18<03:26, 18.78s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:18<01:33,  9.40s/it]Error in evaluation for django__django-15814: >>>>> Patch Apply Failed:
+patching file django/db/models/query.py
+Hunk #1 succeeded at 1717 (offset 1415 lines).
+patch: **** malformed patch at line 21: diff --git a/django/db/models/query.py b/django/db/models/query.py
+
+
+Check (logs/run_evaluation/p152_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/django__django-15814/run_instance.log) for more information.
+2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:35<01:45, 11.67s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:35<01:45, 11.67s/it]3 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:14,  9.35s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:14,  9.35s/it]Error in evaluation for django__django-16595: >>>>> Patch Apply Failed:
+can't find file to patch at input line 4
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/django/db/migrations/optimize.py b/django/db/migrations/optimize.py
+|--- a/django/db/migrations/optimize.py
+|+++ b/django/db/migrations/optimize.py
+--------------------------
+No file to patch.  Skipping patch.
+5 out of 5 hunks ignored
+
+Check (logs/run_evaluation/p152_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/django__django-16595/run_instance.log) for more information.
+4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:53<01:14, 10.69s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:53<01:14, 10.69s/it]5 ran successfully, 0 failed:  50%|█████     | 6/12 [00:54<00:54,  9.04s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:54<00:54,  9.04s/it]Error in evaluation for pytest-dev__pytest-7490: >>>>> Patch Apply Failed:
+patching file src/_pytest/python.py
+Reversed (or previously applied) patch detected!  Skipping patch.
+1 out of 1 hunk ignored -- saving rejects to file src/_pytest/python.py.rej
+patching file testing/test_skipping.py
+Hunk #1 succeeded at 14 (offset -100 lines).
+Hunk #2 succeeded at 31 with fuzz 3 (offset -100 lines).
+patching file testing/test_skipping.py
+Reversed (or previously applied) patch detected!  Skipping patch.
+2 out of 2 hunks ignored -- saving rejects to file testing/test_skipping.py.rej
+patching file testing/test_skipping.py
+Reversed (or previously applied) patch detected!  Skipping patch.
+2 out of 2 hunks ignored -- saving rejects to file testing/test_skipping.py.rej
+patching file testing/test_skipping.py
+Reversed (or previously applied) patch detected!  Skipping patch.
+1 out of 1 hunk ignored -- saving rejects to file testing/test_skipping.py.rej
+
+Check (logs/run_evaluation/p152_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/pytest-dev__pytest-7490/run_instance.log) for more information.
+6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:09<00:49,  9.95s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:09<00:49,  9.95s/it]7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:13<00:36,  9.17s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:13<00:36,  9.17s/it]8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:27<00:29,  9.70s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:27<00:29,  9.70s/it]9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:30<00:18,  9.06s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:30<00:18,  9.06s/it]10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:46<00:09,  9.70s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:46<00:09,  9.70s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:47<00:00,  8.99s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:47<00:00,  8.99s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:47<00:00,  8.99s/it]
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 9
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 8
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 1
+Instances with empty patches: 0
+Instances with errors: 3
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen25_coder_3b_instruct-memON_LoRA.p152_qwen25_coder_3b_instruct_memON_LoRA.json

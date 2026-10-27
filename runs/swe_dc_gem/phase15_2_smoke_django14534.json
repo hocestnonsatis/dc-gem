@@ -1,0 +1,95 @@
+{
+  "phase": 15.2,
+  "min_symbol_sim": 0.15,
+  "max_retrieved_symbols": 2,
+  "hybrid_score": "0.5*cos + 0.5*lex",
+  "rows": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memOFF",
+      "apply%": 16.67,
+      "symRec%": 33.33,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_ablation_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON",
+      "apply%": 16.67,
+      "symRec%": 16.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_ablation_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON_LoRA",
+      "apply%": 8.33,
+      "symRec%": 41.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_ablation_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memOFF",
+      "apply%": 16.67,
+      "symRec%": 33.33,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_1_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON",
+      "apply%": 16.67,
+      "symRec%": 16.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_1_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "variant": "memON_LoRA",
+      "apply%": 8.33,
+      "symRec%": 41.67,
+      "gem_hit_rate%": null,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_1_comparison_report.json"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memOFF",
+      "apply%": 100.0,
+      "symRec%": 100.0,
+      "gem_hit_rate%": 0.0,
+      "resolved_count": 0,
+      "resolved_ids": [],
+      "source": "phase15_2"
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "variant": "memON",
+      "apply%": 100.0,
+      "symRec%": 100.0,
+      "gem_hit_rate%": 100.0,
+      "resolved_count": 1,
+      "resolved_ids": [
+        "django__django-14534"
+      ],
+      "source": "phase15_2"
+    }
+  ],
+  "notes": [
+    "Hybrid GEM gate + Phase-14 patch engine (SR/difflib/.get)",
+    "memOFF: narrow window excludes target methods; memON: GEM OOW inject",
+    "memory.reset() between tasks"
+  ]
+}

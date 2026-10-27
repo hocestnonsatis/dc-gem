@@ -1,0 +1,126 @@
+{
+  "ckpt": "runs/fineweb_dc_gem/final_dc_gem_gen.pt",
+  "device": "cuda",
+  "use_bf16": true,
+  "model": {
+    "n_params": 51548162,
+    "weights_mb": 196.64063262939453,
+    "d": 384,
+    "n_layers": 6,
+    "n_heads": 6,
+    "vocab_size": 52032,
+    "max_seq_len": 256,
+    "memory_size": 2048,
+    "d_k": 384,
+    "d_v": 384
+  },
+  "vram": {
+    "allocated_mb": 277.0908203125,
+    "reserved_mb": 2644.0,
+    "peak_allocated_mb": 2333.99951171875,
+    "total_mb": 16304.0,
+    "device_name": "AMD Radeon RX 9070 XT"
+  },
+  "rss_max_mb": 1857.78515625,
+  "gem_host_mb": 6.017578125,
+  "speed": {
+    "prefill_memOFF": {
+      "tok_s": 616607.745454789,
+      "ms_per_batch": 3.321398433763534,
+      "batch": 8,
+      "seq": 256,
+      "iters": 30,
+      "disable_memory": true,
+      "allow_writes": false
+    },
+    "prefill_memON_ro": {
+      "tok_s": 641607.2392532962,
+      "ms_per_batch": 3.191983934569483,
+      "batch": 8,
+      "seq": 256,
+      "iters": 30,
+      "disable_memory": false,
+      "allow_writes": false
+    },
+    "prefill_memON_filled": {
+      "tok_s": 647737.173436413,
+      "ms_per_batch": 3.161776232688377,
+      "batch": 8,
+      "seq": 256,
+      "iters": 30,
+      "disable_memory": false,
+      "allow_writes": false,
+      "n_valid_slots": 2048
+    },
+    "decode_memOFF": {
+      "tok_s": 637.7508631728455,
+      "ms_per_token": 1.5680104218517954,
+      "prompt_len": 64,
+      "max_new": 32,
+      "iters": 20,
+      "disable_memory": true
+    },
+    "decode_memON": {
+      "tok_s": 184.7240667179819,
+      "ms_per_token": 5.413479779690533,
+      "prompt_len": 64,
+      "max_new": 32,
+      "iters": 20,
+      "disable_memory": false
+    }
+  },
+  "quality": {
+    "val_ppl_off": {
+      "nll": 5.654529690742493,
+      "ppl": 285.58213921363944
+    },
+    "val_ppl_on": {
+      "nll": 5.673077392578125,
+      "ppl": 290.9284592887121
+    },
+    "oow": {
+      "n_facts": 25,
+      "distractor_tokens": 200,
+      "exact_match_mem_on": 0.88,
+      "exact_match_mem_off": 0.0,
+      "target_ppl_mem_on": 2.067795481258658,
+      "target_ppl_mem_off": 688.8242852815466
+    },
+    "generate_exact": {
+      "n_facts": 25,
+      "distractor_tokens": 200,
+      "min_read_sim": 0.35,
+      "exact_match_mem_on": 0.92,
+      "exact_match_mem_off": 0.0,
+      "contains_code_mem_on": 0.92,
+      "contains_code_mem_off": 0.0
+    },
+    "generations": {
+      "prompt": "The secret password of castle Zorg00 is",
+      "answer_token_ids": [
+        220,
+        7371,
+        3299
+      ],
+      "mem_off": "The secret password of castle Zorg00 is in the 2012-12 season,",
+      "mem_on": "The secret password of castle Zorg00 is 8655.\nThe following is",
+      "mem_off_cont": " in the 2012-12 season,",
+      "mem_on_cont": " 8655.\nThe following is",
+      "answer_code": "8655",
+      "contains_code_on": true,
+      "contains_code_off": false,
+      "contains_8492_on": true,
+      "contains_8492_off": false,
+      "exact_ans_prefix_on": true
+    }
+  },
+  "inference_requirements": {
+    "min_vram_mb_observed": 2334.0,
+    "min_ram_mb_observed": 1857.8,
+    "gem_host_mb": 6.0,
+    "weights_mb": 196.6,
+    "recommended_vram_mb": 3057.0,
+    "recommended_ram_mb": 2654.0,
+    "notes": "Core+head GPU; GEM keys/values CPU host (ROCm yolu). Decode B=1; prefill B\u00d7T penceresi."
+  }
+}

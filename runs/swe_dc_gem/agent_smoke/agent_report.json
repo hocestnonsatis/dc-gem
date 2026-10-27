@@ -1,0 +1,83 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "lora_adapter": null,
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "split": "test",
+  "n": 3,
+  "model_name_or_path": "dc-gem-qwen25-coder-3b",
+  "wall_s": 164.3289437610074,
+  "looks_like_diff_rate": 0.0,
+  "dry_run_ok_rate": 0.0,
+  "instances": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "repo": "astropy/astropy",
+      "n_chunks": 12,
+      "pred_chars": 5684,
+      "looks_like_diff": false,
+      "dry_run_ok": null,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 4463,
+            "like_diff": false
+          },
+          {
+            "n": 1,
+            "chars": 5684,
+            "like_diff": false
+          }
+        ]
+      },
+      "pred_head": ": ndarray\\n        An array of booleans indicating whether each output is independent\\n        of the inputs. The length of the array is equal to the number of\\n        outputs of the transform.\\n    \"\"\"\\n"
+    },
+    {
+      "instance_id": "astropy__astropy-14182",
+      "repo": "astropy/astropy",
+      "n_chunks": 12,
+      "pred_chars": 4654,
+      "looks_like_diff": false,
+      "dry_run_ok": null,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 4605,
+            "like_diff": false
+          },
+          {
+            "n": 1,
+            "chars": 4654,
+            "like_diff": false
+          }
+        ]
+      },
+      "pred_head": "):\\n        if \"enable\" not in fast_reader:\\n            fast_reader[\"enable\"] = \"auto\"\\n    else:\\n        fast_reader = {\"enable\": fast_reader}\\n    return fast_reader\\n\\n\\ndef _get_fast_reader(format, kwar"
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "repo": "astropy/astropy",
+      "n_chunks": 12,
+      "pred_chars": 4432,
+      "looks_like_diff": false,
+      "dry_run_ok": null,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 3490,
+            "like_diff": false
+          },
+          {
+            "n": 1,
+            "chars": 4432,
+            "like_diff": false
+          }
+        ]
+      },
+      "pred_head": "\"\\n\\n    if filename is None and isinstance(source, str):\\n        filename = source\\n\\n    if filename is None and source is None:\\n        raise ValueError(\"either filename or source must be provided\")\\n\\n "
+    }
+  ],
+  "predictions_path": "runs/swe_dc_gem/agent_smoke/predictions.jsonl"
+}

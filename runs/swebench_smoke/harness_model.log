@@ -1,0 +1,41 @@
+Running 5 instances...
+  0%|          | 0/5 [00:00<?, ?it/s]Error in evaluation for astropy__astropy-12907: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+patch unexpectedly ends in middle of line
+
+Check (logs/run_evaluation/dc_gem_model_smoke/dc-gem-fineweb-51m/astropy__astropy-12907/run_instance.log) for more information.
+Error in evaluation for astropy__astropy-14182: >>>>> Patch Apply Failed:
+patch unexpectedly ends in middle of line
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/dc_gem_model_smoke/dc-gem-fineweb-51m/astropy__astropy-14182/run_instance.log) for more information.
+ 20%|██        | 1/5 [00:15<01:03, 15.77s/it]1 ran successfully, 0 failed:  20%|██        | 1/5 [00:15<01:03, 15.77s/it]1 ran successfully, 0 failed:  40%|████      | 2/5 [00:18<00:27,  9.21s/it]2 ran successfully, 0 failed:  40%|████      | 2/5 [00:18<00:27,  9.22s/it]Error in evaluation for astropy__astropy-14365: >>>>> Patch Apply Failed:
+patch unexpectedly ends in middle of line
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/dc_gem_model_smoke/dc-gem-fineweb-51m/astropy__astropy-14365/run_instance.log) for more information.
+Error in evaluation for astropy__astropy-14995: >>>>> Patch Apply Failed:
+patch unexpectedly ends in middle of line
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/dc_gem_model_smoke/dc-gem-fineweb-51m/astropy__astropy-14995/run_instance.log) for more information.
+2 ran successfully, 0 failed:  60%|██████    | 3/5 [00:34<00:22, 11.39s/it]3 ran successfully, 0 failed:  60%|██████    | 3/5 [00:34<00:22, 11.39s/it]3 ran successfully, 0 failed:  80%|████████  | 4/5 [00:36<00:09,  9.23s/it]4 ran successfully, 0 failed:  80%|████████  | 4/5 [00:36<00:09,  9.23s/it]Error in evaluation for astropy__astropy-6938: >>>>> Patch Apply Failed:
+patch unexpectedly ends in middle of line
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/dc_gem_model_smoke/dc-gem-fineweb-51m/astropy__astropy-6938/run_instance.log) for more information.
+4 ran successfully, 0 failed: 100%|██████████| 5/5 [00:57<00:00, 11.59s/it]5 ran successfully, 0 failed: 100%|██████████| 5/5 [00:57<00:00, 11.59s/it]5 ran successfully, 0 failed: 100%|██████████| 5/5 [00:57<00:00, 11.59s/it]
+All instances run.
+Total instances: 5
+Instances submitted: 5
+Instances completed: 0
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 0
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 0
+Instances with empty patches: 0
+Instances with errors: 5
+Unstopped containers: 0
+Unremoved images: 5
+Report written to runs/swebench_smoke/dc-gem-fineweb-51m.dc_gem_model_smoke.json

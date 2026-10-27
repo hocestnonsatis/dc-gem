@@ -1,0 +1,43 @@
+{
+  "prereg": "v2",
+  "step": 1,
+  "seed": 0,
+  "n_facts": 5,
+  "steps_per_fact": 500,
+  "total_steps": 2500,
+  "exact": 5,
+  "exact_rate": 1.0,
+  "gate_pass": true,
+  "details": [
+    {
+      "name": "Z000",
+      "code": "60494",
+      "generated": "6049494",
+      "exact": true
+    },
+    {
+      "name": "Z001",
+      "code": "65125",
+      "generated": "6512512",
+      "exact": true
+    },
+    {
+      "name": "Z002",
+      "code": "15306",
+      "generated": "1530636",
+      "exact": true
+    },
+    {
+      "name": "Z003",
+      "code": "43936",
+      "generated": "4393660",
+      "exact": true
+    },
+    {
+      "name": "Z004",
+      "code": "77013",
+      "generated": "7701360",
+      "exact": true
+    }
+  ]
+}

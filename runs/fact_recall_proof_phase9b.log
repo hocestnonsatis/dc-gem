@@ -1,0 +1,76 @@
+[hw] cuda AMD Radeon RX 9070 XT
+[load] runs/rocm_baseline_20m/last.pt  missing=5 unexpected=0 use_lora=True
+[A] baseline memOFF exact=0.000 ppl=16687531008.00
+[stage-B] trainable_tensors=13 steps=1500 λ_ret=0.5 train_top_m=0 span=0 untie=True
+  step    1/1500 loss=39.583 ce=39.113 ret=4.699 ans=0.000 slots=110 writes=110 α=0.000
+  step  300/1500 loss=3.865 ce=3.418 ret=4.472 ans=0.000 slots=114 writes=114 α=0.404
+  step  600/1500 loss=2.063 ce=1.010 ret=10.527 ans=0.000 slots=210 writes=210 α=1.000
+  step  900/1500 loss=41.864 ce=2.624 ret=6.727 ans=38.568 slots=210 writes=210 α=1.000
+  step 1200/1500 loss=2.459 ce=1.759 ret=6.998 ans=0.000 slots=210 writes=210 α=1.000
+  step 1500/1500 loss=2.963 ce=2.421 ret=5.417 ans=0.000 slots=209 writes=209 α=1.000
+
+=== Bölüm 2: Sleep-to-LoRA + PPL Retention (Phase-9) ===
+[sleep] val_ppl_pre_sleep=22.725
+[sleep] planted facts → n_valid=6311
+[sleep] pre-sleep memOFF exact=0.000 ppl=22824165376.00
+[sleep-lora] step    1 | KL 21.0890 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 5.2091 | CE 5.7474 | anchor 165.7503 | valKL 0.4575
+[sleep-lora] step  160 | KL 3.5408 | CE 0.6438 | anchor 231.3738 | valKL 0.4888
+[sleep-lora] step  240 | KL 8.6721 | CE 0.5855 | anchor 199.4454 | valKL 0.2948
+[sleep-lora] step  320 | KL 6.6720 | CE 0.5253 | anchor 193.5487 | valKL 0.1925
+[sleep-lora] step  400 | KL 4.3997 | CE 1.4634 | anchor 191.6565 | valKL 0.2249
+[sleep] done n_replay=50 steps=400 kl=4.3997 ce=1.4634
+[sleep] LM recovery pass (val-only → pre-sleep teacher)
+/home/an-l-z/dc-gem/examples/run_fact_recall_proof.py:832: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/rockrel/rockrel/external-builds/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  print(f"[recover] step {step + 1:4d} | KL {float(kl):.4f} | "
+[recover] step    1 | KL 0.2348 | CE 3.2066
+[recover] step   30 | KL 0.0237 | CE 2.9088
+[recover] step   60 | KL 0.0382 | CE 2.7357
+[recover] step   90 | KL 0.0610 | CE 2.5400
+[recover] step  120 | KL 0.0809 | CE 2.3737
+[sleep] post-sleep memOFF exact=0.000 ppl=11718391808.00
+[sleep] val_ppl_post_sleep=10.685 (limit=26.134)
+[sleep] retention/exact hedefi kaçtı — karışık recovery
+[sleep-lora] step    1 | KL 22.3297 | CE 23.2570 | anchor 18.5322 | valKL -0.0000
+[sleep-lora] step   30 | KL 14.6961 | CE 10.9341 | anchor 55.9769 | valKL 0.5270
+[sleep-lora] step   60 | KL 6.8849 | CE 0.5039 | anchor 102.7563 | valKL 0.5378
+[sleep-lora] step   90 | KL 7.3164 | CE 1.0792 | anchor 110.6799 | valKL 0.3501
+[sleep-lora] step  120 | KL 6.8826 | CE 0.6630 | anchor 105.6965 | valKL 0.2464
+[sleep-lora] step  150 | KL 4.0089 | CE 0.9222 | anchor 101.0376 | valKL 0.2107
+[recover] step    1 | KL 0.3363 | CE 2.4950
+[recover] step   37 | KL 0.0522 | CE 2.5650
+[recover] step   74 | KL 0.0594 | CE 2.5183
+[recover] step  111 | KL 0.0663 | CE 2.4622
+[recover] step  148 | KL 0.0719 | CE 2.4170
+[recover] step  150 | KL 0.0721 | CE 2.4148
+[sleep] retry post exact=0.000 val_ppl=11.176
+[sleep] retention_ok=True exact_ok=False
+
+=== Bölüm 3: Continual Wave-1/2 Dual-Store (Phase-9) ===
+[continual] LoRA reset (no merge) layers=24
+[continual] small GEM max_slots=256 (overflow vs ~25 fact yazımı)
+[continual] Wave-1 planted n_valid=256/256 occupancy=1.00
+[sleep-lora] step    1 | KL 21.0890 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 3.2186 | CE 1.2030 | anchor 517.3267 | valKL 0.6077
+[sleep-lora] step  160 | KL 1.9355 | CE 0.0041 | anchor 340.3094 | valKL 0.3999
+[sleep-lora] step  240 | KL 0.4434 | CE 0.6706 | anchor 457.4315 | valKL 0.7085
+[sleep-lora] step  320 | KL 1.2644 | CE 0.7188 | anchor 438.1118 | valKL 0.4765
+[sleep-lora] step  400 | KL 2.4236 | CE 0.5799 | anchor 454.4382 | valKL 0.3988
+[continual] Wave-1 consolidated → merge layers=24, memory cleared
+[continual] Wave-1 core recall exact=0.760
+[continual] Wave-2 planted n_valid=256/256 occupancy=1.00
+[continual] Wave-1 (Core) exact=0.760
+[continual] Wave-2 (GEM)  exact=0.040
+[continual] Combined 50   exact=0.400
+[continual] val_ppl_final=29.047
+[continual] all50 memON   exact=0.000
+
+=== 31M Continual Learning & Consolidation Proof ===
+Metric                                        Value
+Wave-1 Core exact                             0.760
+Wave-2 GEM exact                              0.040
+Combined 50-Fact exact                        0.400
+val_ppl_final                                29.047
+max_slots / W1 occ / W2 occ              256/1.00/1.00
+[saved] runs/fact_recall_proof.json

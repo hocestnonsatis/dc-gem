@@ -1,0 +1,56 @@
+[hw] cuda AMD Radeon RX 9070 XT
+[load] runs/rocm_baseline_20m/last.pt  missing=5 unexpected=0 use_lora=True
+[A] baseline memOFF exact=0.000 ppl=16687531008.00
+[stage-B] trainable_tensors=13 steps=1200 λ_ret=0.5 train_top_m=0 span=0 untie=True
+  step    1/1200 loss=40.164 ce=39.694 ret=4.699 ans=0.000 slots=110 writes=110 α=0.000
+  step  240/1200 loss=9.631 ce=9.205 ret=4.258 ans=0.000 slots=114 writes=114 α=0.151
+  step  480/1200 loss=4.220 ce=3.318 ret=9.021 ans=0.000 slots=210 writes=210 α=1.000
+  step  720/1200 loss=8.570 ce=5.477 ret=8.392 ans=7.513 slots=210 writes=210 α=0.999
+  step  960/1200 loss=2.750 ce=1.598 ret=11.521 ans=0.000 slots=210 writes=210 α=1.000
+  step 1200/1200 loss=2.001 ce=1.269 ret=7.323 ans=0.000 slots=210 writes=210 α=1.000
+
+=== Bölüm 2: Sleep-to-LoRA + PPL Retention (Phase-9) ===
+[sleep] val_ppl_pre_sleep=22.725
+[sleep] planted facts → n_valid=6381
+[sleep] pre-sleep memOFF exact=0.000 ppl=22824165376.00
+[sleep-lora] step    1 | KL 24.1166 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 5.3559 | CE 3.1726 | anchor 472.2930 | valKL 0.9820
+[sleep-lora] step  160 | KL 3.7602 | CE 1.3106 | anchor 545.7721 | valKL 0.5630
+[sleep-lora] step  240 | KL 3.7483 | CE 0.8864 | anchor 505.0776 | valKL 0.5975
+[sleep-lora] step  320 | KL 1.5410 | CE 0.8678 | anchor 454.3565 | valKL 0.4319
+[sleep-lora] step  400 | KL 2.6230 | CE 1.6340 | anchor 436.8542 | valKL 0.4155
+[sleep] done n_replay=50 steps=400 kl=2.6230 ce=1.6340
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.740 val_ppl=29.603 ok=False
+[balance] factor=0.90 exact=0.760 val_ppl=27.501 ok=False
+[balance] factor=0.85 exact=0.660 val_ppl=26.744 ok=False
+[balance] factor=0.80 exact=0.540 val_ppl=26.138 ok=False
+[balance] factor=0.75 exact=0.480 val_ppl=25.655 ok=False
+[balance] factor=0.72 exact=0.340 val_ppl=25.414 ok=False
+[balance] factor=0.70 exact=0.280 val_ppl=25.270 ok=False
+[balance] factor=0.68 exact=0.180 val_ppl=25.137 ok=False
+[balance] factor=0.65 exact=0.100 val_ppl=24.957 ok=False
+[balance] factor=0.60 exact=0.000 val_ppl=24.690 ok=False
+[balance] gentle val polish…
+Traceback (most recent call last):
+  File "/home/an-l-z/dc-gem/examples/run_fact_recall_proof.py", line 1285, in <module>
+    main()
+  File "/home/an-l-z/dc-gem/examples/run_fact_recall_proof.py", line 1241, in main
+    sleep_metrics = run_sleep_to_lora_section(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/examples/run_fact_recall_proof.py", line 1003, in run_sleep_to_lora_section
+    bal = balance_sleep_retention(
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/.venv-rocm/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/examples/run_fact_recall_proof.py", line 911, in balance_sleep_retention
+    loss.backward()
+  File "/home/an-l-z/dc-gem/.venv-rocm/lib/python3.12/site-packages/torch/_tensor.py", line 623, in backward
+    torch.autograd.backward(
+  File "/home/an-l-z/dc-gem/.venv-rocm/lib/python3.12/site-packages/torch/autograd/__init__.py", line 395, in backward
+    _engine_run_backward(
+  File "/home/an-l-z/dc-gem/.venv-rocm/lib/python3.12/site-packages/torch/autograd/graph.py", line 1072, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn

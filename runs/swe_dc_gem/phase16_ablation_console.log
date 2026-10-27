@@ -1,0 +1,186 @@
+[suite] n=12 model=prism-ml/Ternary-Bonsai-2-9B-gguf
+[load] prism-ml/Ternary-Bonsai-2-9B-gguf → cuda
+[dims] d_model=4096 vocab=151936 backend=llama-server(http://127.0.0.1:8765)
+
+[memOFF] 1/12 django__django-14534
+  ast_chunks=373 files=6
+  chars=1467 dry=False sym_hit=False gem_hit=False
+
+[memOFF] 2/12 django__django-13447
+  ast_chunks=290 files=6
+  chars=433 dry=True sym_hit=False gem_hit=False
+
+[memOFF] 3/12 django__django-14999
+  ast_chunks=422 files=6
+  chars=511 dry=True sym_hit=False gem_hit=False
+
+[memOFF] 4/12 django__django-15814
+  ast_chunks=386 files=6
+  chars=640 dry=True sym_hit=False gem_hit=False
+
+[memOFF] 5/12 django__django-16255
+  ast_chunks=80 files=6
+  chars=473 dry=True sym_hit=True gem_hit=False
+
+[memOFF] 6/12 django__django-16595
+  ast_chunks=6 files=6
+  chars=2732 dry=False sym_hit=True gem_hit=False
+
+[memOFF] 7/12 sympy__sympy-20590
+  ast_chunks=832 files=6
+  chars=1289 dry=False sym_hit=True gem_hit=False
+
+[memOFF] 8/12 sympy__sympy-22714
+  ast_chunks=197 files=6
+  chars=1270 dry=False sym_hit=False gem_hit=False
+
+[memOFF] 9/12 sympy__sympy-24102
+  ast_chunks=321 files=6
+  chars=1058 dry=False sym_hit=False gem_hit=False
+
+[memOFF] 10/12 pytest-dev__pytest-11143
+  ast_chunks=386 files=6
+  chars=1462 dry=False sym_hit=True gem_hit=False
+
+[memOFF] 11/12 pytest-dev__pytest-7490
+  ast_chunks=351 files=6
+  chars=342 dry=True sym_hit=False gem_hit=False
+
+[memOFF] 12/12 scikit-learn__scikit-learn-25747
+  ast_chunks=402 files=6
+  chars=1418 dry=False sym_hit=False gem_hit=False
+[harness] /home/an-l-z/dc-gem/.venv-rocm/bin/python -m swebench.harness.run_evaluation --dataset_name SWE-bench/SWE-bench_Lite --predictions_path runs/swe_dc_gem/predictions_ternary_bonsai_2_9b_gguf_memOFF.jsonl --max_workers 2 --timeout 1800 --run_id p16_ternary_bonsai_2_9b_gguf_memOFF --report_dir runs/swe_dc_gem/harness_phase16 --instance_ids django__django-14534 django__django-13447 django__django-14999 django__django-15814 django__django-16255 django__django-16595 sympy__sympy-20590 sympy__sympy-22714 sympy__sympy-24102 pytest-dev__pytest-11143 pytest-dev__pytest-7490 scikit-learn__scikit-learn-25747
+[load] prism-ml/Ternary-Bonsai-2-9B-gguf → cuda
+[dims] d_model=4096 vocab=151936 backend=llama-server(http://127.0.0.1:8765)
+
+[memON] 1/12 django__django-14534
+  ast_chunks=373 files=6
+Traceback (most recent call last):
+  File "/home/an-l-z/dc-gem/examples/run_swe_ablation_suite.py", line 850, in <module>
+    main()
+  File "/home/an-l-z/dc-gem/examples/run_swe_ablation_suite.py", line 612, in main
+    metrics = run_variant(args, variant, examples, bundle)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/examples/run_swe_ablation_suite.py", line 364, in run_variant
+    bundle.ingest_text_chunks(chunks, max_tokens=384)
+  File "/home/an-l-z/dc-gem/.venv-rocm/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/dc_gem/swe_bundle.py", line 849, in ingest_text_chunks
+    h = self._embed_text(ch.text, max_tokens=max_tokens)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/.venv-rocm/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/dc_gem/swe_bundle.py", line 824, in _embed_text
+    return self.core.encode_states(text).float()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/.venv-rocm/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/dc_gem/gguf_core.py", line 667, in encode_states
+    out = fn(text or " ")
+          ^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/dc_gem/gguf_core.py", line 439, in _embed_via_server
+    with urllib.request.urlopen(req, timeout=120) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/an-l-z/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+[suite] n=12 model=prism-ml/Ternary-Bonsai-2-9B-gguf
+[load] prism-ml/Ternary-Bonsai-2-9B-gguf → cuda
+[dims] d_model=4096 vocab=151936 backend=llama-server(http://127.0.0.1:8765)+hash_embed
+
+[memON] 1/12 django__django-14534
+  ast_chunks=373 files=6
+  hybrid-GEM: 2 OOW [BoundWidget.id_for_label,ChoiceWidget.options] (coverage_aware=on)
+  chars=369 dry=True sym_hit=True gem_hit=True
+
+[memON] 2/12 django__django-13447
+  ast_chunks=299 files=6
+  hybrid-GEM: 2 OOW [BaseModelAdmin.has_delete_permission,BaseModelAdmin.has_change_permission] (coverage_aware=on)
+  chars=1458 dry=False sym_hit=False gem_hit=True
+
+[memON] 3/12 django__django-14999
+  ast_chunks=422 files=6
+  hybrid-GEM: 2 OOW [ManyToManyField._get_m2m_db_table,ForeignObject.contribute_to_related_class] (coverage_aware=on)
+  chars=1455 dry=False sym_hit=False gem_hit=True
+
+[memON] 4/12 django__django-15814
+  ast_chunks=378 files=6
+  hybrid-GEM: 0 OOW → coverage-gate; narrow+2 in-window fix hints
+  chars=640 dry=True sym_hit=False gem_hit=False
+
+[memON] 5/12 django__django-16255
+  ast_chunks=80 files=6
+  hybrid-GEM: 2 OOW [GenericSitemap.lastmod,Sitemap.get_latest_lastmod] (coverage_aware=on)
+  chars=473 dry=True sym_hit=True gem_hit=True
+
+[memON] 6/12 django__django-16595
+  ast_chunks=6 files=6
+  hybrid-GEM: 0 OOW → coverage-gate; narrow+0 in-window fix hints
+  chars=3822 dry=False sym_hit=True gem_hit=False
+
+[memON] 7/12 sympy__sympy-20590
+  ast_chunks=832 files=6
+  hybrid-GEM: 2 OOW [_imp_namespace,Application.eval] (coverage_aware=on)
+  chars=414 dry=True sym_hit=False gem_hit=True
+
+[memON] 8/12 sympy__sympy-22714
+  ast_chunks=197 files=6
+  hybrid-GEM: 2 OOW [eval_expr,sympify] (coverage_aware=on)
+  chars=1024 dry=False sym_hit=True gem_hit=True
+
+[memON] 9/12 sympy__sympy-24102
+  ast_chunks=321 files=6
+  hybrid-GEM: 2 OOW [stringify_expr,MCodePrinter._print_ImmutableSparseNDimArray] (coverage_aware=on)
+  chars=6042 dry=False sym_hit=False gem_hit=True
+
+[memON] 10/12 pytest-dev__pytest-11143
+  ast_chunks=386 files=6
+  hybrid-GEM: 0 OOW → coverage-gate; narrow+0 in-window fix hints
+  chars=2239 dry=False sym_hit=True gem_hit=False
+
+[memON] 11/12 pytest-dev__pytest-7490
+  ast_chunks=351 files=6
+  hybrid-GEM: 2 OOW [Testdir._getpytestargs,Package] (coverage_aware=on)
+  chars=297 dry=False sym_hit=True gem_hit=True
+
+[memON] 12/12 scikit-learn__scikit-learn-25747
+  ast_chunks=402 files=6
+  hybrid-GEM: 2 OOW [LocallyLinearEmbedding.fit_transform,LocallyLinearEmbedding.transform] (coverage_aware=on)
+  chars=1127 dry=False sym_hit=False gem_hit=True
+[harness] /home/an-l-z/dc-gem/.venv-rocm/bin/python -m swebench.harness.run_evaluation --dataset_name SWE-bench/SWE-bench_Lite --predictions_path runs/swe_dc_gem/predictions_ternary_bonsai_2_9b_gguf_memON.jsonl --max_workers 2 --timeout 1800 --run_id p16_ternary_bonsai_2_9b_gguf_memON --report_dir runs/swe_dc_gem/harness_phase16 --instance_ids django__django-14534 django__django-13447 django__django-14999 django__django-15814 django__django-16255 django__django-16595 sympy__sympy-20590 sympy__sympy-22714 sympy__sympy-24102 pytest-dev__pytest-11143 pytest-dev__pytest-7490 scikit-learn__scikit-learn-25747
+
+=== Phase-16.0 Ablation ===
+model=prism-ml/Ternary-Bonsai-2-9B-gguf  min_symbol_sim=0.15  max_retrieved_symbols=2  gguf=True
+variant          apply%  symRec%  gemHit%     resolved
+memON             33.3%    50.0%    75.0%         3/12
+  resolved_ids: ['django__django-14534', 'django__django-15814', 'django__django-16255']
+[save] runs/swe_dc_gem/phase16_ablation_ternary_bonsai_2_9b_gguf.json
+[save] runs/swe_dc_gem/phase16_ternary_bonsai_report.json
+
+=== Phase-16.0 Comparison (0.6B vs 3B vs Ternary-9B) ===
+model                                      variant       apply% symRec% gemHit% resolved  ids
+Qwen/Qwen3-0.6B                            memOFF          16.7    33.3     n/a        0  -
+Qwen/Qwen3-0.6B                            memON           16.7    16.7     n/a        0  -
+Qwen/Qwen3-0.6B                            memON_LoRA       8.3    41.7     n/a        0  -
+Qwen/Qwen2.5-Coder-3B-Instruct             memOFF          83.3    41.7     0.0        1  django__django-15814
+Qwen/Qwen2.5-Coder-3B-Instruct             memON           66.7    41.7    66.7        2  django__django-14534,django__django-15814
+Qwen/Qwen2.5-Coder-3B-Instruct             memON_LoRA      83.3    58.3    75.0        2  django__django-14534,django__django-15814
+prism-ml/Ternary-Bonsai-2-9B-gguf          memON           33.3    50.0    75.0        3  django__django-14534,django__django-15814,django__django-16255

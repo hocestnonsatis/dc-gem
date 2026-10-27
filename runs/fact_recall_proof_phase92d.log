@@ -1,0 +1,50 @@
+[hw] cuda AMD Radeon RX 9070 XT
+[load] runs/rocm_baseline_20m/last.pt  missing=5 unexpected=0 use_lora=True
+[A] baseline memOFF exact=0.000 ppl=16687562752.00
+[stage-B] trainable_tensors=13 steps=1500 λ_ret=0.5 train_top_m=0 span=0 untie=True
+  step    1/1500 loss=38.789 ce=38.319 ret=4.699 ans=0.000 slots=110 writes=110 α=0.000
+  step  300/1500 loss=7.352 ce=2.330 ret=4.916 ans=4.531 slots=114 writes=114 α=0.446
+  step  600/1500 loss=12.977 ce=0.705 ret=10.090 ans=11.263 slots=210 writes=210 α=1.000
+  step  900/1500 loss=24.517 ce=2.063 ret=8.570 ans=21.597 slots=210 writes=210 α=1.000
+  step 1200/1500 loss=3.442 ce=2.731 ret=7.112 ans=0.000 slots=210 writes=210 α=1.000
+  step 1500/1500 loss=2.268 ce=1.692 ret=5.757 ans=0.000 slots=209 writes=209 α=1.000
+[sleep] --skip-sleep: Bölüm 2 atlandı
+
+=== Bölüm 3: Continual Wave-1/2 Dual-Store (Phase-9.2) ===
+[continual] LoRA reset (no merge) layers=24
+[continual] val_ppl_pre (fresh LoRA)=22.725
+[continual] z_thr=2.2 nms_k=5
+[continual] Wave-1 overflow GEM max_slots=256
+[continual] Wave-1 planted n_valid=256/256 occupancy=1.00
+[sleep-lora] step    1 | KL 23.9340 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 0.2433 | CE 1.1741 | anchor 518.7435 | valKL 1.0242
+[sleep-lora] step  160 | KL 2.5263 | CE 0.7425 | anchor 458.5640 | valKL 0.5337
+[sleep-lora] step  240 | KL 2.6203 | CE 0.3857 | anchor 513.4528 | valKL 0.7340
+[sleep-lora] step  320 | KL 1.1858 | CE 1.1358 | anchor 422.0065 | valKL 0.3484
+[sleep-lora] step  400 | KL 1.1986 | CE 0.1303 | anchor 305.8714 | valKL 0.3513
+[continual] Wave-1 consolidated -> merge layers=24 scale=1.0 top_n=None, memory cleared
+[recalib] step   1/50 ce=0.843 ret=3.840 ans=9.106
+[recalib] step  10/50 ce=4.328 ret=4.595 ans=0.000
+[recalib] step  20/50 ce=0.534 ret=5.668 ans=23.178
+[recalib] step  30/50 ce=4.696 ret=8.103 ans=43.337
+[recalib] step  40/50 ce=0.985 ret=8.649 ans=0.000
+[recalib] step  50/50 ce=6.746 ret=4.387 ans=0.000
+[continual] recalib steps=50 ce=6.745552062988281 ret=4.387144088745117 ans=3.5166619909432484e-06
+[continual] Wave-1 core recall exact=0.800
+[continual] Wave-2 AUTONOMOUS planted n_valid=1151/9000 occupancy=0.13 top_m=48
+[continual] Wave-1 (Core) exact=0.800
+[continual] Wave-2 (GEM blank) exact=0.840
+[continual] Wave-2 (GEM shared) exact=0.040
+[continual] Wave-2 (GEM best) exact=0.840
+[continual] Combined 50   exact=0.820
+[continual] val_ppl_pre=22.725 final=24.761 ratio=1.090
+[continual] all50 memON   exact=0.800
+
+=== 31M Continual Learning & Consolidation Proof ===
+Metric                                        Value
+Wave-1 Core exact                             0.800
+Wave-2 GEM exact                              0.840
+Combined 50-Fact exact                        0.820
+val_ppl_final                                24.761
+max_slots / W1 occ / W2 occ              256/1.00/0.13
+[saved] runs/fact_recall_proof.json

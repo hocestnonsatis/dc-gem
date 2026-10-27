@@ -1,0 +1,190 @@
+{
+  "seed": 0,
+  "n": 30,
+  "correct": 0,
+  "rate": 0.0,
+  "gate_threshold": 0.1,
+  "gate_pass": true,
+  "details": [
+    {
+      "id": 0,
+      "expected": "60494",
+      "generated": "0000000",
+      "correct": false
+    },
+    {
+      "id": 1,
+      "expected": "65125",
+      "generated": "The password for castle Z001",
+      "correct": false
+    },
+    {
+      "id": 2,
+      "expected": "15306",
+      "generated": "The password for castle Z002",
+      "correct": false
+    },
+    {
+      "id": 3,
+      "expected": "43936",
+      "generated": "The password for castle Z003",
+      "correct": false
+    },
+    {
+      "id": 4,
+      "expected": "77013",
+      "generated": "0000000",
+      "correct": false
+    },
+    {
+      "id": 5,
+      "expected": "73691",
+      "generated": "The password for castle Z005",
+      "correct": false
+    },
+    {
+      "id": 6,
+      "expected": "63075",
+      "generated": "The password for castle Z006",
+      "correct": false
+    },
+    {
+      "id": 7,
+      "expected": "49755",
+      "generated": "The password for castle Z007",
+      "correct": false
+    },
+    {
+      "id": 8,
+      "expected": "72468",
+      "generated": "The password for castle Z008",
+      "correct": false
+    },
+    {
+      "id": 9,
+      "expected": "56930",
+      "generated": "The password for castle Z009",
+      "correct": false
+    },
+    {
+      "id": 10,
+      "expected": "86465",
+      "generated": "The password for castle Z010",
+      "correct": false
+    },
+    {
+      "id": 11,
+      "expected": "38631",
+      "generated": "The password for castle Z011",
+      "correct": false
+    },
+    {
+      "id": 12,
+      "expected": "76150",
+      "generated": "The password for castle Z012",
+      "correct": false
+    },
+    {
+      "id": 13,
+      "expected": "28254",
+      "generated": "The password for castle Z013",
+      "correct": false
+    },
+    {
+      "id": 14,
+      "expected": "46941",
+      "generated": "14\n\nQuestion: What is",
+      "correct": false
+    },
+    {
+      "id": 15,
+      "expected": "28316",
+      "generated": "The password for castle Z015",
+      "correct": false
+    },
+    {
+      "id": 16,
+      "expected": "22429",
+      "generated": "16\n\nQuestion: What is",
+      "correct": false
+    },
+    {
+      "id": 17,
+      "expected": "91050",
+      "generated": "The password for castle Z017",
+      "correct": false
+    },
+    {
+      "id": 18,
+      "expected": "42834",
+      "generated": "The password for castle Z018",
+      "correct": false
+    },
+    {
+      "id": 19,
+      "expected": "79804",
+      "generated": "1999\n\nSo,",
+      "correct": false
+    },
+    {
+      "id": 20,
+      "expected": "88892",
+      "generated": "The password for castle Z020",
+      "correct": false
+    },
+    {
+      "id": 21,
+      "expected": "29262",
+      "generated": "The password for castle Z021",
+      "correct": false
+    },
+    {
+      "id": 22,
+      "expected": "50651",
+      "generated": "22\n\nQuestion: What is",
+      "correct": false
+    },
+    {
+      "id": 23,
+      "expected": "22945",
+      "generated": "The password for castle Z023",
+      "correct": false
+    },
+    {
+      "id": 24,
+      "expected": "19665",
+      "generated": "The password for castle Z024",
+      "correct": false
+    },
+    {
+      "id": 25,
+      "expected": "99651",
+      "generated": "The password for castle Z025",
+      "correct": false
+    },
+    {
+      "id": 26,
+      "expected": "53279",
+      "generated": "The password for castle Z026",
+      "correct": false
+    },
+    {
+      "id": 27,
+      "expected": "71884",
+      "generated": "27\n\nQuestion: What is",
+      "correct": false
+    },
+    {
+      "id": 28,
+      "expected": "83375",
+      "generated": "The password for castle Z028",
+      "correct": false
+    },
+    {
+      "id": 29,
+      "expected": "23199",
+      "generated": "The password for castle Z029",
+      "correct": false
+    }
+  ]
+}

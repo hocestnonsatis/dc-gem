@@ -1,0 +1,42 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/gem-memory",
+    "crates/gem-ast",
+    "crates/gem-engine",
+    "crates/gem-harness",
+]
+default-members = ["crates/gem-harness"]
+
+[workspace.package]
+version = "0.17.0"
+edition = "2021"
+license = "Apache-2.0"
+authors = ["DC-GEM"]
+repository = "https://github.com/dc-gem/dc-gem"
+
+[workspace.dependencies]
+gem-memory = { path = "crates/gem-memory" }
+gem-ast = { path = "crates/gem-ast" }
+gem-engine = { path = "crates/gem-engine" }
+anyhow = "1"
+thiserror = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = "1"
+similar = "2"
+clap = { version = "4", features = ["derive"] }
+ureq = { version = "2", features = ["json"] }
+sha2 = "0.10"
+md-5 = "0.10"
+walkdir = "2"
+tempfile = "3"
+tree-sitter = "0.24"
+tree-sitter-python = "0.23"
+tree-sitter-rust = "0.23"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }

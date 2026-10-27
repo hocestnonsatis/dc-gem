@@ -1,0 +1,157 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "lora_adapter": null,
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "split": "test",
+  "n": 3,
+  "model_name_or_path": "dc-gem-qwen25-coder-3b",
+  "wall_s": 95.15309136701399,
+  "looks_like_diff_rate": 1.0,
+  "dry_run_ok_rate": 1.0,
+  "instances": [
+    {
+      "instance_id": "django__django-14534",
+      "repo": "django/django",
+      "n_chunks": 8,
+      "pred_chars": 357,
+      "looks_like_diff": true,
+      "dry_run_ok": true,
+      "meta": {
+        "attempts": [],
+        "search_replace_0": {
+          "sr_raw_head": "<<<django/forms/boundfield.py>>>\n<<<<<<< SEARCH\n    def id_for_label(self):\n        return 'id_%s_%s' % (self.data['name'], self.data['index'])\n=======\n    def id_for_label(self):\n        return self.data['attrs']['id']\n>>>>>>> REPLACE",
+          "n_edits": 1,
+          "paths": [
+            "django/forms/boundfield.py",
+            "django/forms/widgets.py"
+          ],
+          "built": true,
+          "dry_run": true,
+          "dry_msg": "checking file django/forms/boundfield.py\n"
+        },
+        "search_replace_1": {
+          "sr_raw_head": "<<<django/forms/boundfield.py>>>\n<<<<<<< SEARCH\n        id_ = self.field.widget.attrs.get('id') or self.auto_id\n=======\n        id_ = self.data['attrs']['id'] or self.auto_id\n>>>>>>> REPLACE\n```",
+          "n_edits": 1,
+          "paths": [
+            "django/forms/boundfield.py",
+            "django/forms/widgets.py"
+          ],
+          "built": true,
+          "dry_run": true,
+          "dry_msg": "checking file django/forms/boundfield.py\n"
+        },
+        "search_replace_2": {
+          "sr_raw_head": "<<<django/forms/boundfield.py>>>\n<<<<<<< SEARCH\n        id_ = self.field.widget.attrs.get('id') or self.auto_id\n=======\n        id_ = self.data['attrs'].get('id') or self.auto_id\n>>>>>>> REPLACE\n```",
+          "n_edits": 1,
+          "paths": [
+            "django/forms/boundfield.py",
+            "django/forms/widgets.py"
+          ],
+          "built": true,
+          "dry_run": true,
+          "dry_msg": "checking file django/forms/boundfield.py\n"
+        },
+        "method": "search_replace_t0",
+        "score": 16.643
+      },
+      "pred_head": "diff --git a/django/forms/boundfield.py b/django/forms/boundfield.py\\n--- a/django/forms/boundfield.py\\n+++ b/django/forms/boundfield.py\\n@@ -277,7 +277,7 @@\\n \\n     @property\\n     def id_for_label(self):"
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "repo": "astropy/astropy",
+      "n_chunks": 8,
+      "pred_chars": 2380,
+      "looks_like_diff": true,
+      "dry_run_ok": true,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 2380,
+            "like_diff": true,
+            "dry_run": true,
+            "dry_msg": "checking file astropy/io/ascii/qdp.py\nHunk #1 succeeded at 20 with fuzz 2 (offset 19 lines).\n"
+          }
+        ],
+        "search_replace_0": {
+          "sr_raw_head": "<<<_qdp = \"\"\"\n    ! Swift/XRT hardness ratio of trigger: XXXX, name: BUBU X-2\n    ! Columns are as labelled\n    READ TERR 1\n    READ SERR 2\n    ! WT -- hard data\n    !MJD            Err (pos)       Err(neg)        Rate            Error\n    53000.123456 2.37847222222222e-05    -2.37847222222222e-05  ",
+          "n_edits": 0,
+          "paths": [
+            "astropy/io/ascii/qdp.py",
+            "astropy/io/ascii/tests/test_qdp.py"
+          ]
+        },
+        "search_replace_1": {
+          "sr_raw_head": "<<<_qdp = \"\"\"\n    ! Swift/XRT hardness ratio of trigger: XXXX, name: BUBU X-2\n    ! Columns are as labelled\n    READ TERR 1\n    READ SERR 2\n    ! WT -- hard data\n    !MJD            Err (pos)       Err(neg)        Rate            Error\n    53000.123456 2.37847222222222e-05    -2.37847222222222e-05  ",
+          "n_edits": 0,
+          "paths": [
+            "astropy/io/ascii/qdp.py",
+            "astropy/io/ascii/tests/test_qdp.py"
+          ]
+        },
+        "search_replace_2": {
+          "sr_raw_head": "<<<_qdp = \"\"\"\n    ! Swift/XRT hardness ratio of trigger: XXXX, name: BUBU X-2\n    ! Columns are as labelled\n    READ TERR 1\n    READ SERR 2\n    ! WT -- hard data\n    !MJD            Err (pos)       Err(neg)        Rate            Error\n    53000.123456 2.37847222222222e-05    -2.37847222222222e-05  ",
+          "n_edits": 0,
+          "paths": [
+            "astropy/io/ascii/qdp.py",
+            "astropy/io/ascii/tests/test_qdp.py"
+          ]
+        },
+        "method": "direct_diff"
+      },
+      "pred_head": "diff --git a/astropy/io/ascii/qdp.py b/astropy/io/ascii/qdp.py\\n--- a/astropy/io/ascii/qdp.py\\n+++ b/astropy/io/ascii/qdp.py\\n@@ -1,3 +1,3 @@\\n-def _line_type(line, delimiter=None):\\n+def _line_type(line, "
+    },
+    {
+      "instance_id": "sympy__sympy-17139",
+      "repo": "sympy/sympy",
+      "n_chunks": 8,
+      "pred_chars": 2159,
+      "looks_like_diff": true,
+      "dry_run_ok": true,
+      "meta": {
+        "attempts": [
+          {
+            "n": 0,
+            "chars": 2159,
+            "like_diff": true,
+            "dry_run": true,
+            "dry_msg": "checking file sympy/core/expr.py\nHunk #1 succeeded at 177 (offset -227 lines).\n"
+          }
+        ],
+        "search_replace_0": {
+          "sr_raw_head": "<<<sympy/core/expr.py>>>\n<<<<<<< SEARCH\n    def __lt__(self):\n        raise TypeError(\"Invalid comparison of complex %s\" % me)\n>>>>>>> REPLACE\n=======\n    def __lt__(self):\n        raise TypeError(\"Invalid comparison of complex %s\" % self)\n>>>>>>> REPLACE",
+          "n_edits": 1,
+          "paths": [
+            "sympy/core/expr.py",
+            "sympy/matrices/expressions/matexpr.py",
+            "sympy/simplify/simplify.py"
+          ],
+          "built": false
+        },
+        "search_replace_1": {
+          "sr_raw_head": "<<<sympy/core/expr.py>>>\n<<<<<<< SEARCH\n    def __lt__(self):\n        raise TypeError(\"Invalid comparison of complex %s\" % me)\n>>>>>>> REPLACE\n=======\n    def __lt__(self):\n        raise TypeError(\"Invalid comparison of complex %s\" % self)\n>>>>>>> REPLACE",
+          "n_edits": 1,
+          "paths": [
+            "sympy/core/expr.py",
+            "sympy/matrices/expressions/matexpr.py",
+            "sympy/simplify/simplify.py"
+          ],
+          "built": false
+        },
+        "search_replace_2": {
+          "sr_raw_head": "<<<sympy/core/expr.py>>>\n<<<<<<< SEARCH\n        if (rv.exp < 0) == True:\n=======\n        if rv.exp < 0:\n>>>>>>> REPLACE",
+          "n_edits": 1,
+          "paths": [
+            "sympy/core/expr.py",
+            "sympy/matrices/expressions/matexpr.py",
+            "sympy/simplify/simplify.py"
+          ],
+          "built": false
+        },
+        "method": "direct_diff"
+      },
+      "pred_head": "diff --git a/sympy/core/expr.py b/sympy/core/expr.py\\n--- a/sympy/core/expr.py\\n+++ b/sympy/core/expr.py\\n@@ -404,7 +404,7 @@\\n         return Add(other, self)\\n\\n     @_sympifyit('other', NotImplemented)\\n-"
+    }
+  ],
+  "predictions_path": "runs/swe_dc_gem/agent_sr3/predictions.jsonl"
+}

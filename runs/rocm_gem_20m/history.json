@@ -1,0 +1,56 @@
+{
+  "args": {
+    "tokens": 20000000,
+    "seq": 256,
+    "batch": 16,
+    "d": 384,
+    "layers": 6,
+    "heads": 6,
+    "memory_size": 16384,
+    "K": 8,
+    "lr": 0.0003,
+    "eval_every": 250,
+    "data_dir": "data/tinystories",
+    "split": "train",
+    "max_docs": null,
+    "refresh_data": false,
+    "out": "runs/rocm_gem_20m",
+    "seed": 0,
+    "no_memory_train": false,
+    "memory_every": 10
+  },
+  "params_M": 30.922368,
+  "device": "cuda",
+  "hist": [
+    {
+      "step": 1,
+      "tokens_seen": 4096,
+      "train_loss": 251.5613250732422,
+      "val_nll_mem_on": 225.47307014465332,
+      "val_ppl_mem_on": 485165195.4097903,
+      "val_nll_mem_off": 225.8087501525879,
+      "val_ppl_mem_off": 485165195.4097903,
+      "fact_mem_on": 0.0,
+      "fact_mem_off": 0.0,
+      "n_valid": 0,
+      "writes": 0,
+      "tok_per_s": 361.2191996854993,
+      "elapsed_s": 11.339375103998464
+    },
+    {
+      "step": 250,
+      "tokens_seen": 1024000,
+      "train_loss": 11.305574417114258,
+      "val_nll_mem_on": 11.623361110687256,
+      "val_ppl_mem_on": 111676.44781623018,
+      "val_nll_mem_off": 9.067444324493408,
+      "val_ppl_mem_off": 8668.441748460551,
+      "fact_mem_on": NaN,
+      "fact_mem_off": NaN,
+      "n_valid": 16384,
+      "writes": 3388,
+      "tok_per_s": 900.2545504438095,
+      "elapsed_s": 1137.4560667260012
+    }
+  ]
+}

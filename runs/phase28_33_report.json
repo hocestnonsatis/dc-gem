@@ -1,0 +1,69 @@
+{
+  "phase": "28-30",
+  "phase28": {
+    "status": "code-complete",
+    "changes": [
+      "rewrite-loop guard for repeated full writes",
+      "manifest completion gate (missing/empty/placeholder/parse)",
+      "manifest path capture from request + model output",
+      "SHORT_SYSTEM manifest-first instruction"
+    ],
+    "tests": "cargo test --workspace PASS"
+  },
+  "phase29": {
+    "status": "core-live-7of7",
+    "live_agent_bench": {
+      "passed": 7,
+      "total": 12,
+      "core_passing": [
+        "write_short", "expand_long", "size_goal_guard", "str_replace",
+        "read_list", "multi_step_bugfix", "rust_oow_bugfix"
+      ],
+      "known_fail": "expand_typo (honest fail)",
+      "adversarial_scripted_only": [
+        "completion_review_repair", "tool_failure_repair",
+        "tool_format_recovery", "verify_repair"
+      ]
+    },
+    "scripted": "12/12 PASS"
+  },
+  "phase30": {
+    "status": "diagnosed",
+    "swe_bench_lite_12": {
+      "memON": {"apply_pct": 91.7, "sym_rec_pct": 91.7, "gem_hit_pct": 75.0, "resolved": 5},
+      "memOFF": {"apply_pct": 91.7, "sym_rec_pct": 91.7, "gem_hit_pct": 0.0, "resolved": 5}
+    },
+    "root_cause": {
+      "resolved": 5,
+      "empty_patch": 1,
+      "ambiguous_no_tests": 2,
+      "likely_wrong_patch": 4
+    },
+    "next_lever": "best-of-N + verify loop / model scale (not retrieval; apply already 91.7)"
+  },
+  "phase31": {
+    "status": "substantially-complete",
+    "decode_memON_tok_s_before": 81,
+    "decode_memON_tok_s_after": 191,
+    "speedup": 2.35,
+    "oow_exact": 0.92,
+    "gen_exact": 0.92,
+    "optimization": "index_select instead of fancy indexing; query_read inference path"
+  },
+  "phase32": {
+    "status": "partial",
+    "20m_exact": 0.04,
+    "31m_exact": 0.84,
+    "finding": "core size has strong effect on GEM fact-recall",
+    "150m_plus": "deferred (training run)"
+  },
+  "phase33": {
+    "status": "documented",
+    "python_proof_reference": {
+      "wave2_exact": 0.84,
+      "combined_exact": 0.82,
+      "sleep_memoff_exact": 0.60
+    },
+    "rust_parity": "pending (sleep/consolidation not yet ported)"
+  }
+}

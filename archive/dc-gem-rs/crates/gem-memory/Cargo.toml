@@ -1,0 +1,12 @@
+[package]
+name = "gem-memory"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Gradient-free episodic memory and coverage-aware OOW gate"
+
+[dependencies]
+serde = { workspace = true }
+
+[lints]
+workspace = true

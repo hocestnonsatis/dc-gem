@@ -1,0 +1,17 @@
+[harness] /home/an-l-z/dc-gem/.venv-rocm/bin/python -m swebench.harness.run_evaluation --dataset_name SWE-bench/SWE-bench_Lite --predictions_path runs/swe_dc_gem/agent_sr3/predictions_django.jsonl --max_workers 1 --timeout 1800 --run_id phase14_django14534 --report_dir runs/swe_dc_gem/harness --instance_ids django__django-14534
+[harness] returncode=0 log=runs/swe_dc_gem/harness/harness_phase14_django14534.log
+{
+  "run_id": "phase14_django14534",
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "predictions": "runs/swe_dc_gem/agent_sr3/predictions_django.jsonl",
+  "n_instances": 1,
+  "instance_ids": [
+    "django__django-14534"
+  ],
+  "returncode": 0,
+  "resolved_instances": 0,
+  "report_file": "runs/swe_dc_gem/harness/dc-gem-qwen25-coder-3b.phase14_django14534.json",
+  "log": "runs/swe_dc_gem/harness/harness_phase14_django14534.log",
+  "success_criterion_met": false
+}
+[save] runs/swe_dc_gem/harness/phase14_harness_summary_phase14_django14534.json

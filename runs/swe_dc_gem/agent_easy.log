@@ -1,0 +1,48 @@
+[load] Qwen/Qwen2.5-Coder-3B-Instruct → cuda
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]Loading weights: 100%|██████████| 434/434 [00:00<00:00, 30315.56it/s]
+[lora] attach runs/swe_dc_gem/lora/adapter
+
+[1/8] django__django-14534
+  retrieve: 8 chunks from 3 files (ftp_hints=[])
+  GEM ingest: {'writes': 8, 'n_valid': 8}
+  patch chars=2651 like_diff=True dry_run=False
+
+[2/8] sympy__sympy-17139
+  retrieve: 8 chunks from 3 files (ftp_hints=[])
+  GEM ingest: {'writes': 8, 'n_valid': 8}
+  patch chars=1732 like_diff=True dry_run=False
+
+[3/8] django__django-14915
+  retrieve: 8 chunks from 3 files (ftp_hints=[])
+  GEM ingest: {'writes': 8, 'n_valid': 8}
+  patch chars=2295 like_diff=True dry_run=False
+
+[4/8] sympy__sympy-18057
+  retrieve: 8 chunks from 3 files (ftp_hints=[])
+  GEM ingest: {'writes': 8, 'n_valid': 8}
+  patch chars=2701 like_diff=True dry_run=False
+
+[5/8] django__django-15061
+  retrieve: 8 chunks from 3 files (ftp_hints=[])
+  GEM ingest: {'writes': 8, 'n_valid': 8}
+  patch chars=2766 like_diff=True dry_run=False
+
+[6/8] pytest-dev__pytest-6116
+  retrieve: 8 chunks from 3 files (ftp_hints=['testing/test_collection.py', 'test_collection', 'test_pytest_fs_collect_hooks_are_seen'])
+  GEM ingest: {'writes': 8, 'n_valid': 8}
+  patch chars=993 like_diff=True dry_run=False
+
+[7/8] sympy__sympy-20212
+  retrieve: 8 chunks from 3 files (ftp_hints=[])
+  GEM ingest: {'writes': 8, 'n_valid': 8}
+  patch chars=382 like_diff=True dry_run=False
+
+[8/8] django__django-14411
+  retrieve: 8 chunks from 3 files (ftp_hints=[])
+  GEM ingest: {'writes': 8, 'n_valid': 8}
+  patch chars=1172 like_diff=True dry_run=False
+
+[save] runs/swe_dc_gem/agent_easy/predictions.jsonl
+[save] runs/swe_dc_gem/agent_easy/agent_report.json
+looks_like_diff=1.00 dry_ok=0.00 wall=600.1s

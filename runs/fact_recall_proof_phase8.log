@@ -1,0 +1,31 @@
+[hw] cuda AMD Radeon RX 9070 XT
+[load] runs/rocm_baseline_20m/last.pt  missing=5 unexpected=0 use_lora=True
+[A] baseline memOFF exact=0.000 ppl=16687531008.00
+[stage-B] trainable_tensors=13 steps=1500 λ_ret=0.5 train_top_m=0 span=0 untie=True
+  step    1/1500 loss=40.158 ce=39.688 ret=4.699 ans=0.000 slots=110 writes=110 α=0.000
+  step  300/1500 loss=3.005 ce=2.413 ret=5.919 ans=0.000 slots=114 writes=114 α=0.598
+  step  600/1500 loss=5.430 ce=3.956 ret=9.501 ans=0.524 slots=210 writes=210 α=1.000
+  step  900/1500 loss=11.614 ce=1.074 ret=11.681 ans=9.372 slots=210 writes=210 α=1.000
+  step 1200/1500 loss=7.265 ce=2.062 ret=7.661 ans=4.437 slots=210 writes=210 α=1.000
+  step 1500/1500 loss=5.059 ce=4.519 ret=5.398 ans=0.000 slots=209 writes=209 α=1.000
+
+=== Fact-Recall Proof (Phase-8) ===
+Variant                                                             Exact     TgtPPL
+Baseline (memOFF)                                                   0.000 16687531008.00
+DC-GEM (memON, write_top_m=0 / unlimited)                           0.440      87.32
+DC-GEM (memON, guided force_write + top_m=32)                       0.720       8.88
+DC-GEM (memON, AUTONOMOUS no-mask, hybrid surprise + top_m=48 + span=2)    0.780       3.74
+Throughput (vectorized GEM, M=32): 6603 tok/s
+
+=== Bölüm 2: Sleep-to-LoRA (31M / warm-core) ===
+[sleep] planted facts → n_valid=2396
+[sleep] pre-sleep memOFF exact=0.000 ppl=22824165376.00
+[sleep-lora] step    1 | KL 22.5145 | CE 24.0572
+[sleep-lora] step   80 | KL 12.0703 | CE 4.1328
+[sleep-lora] step  160 | KL 9.8528 | CE 0.6423
+[sleep-lora] step  240 | KL 5.4736 | CE 1.9840
+[sleep-lora] step  320 | KL 11.4706 | CE 4.0994
+[sleep-lora] step  400 | KL 12.5550 | CE 2.0937
+[sleep] done n_replay=50 steps=400 kl=12.5550 ce=2.0937
+[sleep] post-sleep memOFF exact=0.560 ppl=5.20
+[saved] runs/fact_recall_proof.json

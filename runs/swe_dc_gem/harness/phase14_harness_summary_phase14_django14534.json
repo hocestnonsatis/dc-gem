@@ -1,0 +1,14 @@
+{
+  "run_id": "phase14_django14534",
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "predictions": "runs/swe_dc_gem/agent_sr3/predictions_django.jsonl",
+  "n_instances": 1,
+  "instance_ids": [
+    "django__django-14534"
+  ],
+  "returncode": 0,
+  "resolved_instances": 0,
+  "report_file": "runs/swe_dc_gem/harness/dc-gem-qwen25-coder-3b.phase14_django14534.json",
+  "log": "runs/swe_dc_gem/harness/harness_phase14_django14534.log",
+  "success_criterion_met": false
+}

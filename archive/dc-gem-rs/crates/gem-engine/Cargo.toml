@@ -1,0 +1,26 @@
+[package]
+name = "gem-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Cross-platform model inference backends (GGUF / mock)"
+
+[features]
+default = ["cpu"]
+cpu = []
+rocm = []
+cuda = []
+metal = []
+vulkan = []
+
+[dependencies]
+anyhow = { workspace = true }
+md-5 = { workspace = true }
+regex = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+ureq = { workspace = true }
+
+[lints]
+workspace = true

@@ -1,0 +1,25 @@
+{
+  "run_id": "p15_qwen3_06b_memOFF",
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "predictions": "runs/swe_dc_gem/predictions_qwen3_06b_memOFF.jsonl",
+  "n_instances": 12,
+  "instance_ids": [
+    "django__django-14534",
+    "django__django-13447",
+    "django__django-14999",
+    "django__django-15814",
+    "django__django-16255",
+    "django__django-16595",
+    "sympy__sympy-20590",
+    "sympy__sympy-22714",
+    "sympy__sympy-24102",
+    "pytest-dev__pytest-11143",
+    "pytest-dev__pytest-7490",
+    "scikit-learn__scikit-learn-25747"
+  ],
+  "returncode": 0,
+  "resolved_instances": 0,
+  "report_file": "runs/swe_dc_gem/harness_phase15/dc-gem-qwen3_06b-memOFF.p15_qwen3_06b_memOFF.json",
+  "log": "runs/swe_dc_gem/harness_phase15/harness_p15_qwen3_06b_memOFF.log",
+  "success_criterion_met": false
+}

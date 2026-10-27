@@ -1,0 +1,85 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:19<03:29, 19.03s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:19<03:29, 19.03s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:35,  9.52s/it]Error in evaluation for django__django-14999: >>>>> Patch Apply Failed:
+patching file django/db/backends/oracle/operations.py
+Hunk #1 FAILED at 10.
+Hunk #2 FAILED at 18.
+Hunk #3 FAILED at 26.
+Hunk #4 FAILED at 34.
+Hunk #5 FAILED at 42.
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/p15_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/django__django-14999/run_instance.log) for more information.
+Error in evaluation for django__django-15814: >>>>> Patch Apply Failed:
+patching file django/db/models/sql/query.py
+Hunk #1 FAILED at 2268.
+Hunk #2 FAILED at 2280.
+Hunk #3 FAILED at 2300.
+Hunk #4 FAILED at 2318.
+Hunk #5 FAILED at 2336.
+Hunk #6 FAILED at 2354.
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/p15_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/django__django-15814/run_instance.log) for more information.
+2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:35<01:45, 11.74s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:35<01:45, 11.74s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:35<01:10,  8.81s/it]4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:54<01:15, 10.85s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:54<01:15, 10.85s/it]5 ran successfully, 0 failed:  50%|█████     | 6/12 [00:54<00:54,  9.08s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:54<00:54,  9.08s/it]Error in evaluation for pytest-dev__pytest-11143: >>>>> Patch Apply Failed:
+patching file src/_pytest/python.py
+Hunk #1 succeeded at 174 (offset 62 lines).
+patching file testing/test_assertrewrite.py
+Hunk #1 succeeded at 23 with fuzz 3 (offset 22 lines).
+Hunk #2 FAILED at 11.
+Hunk #3 FAILED at 19.
+Hunk #4 FAILED at 27.
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/p15_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/pytest-dev__pytest-11143/run_instance.log) for more information.
+6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:09<00:49,  9.97s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:09<00:49,  9.97s/it]Error in evaluation for scikit-learn__scikit-learn-25747: >>>>> Patch Apply Failed:
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/sklearn/utils/set_output.py b/sklearn/utils/set_output.py
+|index 02d803b17..b50928024 100644
+|--- a/sklearn/utils/set_output.py
+|+++ b/sklearn/utils/set_output.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+patching file sklearn/utils/tests/test_set_output.py
+Hunk #1 FAILED at 15.
+patch: **** malformed patch at line 49: @@ -135,11 +135,11 @@ def test__wrap_in_pandas_container_dense():
+
+
+Check (logs/run_evaluation/p15_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/scikit-learn__scikit-learn-25747/run_instance.log) for more information.
+7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:13<00:36,  9.23s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:13<00:36,  9.23s/it]Error in evaluation for sympy__sympy-20590: >>>>> Patch Apply Failed:
+patching file sympy/core/function.py
+Reversed (or previously applied) patch detected!  Skipping patch.
+patch: **** malformed patch at line 36:  
+
+
+Check (logs/run_evaluation/p15_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/sympy__sympy-20590/run_instance.log) for more information.
+8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:25<00:28,  9.50s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:25<00:28,  9.50s/it]9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:29<00:17,  8.96s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:29<00:17,  8.96s/it]Error in evaluation for sympy__sympy-24102: >>>>> Patch Apply Failed:
+patching file sympy/parsing/mathematica.py
+Hunk #1 FAILED at 1.
+Hunk #2 FAILED at 102.
+Hunk #3 FAILED at 115.
+Hunk #4 FAILED at 123.
+Hunk #5 FAILED at 133.
+Hunk #6 FAILED at 141.
+Hunk #7 FAILED at 150.
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/p15_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/sympy__sympy-24102/run_instance.log) for more information.
+10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:42<00:09,  9.30s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:42<00:09,  9.30s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:45<00:00,  8.78s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:45<00:00,  8.78s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:45<00:00,  8.78s/it]
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 6
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 6
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 1
+Instances with empty patches: 0
+Instances with errors: 6
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen25_coder_3b_instruct-memON_LoRA.p15_qwen25_coder_3b_instruct_memON_LoRA.json

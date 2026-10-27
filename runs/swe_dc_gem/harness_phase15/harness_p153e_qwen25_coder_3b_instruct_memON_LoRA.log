@@ -1,0 +1,39 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:18<03:26, 18.73s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:18<03:26, 18.73s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:18<01:33,  9.38s/it]2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:37<01:52, 12.49s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:37<01:52, 12.49s/it]3 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:15,  9.47s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:15,  9.47s/it]4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:56<01:18, 11.21s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:56<01:18, 11.21s/it]5 ran successfully, 0 failed:  50%|█████     | 6/12 [00:56<00:56,  9.44s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:56<00:56,  9.44s/it]6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:15<00:54, 10.83s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:15<00:54, 10.83s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:15<00:37,  9.49s/it]Error in evaluation for scikit-learn__scikit-learn-25747: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 18:          estimator : estimator instance
+
+patching file sklearn/utils/_set_output.py
+
+Check (logs/run_evaluation/p153e_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/scikit-learn__scikit-learn-25747/run_instance.log) for more information.
+Error in evaluation for sympy__sympy-20590: >>>>> Patch Apply Failed:
+patching file sympy/core/singleton.py
+Reversed (or previously applied) patch detected!  Skipping patch.
+1 out of 1 hunk ignored -- saving rejects to file sympy/core/singleton.py.rej
+patching file sympy/core/function.py
+Hunk #1 succeeded at 2066 (offset 1953 lines).
+Hunk #2 FAILED at 121.
+1 out of 2 hunks FAILED -- saving rejects to file sympy/core/function.py.rej
+patching file sympy/core/function.py
+Hunk #1 succeeded at 59 with fuzz 2 (offset -71 lines).
+patching file sympy/core/function.py
+Hunk #1 succeeded at 149 with fuzz 3 (offset 2 lines).
+patching file sympy/core/function.py
+Hunk #1 FAILED at 154.
+1 out of 1 hunk FAILED -- saving rejects to file sympy/core/function.py.rej
+
+Check (logs/run_evaluation/p153e_qwen25_coder_3b_instruct_memON_LoRA/dc-gem-qwen25_coder_3b_instruct-memON_LoRA/sympy__sympy-20590/run_instance.log) for more information.
+8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:31<00:30, 10.17s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:31<00:30, 10.17s/it]9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:31<00:18,  9.17s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:31<00:18,  9.17s/it]10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:48<00:09,  9.88s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:48<00:09,  9.88s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:48<00:00,  9.08s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:48<00:00,  9.08s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:48<00:00,  9.08s/it]
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 10
+Instances incomplete: 0
+Instances resolved: 2
+Instances unresolved: 8
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 2
+Instances with empty patches: 0
+Instances with errors: 2
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen25_coder_3b_instruct-memON_LoRA.p153e_qwen25_coder_3b_instruct_memON_LoRA.json

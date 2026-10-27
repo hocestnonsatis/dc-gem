@@ -1,0 +1,32 @@
+{
+  "pre_adapter_baseline_memOFF": {
+    "exact_match": 0.0,
+    "target_ppl": 16687562752.0,
+    "n_facts": 50
+  },
+  "device": "cuda",
+  "steps": 800,
+  "n_facts": 50,
+  "distractor": 192,
+  "Baseline (memOFF)": {
+    "exact_match": 0.0,
+    "target_ppl": 16687562752.0,
+    "n_facts": 50
+  },
+  "DC-GEM (memON, write_top_m=0 / unlimited)": {
+    "exact_match": 0.02,
+    "target_ppl": 8977.1005859375,
+    "n_facts": 50
+  },
+  "DC-GEM (memON, guided force_write + top_m=32)": {
+    "exact_match": 0.04,
+    "target_ppl": 6165.0830078125,
+    "n_facts": 50
+  },
+  "DC-GEM (memON, AUTONOMOUS no-mask, hybrid surprise + top_m=48 + span=2)": {
+    "exact_match": 0.0,
+    "target_ppl": 4388.56201171875,
+    "n_facts": 50
+  },
+  "throughput_tok_s_vectorized_gem": 4997.414037139955
+}

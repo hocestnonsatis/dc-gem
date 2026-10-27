@@ -1,0 +1,35 @@
+[hw] cuda AMD Radeon RX 9070 XT
+[load] runs/rocm_baseline_20m/last.pt  missing=5 unexpected=0 use_lora=True
+[A] baseline memOFF exact=0.000 ppl=16687531008.00
+[stage-B] trainable_tensors=13 steps=1500 λ_ret=0.5 train_top_m=0 span=0 untie=True
+  step    1/1500 loss=39.768 ce=39.298 ret=4.699 ans=0.000 slots=110 writes=110 α=0.000
+  step  300/1500 loss=5.993 ce=4.849 ret=5.129 ans=0.631 slots=114 writes=114 α=0.481
+  step  600/1500 loss=1.721 ce=0.743 ret=9.780 ans=0.000 slots=210 writes=210 α=1.000
+  step  900/1500 loss=23.752 ce=1.348 ret=7.459 ans=21.658 slots=210 writes=210 α=1.000
+  step 1200/1500 loss=2.319 ce=1.579 ret=7.404 ans=0.000 slots=210 writes=210 α=1.000
+  step 1500/1500 loss=4.232 ce=3.695 ret=5.373 ans=0.000 slots=209 writes=209 α=1.000
+
+=== Bölüm 2: Sleep-to-LoRA + PPL Retention (Phase-9) ===
+[sleep] val_ppl_pre_sleep=22.725
+[sleep] planted facts → n_valid=6307
+[sleep] pre-sleep memOFF exact=0.000 ppl=22824165376.00
+[sleep-lora] step    1 | KL 23.0340 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 12.1257 | CE 6.7639 | anchor 725.1907 | valKL 1.9308
+[sleep-lora] step  160 | KL 6.0238 | CE 1.1050 | anchor 966.2746 | valKL 1.3310
+[sleep-lora] step  240 | KL 2.1943 | CE 0.2250 | anchor 925.6767 | valKL 1.2012
+[sleep-lora] step  320 | KL 5.6565 | CE 3.4463 | anchor 953.8348 | valKL 1.0269
+[sleep-lora] step  400 | KL 6.6236 | CE 0.3321 | anchor 929.1458 | valKL 0.8489
+[sleep] done n_replay=50 steps=400 kl=6.6236 ce=0.3321
+[sleep] LoRA scale balance (exact vs val_ppl)
+Traceback (most recent call last):
+  File "/home/an-l-z/dc-gem/examples/run_fact_recall_proof.py", line 1255, in <module>
+    main()
+  File "/home/an-l-z/dc-gem/examples/run_fact_recall_proof.py", line 1211, in main
+    sleep_metrics = run_sleep_to_lora_section(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/examples/run_fact_recall_proof.py", line 973, in run_sleep_to_lora_section
+    bal = balance_sleep_retention(
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/examples/run_fact_recall_proof.py", line 870, in balance_sleep_retention
+    m.lora_B.copy_(b0 * factor)
+RuntimeError: a leaf Variable that requires grad is being used in an in-place operation.

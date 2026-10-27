@@ -1,0 +1,13 @@
+{
+  "pairs": 24,
+  "width": 96,
+  "seed": 7,
+  "baseline_exact": 0.041666666666666664,
+  "one_shot_exact": 0.9166666666666666,
+  "checkpoint_exact": 0.9166666666666666,
+  "conflict_updated_to_new_value": true,
+  "writes": 32,
+  "slow_train_loss_finite": true,
+  "slow_parameters_changed": true,
+  "scope": "synthetic associative mechanism probe; not general language quality"
+}

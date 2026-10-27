@@ -1,0 +1,17 @@
+[package]
+name = "gem-ast"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "tree-sitter symbol chunker and multi-stage patch salvager"
+
+[dependencies]
+regex = { workspace = true }
+similar = { workspace = true }
+thiserror = { workspace = true }
+tree-sitter = { workspace = true }
+tree-sitter-python = { workspace = true }
+tree-sitter-rust = { workspace = true }
+
+[lints]
+workspace = true

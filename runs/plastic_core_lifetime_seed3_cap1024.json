@@ -1,0 +1,141 @@
+{
+  "dataset": "data/tinystories/tinystories_train.npy",
+  "seed": 3,
+  "train_tokens": 2048,
+  "segments": 5,
+  "segment_tokens": 256,
+  "compact_vocab": 256,
+  "train_oov": 182,
+  "width": 48,
+  "memory_capacity": 1024,
+  "memory_match_threshold": 0.999,
+  "memory_read_threshold": 0.999,
+  "epochs": 2,
+  "mean_final_train_loss": 3.812114402651787,
+  "session_1_before_memory": {
+    "nll": 3.198697954416275,
+    "perplexity": 24.500608510763765,
+    "top1": 0.29296875,
+    "memory_similarity_mean": -1.0,
+    "memory_similarity_p90": -1.0,
+    "memory_similarity_max": -1.0
+  },
+  "history": [
+    {
+      "session": 1,
+      "writes": 228,
+      "current_replay": {
+        "nll": 1.244529828429222,
+        "perplexity": 3.4713023079326097,
+        "top1": 0.72265625,
+        "memory_similarity_mean": 0.9878933329600841,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 1.244529828429222,
+        "perplexity": 3.4713023079326097,
+        "top1": 0.72265625,
+        "memory_similarity_mean": 0.9878933329600841,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "occupied_slots": 224,
+      "fresh_allocations": 224,
+      "slot_replacements": 0
+    },
+    {
+      "session": 2,
+      "writes": 213,
+      "current_replay": {
+        "nll": 1.5365602374076843,
+        "perplexity": 4.648572751890235,
+        "top1": 0.671875,
+        "memory_similarity_mean": 0.9793769615935162,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 1.353578805923462,
+        "perplexity": 3.871255240197951,
+        "top1": 0.69921875,
+        "memory_similarity_mean": 0.9883389794267714,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "occupied_slots": 436,
+      "fresh_allocations": 436,
+      "slot_replacements": 0
+    },
+    {
+      "session": 3,
+      "writes": 209,
+      "current_replay": {
+        "nll": 1.4699267148971558,
+        "perplexity": 4.3489164185970814,
+        "top1": 0.71484375,
+        "memory_similarity_mean": 0.9831845306325704,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 1.4556397795677185,
+        "perplexity": 4.287225467626542,
+        "top1": 0.6640625,
+        "memory_similarity_mean": 0.9886148285586387,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "occupied_slots": 630,
+      "fresh_allocations": 630,
+      "slot_replacements": 0
+    },
+    {
+      "session": 4,
+      "writes": 201,
+      "current_replay": {
+        "nll": 1.6230674982070923,
+        "perplexity": 5.068614460018384,
+        "top1": 0.65625,
+        "memory_similarity_mean": 0.9828477466944605,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 1.5085104405879974,
+        "perplexity": 4.5199929792876885,
+        "top1": 0.64453125,
+        "memory_similarity_mean": 0.9901471361517906,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "occupied_slots": 817,
+      "fresh_allocations": 817,
+      "slot_replacements": 0
+    },
+    {
+      "session": 5,
+      "writes": 221,
+      "current_replay": {
+        "nll": 1.5839068591594696,
+        "perplexity": 4.873960540043497,
+        "top1": 0.66015625,
+        "memory_similarity_mean": 0.9859738522209227,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "session_1_retention": {
+        "nll": 1.5550605654716492,
+        "perplexity": 4.735373316592861,
+        "top1": 0.63671875,
+        "memory_similarity_mean": 0.9903679578565061,
+        "memory_similarity_p90": 1.0,
+        "memory_similarity_max": 1.0
+      },
+      "occupied_slots": 1021,
+      "fresh_allocations": 1021,
+      "slot_replacements": 0
+    }
+  ],
+  "scope": "multi-session replay lifetime probe; compact vocabulary, not language-quality benchmark"
+}

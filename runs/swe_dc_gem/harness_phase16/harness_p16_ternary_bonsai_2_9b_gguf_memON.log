@@ -1,0 +1,62 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]Error in evaluation for django__django-13447: >>>>> Patch Apply Failed:
+patching file django/contrib/admin/options.py
+patch: **** malformed patch at line 9: @@ -12,10 +12,12 @@
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/django__django-13447/run_instance.log) for more information.
+  8%|▊         | 1/12 [00:16<02:58, 16.19s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:16<02:58, 16.19s/it]Error in evaluation for django__django-14999: >>>>> Patch Apply Failed:
+patching file django/db/models/fields/related.py
+patch: **** malformed patch at line 10: @@ -12,10 +12,10 @@
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/django__django-14999/run_instance.log) for more information.
+1 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:18<01:33,  9.33s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:18<01:33,  9.33s/it]2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:32<01:37, 10.80s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:32<01:37, 10.80s/it]3 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:14,  9.33s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:37<01:14,  9.33s/it]Error in evaluation for django__django-16595: >>>>> Patch Apply Failed:
+patching file django/db/migrations/optimizer.py
+patch: **** malformed patch at line 13:      def is_same_field_operation(self, operation):
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/django__django-16595/run_instance.log) for more information.
+4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:50<01:11, 10.19s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:50<01:11, 10.19s/it]Error in evaluation for pytest-dev__pytest-11143: >>>>> Patch Apply Failed:
+patching file testing/test_assertrewrite.py
+patch: **** malformed patch at line 11: @@ -10,10 +10,10 @@
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/pytest-dev__pytest-11143/run_instance.log) for more information.
+5 ran successfully, 0 failed:  50%|█████     | 6/12 [00:53<00:53,  8.92s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:53<00:53,  8.92s/it]Error in evaluation for pytest-dev__pytest-7490: >>>>> Patch Apply Failed:
+patching file src/_pytest/pytester.py
+patch: **** malformed patch at line 10:  def _getpytestargs(self) -> Tuple[str, ...]:
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/pytest-dev__pytest-7490/run_instance.log) for more information.
+6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:06<00:47,  9.49s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:06<00:47,  9.49s/it]Error in evaluation for scikit-learn__scikit-learn-25747: >>>>> Patch Apply Failed:
+patching file sklearn/utils/_set_output.py
+patch: **** malformed patch at line 16: @@ -130,7 +130,10 @@ def _wrap_in_pandas_container(
+
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/scikit-learn__scikit-learn-25747/run_instance.log) for more information.
+7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:08<00:34,  8.62s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:08<00:34,  8.62s/it]8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:22<00:27,  9.12s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:22<00:27,  9.12s/it]Error in evaluation for sympy__sympy-22714: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 14: @@ -472,7 +474,9 @@ def sympify(a, locals=None, convert_xor=True, strict=False, rational=False,
+
+patching file sympy/core/sympify.py
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/sympy__sympy-22714/run_instance.log) for more information.
+9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:26<00:17,  8.64s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:26<00:17,  8.64s/it]Error in evaluation for sympy__sympy-24102: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/p16_ternary_bonsai_2_9b_gguf_memON/dc-gem-ternary_bonsai_2_9b_gguf-memON/sympy__sympy-24102/run_instance.log) for more information.
+10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:37<00:08,  8.90s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:37<00:08,  8.90s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:42<00:00,  8.51s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:42<00:00,  8.51s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:42<00:00,  8.51s/it]
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 4
+Instances incomplete: 0
+Instances resolved: 3
+Instances unresolved: 1
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 0
+Instances with empty patches: 0
+Instances with errors: 8
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase16/dc-gem-ternary_bonsai_2_9b_gguf-memON.p16_ternary_bonsai_2_9b_gguf_memON.json

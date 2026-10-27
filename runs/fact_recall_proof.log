@@ -1,0 +1,18 @@
+[hw] cuda AMD Radeon RX 9070 XT
+[load] runs/rocm_baseline_20m/last.pt  missing=5 unexpected=0 use_lora=True
+[A] baseline memOFF exact=0.000 ppl=16687562752.00
+[stage-B] trainable_tensors=13 steps=1500 λ_ret=0.5 train_top_m=0 span=0 untie=True
+  step    1/1500 loss=39.264 ce=38.794 ret=4.699 ans=0.000 slots=110 writes=110 α=0.000
+  step  300/1500 loss=6.961 ce=3.298 ret=5.137 ans=3.149 slots=114 writes=114 α=0.471
+  step  600/1500 loss=11.509 ce=5.030 ret=11.955 ans=17.609 slots=210 writes=210 α=1.000
+  step  900/1500 loss=18.489 ce=0.793 ret=10.842 ans=16.611 slots=210 writes=210 α=1.000
+  step 1200/1500 loss=1.555 ce=0.828 ret=7.271 ans=0.000 slots=210 writes=210 α=1.000
+  step 1500/1500 loss=2.857 ce=2.317 ret=5.402 ans=0.000 slots=209 writes=209 α=1.000
+
+=== Fact-Recall Proof (Phase-7) ===
+Variant                                             Exact     TgtPPL
+Baseline (memOFF)                                   0.000 16687562752.00
+DC-GEM (memON, write_top_m=0 / unlimited)           0.660      40.52
+DC-GEM (memON, write_top_m=32 + span=2)             0.800       3.61
+Throughput (vectorized GEM, M=32): 6895 tok/s
+[saved] runs/fact_recall_proof.json

@@ -1,0 +1,7 @@
+[hw] device=cuda name=AMD Radeon RX 9070 XT
+[data] cache: data/tinystories/tinystories_train.npy (44,978,706 tokens)
+[data] train=43,978,706  val=1,000,000
+[train] budget=20,000,000  steps=4882  tok/step=4096
+[model] params=30.92M  memory_slots=16384  train_memory=True
+[step     1/4882] loss=251.561 val_ppl on/off=485165195.41/485165195.41 fact on/off=0.00/0.00 slots=0  361 tok/s
+[step   250/4882] loss=11.306 val_ppl on/off=111676.45/8668.44 fact on/off=nan/nan slots=16384  900 tok/s

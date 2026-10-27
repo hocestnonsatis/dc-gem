@@ -1,0 +1,61 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "lora_adapter": null,
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "split": "test",
+  "n": 1,
+  "model_name_or_path": "dc-gem-qwen25-coder-3b",
+  "wall_s": 9.681481785024516,
+  "looks_like_diff_rate": 1.0,
+  "dry_run_ok_rate": 1.0,
+  "instances": [
+    {
+      "instance_id": "django__django-14534",
+      "repo": "django/django",
+      "n_chunks": 6,
+      "pred_chars": 361,
+      "looks_like_diff": true,
+      "dry_run_ok": true,
+      "meta": {
+        "attempts": [],
+        "search_replace_0": {
+          "sr_raw_head": "<<<django/forms/boundfield.py>>>\n<<<<<<< SEARCH\n    def id_for_label(self):\n        return 'id_%s_%s' % (self.data['name'], self.data['index'])\n=======\n    def id_for_label(self):\n        return self.data['attrs']['id']\n>>>>>>> REPLACE",
+          "n_edits": 1,
+          "paths": [
+            "django/forms/boundfield.py",
+            "django/forms/widgets.py"
+          ],
+          "built": true,
+          "dry_run": true,
+          "dry_msg": "checking file django/forms/boundfield.py\n"
+        },
+        "search_replace_1": {
+          "sr_raw_head": "<<<django/forms/boundfield.py>>>\n<<<<<<< SEARCH\n        id_ = self.field.widget.attrs.get('id') or self.auto_id\n=======\n        id_ = self.data['attrs'].get('id') or self.auto_id\n>>>>>>> REPLACE\n<<<django/forms/widgets.py>>>\n<<<<<<< SEARCH\n        id_ = self.field.widget.attrs.get('id') or self.auto",
+          "n_edits": 2,
+          "paths": [
+            "django/forms/boundfield.py",
+            "django/forms/widgets.py"
+          ],
+          "built": true,
+          "dry_run": true,
+          "dry_msg": "checking file django/forms/boundfield.py\n"
+        },
+        "search_replace_2": {
+          "sr_raw_head": "<<<django/forms/boundfield.py>>>\n<<<<<<< SEARCH\n        id_ = self.field.widget.attrs.get('id') or self.auto_id\n=======\n        id_ = self.data.get('attrs', {}).get('id') or self.auto_id\n>>>>>>> REPLACE\n<<<django/forms/widgets.py>>>\n<<<<<<< SEARCH\n        return 'id_%s_%s' % (self.data['name'], self",
+          "n_edits": 2,
+          "paths": [
+            "django/forms/boundfield.py",
+            "django/forms/widgets.py"
+          ],
+          "built": true,
+          "dry_run": true,
+          "dry_msg": "checking file django/forms/boundfield.py\n"
+        },
+        "method": "search_replace_t0_v1",
+        "score": 17.639
+      },
+      "pred_head": "diff --git a/django/forms/boundfield.py b/django/forms/boundfield.py\\n--- a/django/forms/boundfield.py\\n+++ b/django/forms/boundfield.py\\n@@ -277,7 +277,7 @@\\n \\n     @property\\n     def id_for_label(self):"
+    }
+  ],
+  "predictions_path": "runs/swe_dc_gem/agent_django_fix/predictions.jsonl"
+}

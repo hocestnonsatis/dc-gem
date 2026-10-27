@@ -1,0 +1,178 @@
+[suite] n=12 model=Qwen/Qwen3-0.6B
+[load] Qwen/Qwen3-0.6B → cuda
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 27839.09it/s]
+[dims] d_model=1024 vocab=151936
+
+[memOFF] 1/12 django__django-14534
+  ast_chunks=373 files=6
+  chars=1951 dry=True sym_hit=False
+
+[memOFF] 2/12 django__django-13447
+  ast_chunks=290 files=6
+  chars=489 dry=False sym_hit=False
+
+[memOFF] 3/12 django__django-14999
+  ast_chunks=368 files=6
+  chars=831 dry=False sym_hit=False
+
+[memOFF] 4/12 django__django-15814
+  ast_chunks=439 files=6
+  chars=1380 dry=False sym_hit=False
+
+[memOFF] 5/12 django__django-16255
+  ast_chunks=80 files=6
+  chars=2195 dry=False sym_hit=True
+
+[memOFF] 6/12 django__django-16595
+  ast_chunks=6 files=6
+  chars=3464 dry=False sym_hit=True
+
+[memOFF] 7/12 sympy__sympy-20590
+  ast_chunks=832 files=6
+  chars=823 dry=True sym_hit=False
+
+[memOFF] 8/12 sympy__sympy-22714
+  ast_chunks=239 files=6
+  chars=981 dry=False sym_hit=False
+
+[memOFF] 9/12 sympy__sympy-24102
+  ast_chunks=321 files=6
+  chars=955 dry=False sym_hit=False
+
+[memOFF] 10/12 pytest-dev__pytest-11143
+  ast_chunks=386 files=6
+  chars=2074 dry=False sym_hit=True
+
+[memOFF] 11/12 pytest-dev__pytest-7490
+  ast_chunks=351 files=6
+  chars=2074 dry=False sym_hit=True
+
+[memOFF] 12/12 scikit-learn__scikit-learn-25747
+  ast_chunks=402 files=6
+  chars=379 dry=False sym_hit=False
+[harness] /home/an-l-z/dc-gem/.venv-rocm/bin/python -m swebench.harness.run_evaluation --dataset_name SWE-bench/SWE-bench_Lite --predictions_path runs/swe_dc_gem/predictions_qwen3_06b_memOFF.jsonl --max_workers 2 --timeout 1800 --run_id p15_qwen3_06b_memOFF --report_dir runs/swe_dc_gem/harness_phase15 --instance_ids django__django-14534 django__django-13447 django__django-14999 django__django-15814 django__django-16255 django__django-16595 sympy__sympy-20590 sympy__sympy-22714 sympy__sympy-24102 pytest-dev__pytest-11143 pytest-dev__pytest-7490 scikit-learn__scikit-learn-25747
+Traceback (most recent call last):
+  File "/home/an-l-z/dc-gem/examples/run_swe_ablation_suite.py", line 533, in <module>
+    main()
+  File "/home/an-l-z/dc-gem/examples/run_swe_ablation_suite.py", line 477, in main
+    h = run_harness(
+        ^^^^^^^^^^^^
+  File "/home/an-l-z/dc-gem/examples/run_swe_ablation_suite.py", line 393, in run_harness
+    with log.open("w") as lf:
+         ^^^^^^^^^^^^^
+  File "/home/an-l-z/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/swe_dc_gem/harness_phase15/harness_p15_qwen3_06b_memOFF.log'
+[suite] n=12 model=Qwen/Qwen3-0.6B
+[load] Qwen/Qwen3-0.6B → cuda
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 26135.09it/s]
+[dims] d_model=1024 vocab=151936
+
+[memON] 1/12 django__django-14534
+  ast_chunks=373 files=6
+  chars=1433 dry=True sym_hit=False
+
+[memON] 2/12 django__django-13447
+  ast_chunks=290 files=6
+  chars=1004 dry=False sym_hit=False
+
+[memON] 3/12 django__django-14999
+  ast_chunks=422 files=6
+  chars=1694 dry=False sym_hit=False
+
+[memON] 4/12 django__django-15814
+  ast_chunks=392 files=6
+  chars=1169 dry=False sym_hit=False
+
+[memON] 5/12 django__django-16255
+  ast_chunks=80 files=6
+  chars=2343 dry=False sym_hit=True
+
+[memON] 6/12 django__django-16595
+  ast_chunks=6 files=6
+  chars=2125 dry=False sym_hit=True
+
+[memON] 7/12 sympy__sympy-20590
+  ast_chunks=664 files=6
+  chars=823 dry=True sym_hit=False
+
+[memON] 8/12 sympy__sympy-22714
+  ast_chunks=239 files=6
+  chars=755 dry=False sym_hit=False
+
+[memON] 9/12 sympy__sympy-24102
+  ast_chunks=321 files=6
+  chars=964 dry=False sym_hit=False
+
+[memON] 10/12 pytest-dev__pytest-11143
+  ast_chunks=386 files=6
+  chars=879 dry=False sym_hit=False
+
+[memON] 11/12 pytest-dev__pytest-7490
+  ast_chunks=351 files=6
+  chars=2920 dry=False sym_hit=False
+
+[memON] 12/12 scikit-learn__scikit-learn-25747
+  ast_chunks=407 files=6
+  chars=561 dry=False sym_hit=False
+[harness] /home/an-l-z/dc-gem/.venv-rocm/bin/python -m swebench.harness.run_evaluation --dataset_name SWE-bench/SWE-bench_Lite --predictions_path runs/swe_dc_gem/predictions_qwen3_06b_memON.jsonl --max_workers 2 --timeout 1800 --run_id p15_qwen3_06b_memON --report_dir runs/swe_dc_gem/harness_phase15 --instance_ids django__django-14534 django__django-13447 django__django-14999 django__django-15814 django__django-16255 django__django-16595 sympy__sympy-20590 sympy__sympy-22714 sympy__sympy-24102 pytest-dev__pytest-11143 pytest-dev__pytest-7490 scikit-learn__scikit-learn-25747
+[load] Qwen/Qwen3-0.6B → cuda
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 27114.02it/s]
+[dims] d_model=1024 vocab=151936
+[lora] runs/swe_dc_gem_qwen3_06b/lora/adapter
+
+[memON_LoRA] 1/12 django__django-14534
+  ast_chunks=373 files=6
+  chars=1117 dry=False sym_hit=True
+
+[memON_LoRA] 2/12 django__django-13447
+  ast_chunks=290 files=6
+  chars=3404 dry=False sym_hit=False
+
+[memON_LoRA] 3/12 django__django-14999
+  ast_chunks=422 files=6
+  chars=2249 dry=False sym_hit=False
+
+[memON_LoRA] 4/12 django__django-15814
+  ast_chunks=414 files=6
+  chars=2941 dry=False sym_hit=False
+
+[memON_LoRA] 5/12 django__django-16255
+  ast_chunks=80 files=6
+  chars=3325 dry=True sym_hit=True
+
+[memON_LoRA] 6/12 django__django-16595
+  ast_chunks=6 files=6
+  chars=2974 dry=False sym_hit=True
+
+[memON_LoRA] 7/12 sympy__sympy-20590
+  ast_chunks=832 files=6
+  chars=3197 dry=False sym_hit=False
+
+[memON_LoRA] 8/12 sympy__sympy-22714
+  ast_chunks=197 files=6
+  chars=3079 dry=False sym_hit=False
+
+[memON_LoRA] 9/12 sympy__sympy-24102
+  ast_chunks=321 files=6
+  chars=3028 dry=False sym_hit=False
+
+[memON_LoRA] 10/12 pytest-dev__pytest-11143
+  ast_chunks=386 files=6
+  chars=3323 dry=False sym_hit=True
+
+[memON_LoRA] 11/12 pytest-dev__pytest-7490
+  ast_chunks=351 files=6
+  chars=3222 dry=False sym_hit=True
+
+[memON_LoRA] 12/12 scikit-learn__scikit-learn-25747
+  ast_chunks=402 files=6
+  chars=2691 dry=False sym_hit=False
+[harness] /home/an-l-z/dc-gem/.venv-rocm/bin/python -m swebench.harness.run_evaluation --dataset_name SWE-bench/SWE-bench_Lite --predictions_path runs/swe_dc_gem/predictions_qwen3_06b_memON_LoRA.jsonl --max_workers 2 --timeout 1800 --run_id p15_qwen3_06b_memON_LoRA --report_dir runs/swe_dc_gem/harness_phase15 --instance_ids django__django-14534 django__django-13447 django__django-14999 django__django-15814 django__django-16255 django__django-16595 sympy__sympy-20590 sympy__sympy-22714 sympy__sympy-24102 pytest-dev__pytest-11143 pytest-dev__pytest-7490 scikit-learn__scikit-learn-25747
+
+=== Phase-15 Ablation ===
+variant          apply%  symRec%     resolved
+memON             16.7%    16.7%         0/12
+memON_LoRA         8.3%    41.7%         0/12
+[save] runs/swe_dc_gem/phase15_ablation_report.json

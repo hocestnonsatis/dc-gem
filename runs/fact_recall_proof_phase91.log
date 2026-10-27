@@ -1,0 +1,206 @@
+[hw] cuda AMD Radeon RX 9070 XT
+[load] runs/rocm_baseline_20m/last.pt  missing=5 unexpected=0 use_lora=True
+[A] baseline memOFF exact=0.000 ppl=16687531008.00
+[stage-B] trainable_tensors=13 steps=1500 λ_ret=0.5 train_top_m=0 span=0 untie=True
+  step    1/1500 loss=40.495 ce=40.025 ret=4.699 ans=0.000 slots=110 writes=110 α=0.000
+  step  300/1500 loss=5.481 ce=4.861 ret=6.065 ans=0.013 slots=114 writes=114 α=0.547
+  step  600/1500 loss=2.163 ce=1.057 ret=11.058 ans=0.000 slots=210 writes=210 α=1.000
+  step  900/1500 loss=11.315 ce=1.049 ret=9.118 ans=9.355 slots=210 writes=210 α=1.000
+  step 1200/1500 loss=2.803 ce=1.963 ret=8.396 ans=0.000 slots=210 writes=210 α=1.000
+  step 1500/1500 loss=4.221 ce=3.666 ret=5.551 ans=0.000 slots=209 writes=209 α=1.000
+
+=== Bölüm 2: Sleep-to-LoRA + PPL Retention (Phase-9) ===
+[sleep] val_ppl_pre_sleep=22.725
+[sleep] planted facts → n_valid=6368
+[sleep] pre-sleep memOFF exact=0.000 ppl=22824120320.00
+[sleep-lora] step    1 | KL 24.4280 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   10 | KL 16.9124 | CE 17.9148 | anchor 28.6560 | valKL 1.6290
+[sleep-lora] step   20 | KL 7.8220 | CE 16.1761 | anchor 87.9823 | valKL 0.9056
+[sleep-lora] step   30 | KL 10.1890 | CE 13.3313 | anchor 133.8659 | valKL 0.6785
+[sleep-lora] step   40 | KL 11.1542 | CE 11.5124 | anchor 190.6836 | valKL 0.6446
+[sleep-lora] step   50 | KL 16.5004 | CE 15.3797 | anchor 263.9621 | valKL 0.8414
+[sleep] chunk 1/8 kl=16.5004 ce=15.3797
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.080 val_ppl=51.332 ok=False
+[balance] factor=0.90 exact=0.060 val_ppl=43.481 ok=False
+[balance] factor=0.85 exact=0.040 val_ppl=40.541 ok=False
+[balance] factor=0.80 exact=0.040 val_ppl=38.114 ok=False
+[balance] factor=0.78 exact=0.020 val_ppl=37.266 ok=False
+[balance] factor=0.75 exact=0.020 val_ppl=36.110 ok=False
+[balance] factor=0.72 exact=0.000 val_ppl=35.076 ok=False
+[balance] factor=0.70 exact=0.000 val_ppl=34.448 ok=False
+[balance] factor=0.65 exact=0.000 val_ppl=33.057 ok=False
+[sleep-lora] step    1 | KL 12.1074 | CE 8.0900 | anchor 273.7795 | valKL -0.0000
+[sleep-lora] step   10 | KL 5.1141 | CE 2.9685 | anchor 309.9434 | valKL 0.4200
+[sleep-lora] step   20 | KL 9.1858 | CE 0.7407 | anchor 383.3419 | valKL 0.6396
+[sleep-lora] step   30 | KL 1.4477 | CE 1.8232 | anchor 438.0623 | valKL 0.6116
+[sleep-lora] step   40 | KL 3.8468 | CE 2.0289 | anchor 456.3587 | valKL 0.8869
+[sleep-lora] step   50 | KL 12.4250 | CE 6.5217 | anchor 461.5053 | valKL 0.7256
+[sleep] chunk 2/8 kl=12.4250 ce=6.5217
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.480 val_ppl=50.839 ok=False
+[balance] factor=0.90 exact=0.380 val_ppl=43.515 ok=False
+[balance] factor=0.85 exact=0.360 val_ppl=40.786 ok=False
+[balance] factor=0.80 exact=0.260 val_ppl=38.544 ok=False
+[balance] factor=0.78 exact=0.160 val_ppl=37.764 ok=False
+[balance] factor=0.75 exact=0.120 val_ppl=36.705 ok=False
+[balance] factor=0.72 exact=0.060 val_ppl=35.761 ok=False
+[balance] factor=0.70 exact=0.020 val_ppl=35.185 ok=False
+[balance] factor=0.65 exact=0.000 val_ppl=33.898 ok=False
+[sleep-lora] step    1 | KL 5.7015 | CE 2.5990 | anchor 463.8109 | valKL -0.0000
+[sleep-lora] step   10 | KL 6.9461 | CE 3.6837 | anchor 533.3063 | valKL 0.8459
+[sleep-lora] step   20 | KL 7.3528 | CE 2.0150 | anchor 559.1058 | valKL 0.6324
+[sleep-lora] step   30 | KL 6.0489 | CE 0.3807 | anchor 560.8792 | valKL 0.7143
+[sleep-lora] step   40 | KL 5.4405 | CE 0.1091 | anchor 559.3868 | valKL 0.8936
+[sleep-lora] step   50 | KL 6.4953 | CE 6.4922 | anchor 538.6547 | valKL 0.5076
+[sleep] chunk 3/8 kl=6.4953 ce=6.4922
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.480 val_ppl=56.363 ok=False
+[balance] factor=0.90 exact=0.360 val_ppl=47.670 ok=False
+[balance] factor=0.85 exact=0.340 val_ppl=44.305 ok=False
+[balance] factor=0.80 exact=0.280 val_ppl=41.449 ok=False
+[balance] factor=0.78 exact=0.260 val_ppl=40.432 ok=False
+[balance] factor=0.75 exact=0.180 val_ppl=39.024 ok=False
+[balance] factor=0.72 exact=0.100 val_ppl=37.742 ok=False
+[balance] factor=0.70 exact=0.060 val_ppl=36.948 ok=False
+[balance] factor=0.65 exact=0.020 val_ppl=35.139 ok=False
+[sleep-lora] step    1 | KL 3.2099 | CE 1.8251 | anchor 541.0609 | valKL -0.0000
+[sleep-lora] step   10 | KL 4.4047 | CE 4.3272 | anchor 607.6141 | valKL 0.6863
+[sleep-lora] step   20 | KL 8.0327 | CE 1.3638 | anchor 625.0709 | valKL 0.7416
+[sleep-lora] step   30 | KL 11.5969 | CE 1.6613 | anchor 638.4620 | valKL 0.6328
+[sleep-lora] step   40 | KL 4.9489 | CE 2.4651 | anchor 631.3557 | valKL 0.7542
+[sleep-lora] step   50 | KL 10.8257 | CE 1.1319 | anchor 615.0979 | valKL 0.5728
+[sleep] chunk 4/8 kl=10.8257 ce=1.1319
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.640 val_ppl=58.811 ok=False
+[balance] factor=0.90 exact=0.640 val_ppl=50.081 ok=False
+[balance] factor=0.85 exact=0.540 val_ppl=46.637 ok=False
+[balance] factor=0.80 exact=0.380 val_ppl=43.676 ok=False
+[balance] factor=0.78 exact=0.300 val_ppl=42.605 ok=False
+[balance] factor=0.75 exact=0.240 val_ppl=41.103 ok=False
+[balance] factor=0.72 exact=0.160 val_ppl=39.714 ok=False
+[balance] factor=0.70 exact=0.120 val_ppl=38.845 ok=False
+[balance] factor=0.65 exact=0.120 val_ppl=36.844 ok=False
+[balance] gentle val polish…
+[polish] step  10 exact=0.360 val_ppl=31.168
+[balance] polish reverted → exact=0.380 val_ppl=37.854
+[sleep-lora] step    1 | KL 4.1744 | CE 2.0200 | anchor 437.0402 | valKL -0.0000
+[sleep-lora] step   10 | KL 6.1643 | CE 7.5367 | anchor 562.6175 | valKL 0.6897
+[sleep-lora] step   20 | KL 7.5606 | CE 1.2916 | anchor 618.7670 | valKL 0.5564
+[sleep-lora] step   30 | KL 10.7132 | CE 1.0792 | anchor 640.2377 | valKL 0.6662
+[sleep-lora] step   40 | KL 3.4401 | CE 0.8471 | anchor 636.4896 | valKL 0.8844
+[sleep-lora] step   50 | KL 5.0136 | CE 1.5432 | anchor 619.7795 | valKL 0.6091
+[sleep] chunk 5/8 kl=5.0136 ce=1.5432
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.580 val_ppl=61.556 ok=False
+[balance] factor=0.90 exact=0.600 val_ppl=50.000 ok=False
+[balance] factor=0.85 exact=0.560 val_ppl=45.727 ok=False
+[balance] factor=0.80 exact=0.480 val_ppl=42.172 ok=False
+[balance] factor=0.78 exact=0.440 val_ppl=40.917 ok=False
+[balance] factor=0.75 exact=0.260 val_ppl=39.188 ok=False
+[balance] factor=0.72 exact=0.160 val_ppl=37.620 ok=False
+[balance] factor=0.70 exact=0.120 val_ppl=36.654 ok=False
+[balance] factor=0.65 exact=0.020 val_ppl=34.483 ok=False
+[balance] gentle val polish…
+[polish] step  10 exact=0.480 val_ppl=30.505
+[balance] polish reverted → exact=0.520 val_ppl=37.178
+[sleep-lora] step    1 | KL 4.4793 | CE 2.8633 | anchor 440.7892 | valKL -0.0000
+[sleep-lora] step   10 | KL 12.5279 | CE 4.5018 | anchor 532.3535 | valKL 0.5160
+[sleep-lora] step   20 | KL 8.7458 | CE 1.8557 | anchor 579.0743 | valKL 0.8133
+[sleep-lora] step   30 | KL 4.3917 | CE 1.2445 | anchor 577.4628 | valKL 0.4798
+[sleep-lora] step   40 | KL 2.5813 | CE 1.9361 | anchor 569.6679 | valKL 0.3745
+[sleep-lora] step   50 | KL 4.9180 | CE 0.5376 | anchor 564.9012 | valKL 0.4224
+[sleep] chunk 6/8 kl=4.9180 ce=0.5376
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.660 val_ppl=50.474 ok=False
+[balance] factor=0.90 exact=0.640 val_ppl=44.091 ok=False
+[balance] factor=0.85 exact=0.640 val_ppl=41.581 ok=False
+[balance] factor=0.80 exact=0.500 val_ppl=39.396 ok=False
+[balance] factor=0.78 exact=0.380 val_ppl=38.595 ok=False
+[balance] factor=0.75 exact=0.340 val_ppl=37.458 ok=False
+[balance] factor=0.72 exact=0.280 val_ppl=36.390 ok=False
+[balance] factor=0.70 exact=0.260 val_ppl=35.712 ok=False
+[balance] factor=0.65 exact=0.160 val_ppl=34.118 ok=False
+[balance] gentle val polish…
+[polish] step  10 exact=0.380 val_ppl=27.918
+[balance] polish reverted → exact=0.380 val_ppl=33.104
+[sleep-lora] step    1 | KL 5.3505 | CE 1.6085 | anchor 357.9601 | valKL -0.0000
+[sleep-lora] step   10 | KL 7.9311 | CE 3.8868 | anchor 486.2747 | valKL 0.4648
+[sleep-lora] step   20 | KL 4.0877 | CE 1.1535 | anchor 543.8788 | valKL 0.6501
+[sleep-lora] step   30 | KL 5.0403 | CE 1.1857 | anchor 564.5894 | valKL 0.4826
+[sleep-lora] step   40 | KL 3.7435 | CE 3.8695 | anchor 552.6856 | valKL 0.4416
+[sleep-lora] step   50 | KL 10.4593 | CE 1.0274 | anchor 548.9269 | valKL 0.5141
+[sleep] chunk 7/8 kl=10.4593 ce=1.0274
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.720 val_ppl=53.568 ok=False
+[balance] factor=0.90 exact=0.600 val_ppl=45.329 ok=False
+[balance] factor=0.85 exact=0.540 val_ppl=42.422 ok=False
+[balance] factor=0.80 exact=0.500 val_ppl=40.042 ok=False
+[balance] factor=0.78 exact=0.420 val_ppl=39.202 ok=False
+[balance] factor=0.75 exact=0.280 val_ppl=38.036 ok=False
+[balance] factor=0.72 exact=0.240 val_ppl=36.961 ok=False
+[balance] factor=0.70 exact=0.200 val_ppl=36.286 ok=False
+[balance] factor=0.65 exact=0.100 val_ppl=34.714 ok=False
+[balance] gentle val polish…
+[polish] step  10 exact=0.380 val_ppl=27.491
+[balance] polish reverted → exact=0.360 val_ppl=33.880
+[sleep-lora] step    1 | KL 3.6243 | CE 2.4883 | anchor 348.2642 | valKL -0.0000
+[sleep-lora] step   10 | KL 12.5321 | CE 5.0586 | anchor 446.4979 | valKL 0.5279
+[sleep-lora] step   20 | KL 16.5515 | CE 0.6820 | anchor 518.4991 | valKL 0.9180
+[sleep-lora] step   30 | KL 1.7893 | CE 0.1181 | anchor 545.8548 | valKL 0.5507
+[sleep-lora] step   40 | KL 1.3033 | CE 0.5186 | anchor 560.5215 | valKL 0.5204
+[sleep-lora] step   50 | KL 5.7168 | CE 1.0254 | anchor 560.1874 | valKL 0.5146
+[sleep] chunk 8/8 kl=5.7168 ce=1.0254
+[sleep] LoRA scale balance (exact vs val_ppl)
+[balance] factor=1.00 exact=0.680 val_ppl=50.469 ok=False
+[balance] factor=0.90 exact=0.660 val_ppl=43.005 ok=False
+[balance] factor=0.85 exact=0.640 val_ppl=40.165 ok=False
+[balance] factor=0.80 exact=0.520 val_ppl=37.744 ok=False
+[balance] factor=0.78 exact=0.500 val_ppl=36.873 ok=False
+[balance] factor=0.75 exact=0.420 val_ppl=35.658 ok=False
+[balance] factor=0.72 exact=0.360 val_ppl=34.544 ok=False
+[balance] factor=0.70 exact=0.260 val_ppl=33.851 ok=False
+[balance] factor=0.65 exact=0.080 val_ppl=32.268 ok=False
+[balance] gentle val polish…
+[polish] step  10 exact=0.380 val_ppl=26.481
+[balance] polish reverted → exact=0.440 val_ppl=32.058
+[sleep] post-sleep memOFF exact=0.440 fact_ppl=9.32
+[sleep] val_ppl_post_sleep=32.058 (limit=26.134) factor=0.78
+[sleep] retention_ok=False exact_ok=False
+
+=== Bölüm 3: Continual Wave-1/2 Dual-Store (Phase-9.1) ===
+[continual] LoRA reset (no merge) layers=24
+[continual] Wave-1 overflow GEM max_slots=256
+[continual] Wave-1 planted n_valid=256/256 occupancy=1.00
+[sleep-lora] step    1 | KL 24.4280 | CE 24.0572 | anchor 0.0000 | valKL -0.0000
+[sleep-lora] step   80 | KL 6.7717 | CE 4.6756 | anchor 553.3398 | valKL 4.6802
+[sleep-lora] step  160 | KL 3.6894 | CE 4.3778 | anchor 563.4035 | valKL 2.0782
+[sleep-lora] step  240 | KL 3.5694 | CE 3.8441 | anchor 653.7172 | valKL 1.0030
+[sleep-lora] step  320 | KL 3.8981 | CE 5.3125 | anchor 689.2686 | valKL 1.5645
+[sleep-lora] step  400 | KL 1.9729 | CE 3.4572 | anchor 781.8854 | valKL 1.2292
+[continual] Wave-1 consolidated → merge layers=8 scale=0.75 top_n=2, memory cleared
+[recalib] step   1/30 ce=58.0529 ret=5.7280
+[recalib] step   6/30 ce=65.6858 ret=3.0572
+[recalib] step  12/30 ce=39.1553 ret=2.2115
+[recalib] step  18/30 ce=77.8940 ret=1.9712
+[recalib] step  24/30 ce=55.7278 ret=2.2557
+[recalib] step  30/30 ce=56.5200 ret=1.3945
+[continual] recalib steps=30 ce=56.52001953125 ret=1.3944610357284546
+[continual] Wave-1 core recall exact=0.000
+[continual] Wave-2 planted n_valid=1170/2250 occupancy=0.52 top_m=12
+[continual] Wave-1 (Core) exact=0.000
+[continual] Wave-2 (GEM blank) exact=0.000
+[continual] Wave-2 (GEM shared) exact=0.000
+[continual] Wave-2 (GEM best) exact=0.000
+[continual] Combined 50   exact=0.000
+[continual] val_ppl_pre=32.058 final=62.542 ratio=1.951
+[continual] all50 memON   exact=0.000
+
+=== 31M Continual Learning & Consolidation Proof ===
+Metric                                        Value
+Wave-1 Core exact                             0.000
+Wave-2 GEM exact                              0.000
+Combined 50-Fact exact                        0.000
+val_ppl_final                                62.542
+max_slots / W1 occ / W2 occ              256/1.00/0.52
+[saved] runs/fact_recall_proof.json

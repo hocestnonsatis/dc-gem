@@ -1,0 +1,79 @@
+Running 12 instances...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:16<02:57, 16.13s/it]1 ran successfully, 0 failed:   8%|▊         | 1/12 [00:16<02:57, 16.13s/it]1 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:37,  9.79s/it]2 ran successfully, 0 failed:  17%|█▋        | 2/12 [00:19<01:37,  9.79s/it]2 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:35<01:47, 11.95s/it]3 ran successfully, 0 failed:  25%|██▌       | 3/12 [00:35<01:47, 11.95s/it]3 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:36<01:12,  9.12s/it]4 ran successfully, 0 failed:  33%|███▎      | 4/12 [00:36<01:12,  9.12s/it]4 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:55<01:17, 11.08s/it]5 ran successfully, 0 failed:  42%|████▏     | 5/12 [00:55<01:17, 11.08s/it]5 ran successfully, 0 failed:  50%|█████     | 6/12 [00:55<00:55,  9.32s/it]6 ran successfully, 0 failed:  50%|█████     | 6/12 [00:55<00:55,  9.32s/it]6 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:10<00:50, 10.13s/it]7 ran successfully, 0 failed:  58%|█████▊    | 7/12 [01:10<00:50, 10.13s/it]7 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:11<00:35,  8.92s/it]8 ran successfully, 0 failed:  67%|██████▋   | 8/12 [01:11<00:35,  8.92s/it]8 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:26<00:28,  9.62s/it]9 ran successfully, 0 failed:  75%|███████▌  | 9/12 [01:26<00:28,  9.62s/it]9 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:27<00:17,  8.71s/it]10 ran successfully, 0 failed:  83%|████████▎ | 10/12 [01:27<00:17,  8.71s/it]10 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:42<00:09,  9.31s/it]11 ran successfully, 0 failed:  92%|█████████▏| 11/12 [01:42<00:09,  9.31s/it]11 ran successfully, 0 failed: 100%|██████████| 12/12 [01:42<00:00,  8.56s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:42<00:00,  8.56s/it]12 ran successfully, 0 failed: 100%|██████████| 12/12 [01:42<00:00,  8.56s/it]
+Error in evaluation for django__django-13447: >>>>> Patch Apply Failed:
+patching file django/contrib/admin/sites.py
+patch: **** malformed patch at line 11: @@ -18,6 +19,7 @@
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON_LoRA/dc-gem-qwen3_06b-memON_LoRA/django__django-13447/run_instance.log) for more information.
+Error in evaluation for django__django-15814: >>>>> Patch Apply Failed:
+patching file django/db/models/sql/query.py
+patch: **** malformed patch at line 4: @@ -1507,7 -1507,7 @@ def _iterable_class(self):
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON_LoRA/dc-gem-qwen3_06b-memON_LoRA/django__django-15814/run_instance.log) for more information.
+Error in evaluation for pytest-dev__pytest-11143: >>>>> Patch Apply Failed:
+patching file testing/test_assertrewrite.py
+Hunk #1 FAILED at 12.
+1 out of 1 hunk FAILED -- saving rejects to file testing/test_assertrewrite.py.rej
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON_LoRA/dc-gem-qwen3_06b-memON_LoRA/pytest-dev__pytest-11143/run_instance.log) for more information.
+Error in evaluation for pytest-dev__pytest-7490: >>>>> Patch Apply Failed:
+patching file testing/test_skipping.py
+patch: **** malformed patch at line 17: -            import pytest
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON_LoRA/dc-gem-qwen3_06b-memON_LoRA/pytest-dev__pytest-7490/run_instance.log) for more information.
+Error in evaluation for scikit-learn__scikit-learn-25747: >>>>> Patch Apply Failed:
+patching file sklearn/utils/tests/test_set_output.py
+patch: **** malformed patch at line 12:      new_index = [10, 12]
+
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON_LoRA/dc-gem-qwen3_06b-memON_LoRA/scikit-learn__scikit-learn-25747/run_instance.log) for more information.
+Error in evaluation for sympy__sympy-20590: >>>>> Patch Apply Failed:
+patching file sympy/core/function.py
+Hunk #1 FAILED at 12.
+Hunk #2 FAILED at 13.
+Hunk #3 FAILED at 14.
+Hunk #4 FAILED at 15.
+Hunk #5 FAILED at 16.
+Hunk #6 FAILED at 17.
+Hunk #7 FAILED at 18.
+Hunk #8 FAILED at 19.
+8 out of 8 hunks FAILED -- saving rejects to file sympy/core/function.py.rej
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON_LoRA/dc-gem-qwen3_06b-memON_LoRA/sympy__sympy-20590/run_instance.log) for more information.
+Error in evaluation for sympy__sympy-22714: >>>>> Patch Apply Failed:
+patching file sympy/core/sympify.py
+Hunk #1 FAILED at 472.
+Hunk #2 FAILED at 479.
+Hunk #3 FAILED at 486.
+Hunk #4 FAILED at 493.
+Hunk #5 FAILED at 499.
+Hunk #6 FAILED at 506.
+Hunk #7 FAILED at 513.
+Hunk #8 FAILED at 520.
+Hunk #9 FAILED at 527.
+9 out of 9 hunks FAILED -- saving rejects to file sympy/core/sympify.py.rej
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON_LoRA/dc-gem-qwen3_06b-memON_LoRA/sympy__sympy-22714/run_instance.log) for more information.
+Error in evaluation for sympy__sympy-24102: >>>>> Patch Apply Failed:
+patch: **** unexpected end of file in patch
+patching file sympy/parsing/mathematica.py
+Reversed (or previously applied) patch detected!  Skipping patch.
+
+Check (logs/run_evaluation/p15_qwen3_06b_memON_LoRA/dc-gem-qwen3_06b-memON_LoRA/sympy__sympy-24102/run_instance.log) for more information.
+All instances run.
+Total instances: 12
+Instances submitted: 12
+Instances completed: 4
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 4
+Instances with likely infrastructure failures: 0
+Instances with ambiguous failures: 0
+Instances with empty patches: 0
+Instances with errors: 8
+Unstopped containers: 0
+Unremoved images: 12
+Report written to runs/swe_dc_gem/harness_phase15/dc-gem-qwen3_06b-memON_LoRA.p15_qwen3_06b_memON_LoRA.json
